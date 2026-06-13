@@ -12,12 +12,6 @@ web/.astro/
 web/src/data/
 node_modules/
 
-# Auto-deploy workflow is withheld from the repo until the `workflow` OAuth scope
-# is granted (`gh auth refresh -h github.com -s workflow`). Until then the site is
-# published via the gh-pages branch. To enable Actions auto-deploy: remove this line,
-# `git add .github/workflows/deploy.yml`, and push (with the scope).
-.github/workflows/
-
 # Secrets — NEVER commit Instagram tokens etc.
 .env
 *.env

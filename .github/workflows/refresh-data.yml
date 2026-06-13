@@ -1,0 +1,38 @@
+name: Refresh deals data (daily expiry)
+
+# Runs just after Qatar midnight, expires any deals whose validity has passed,
+# re-exports deals.json + CSVs, and commits if anything changed. The committed
+# data/deals.json then triggers deploy.yml, so the live site stays current with
+# zero manual steps. (Phase B will add the Instagram fetch step ahead of --expire.)
+on:
+  schedule:
+    - cron: "5 21 * * *" # 21:05 UTC = 00:05 Asia/Qatar (UTC+3), just after midnight
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python ingest/db.py --expire --export-json --export-csv
+      - name: Commit data if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data)" ]; then
+            git add data
+            git commit -m "chore(data): daily expiry refresh"
+            git push
+          else
+            echo "No data changes — nothing to commit."
+          fi
