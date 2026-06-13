@@ -7,7 +7,7 @@ interface Props {
 }
 const {
   title = "Qatar Restaurant Deals",
-  description = "Live restaurant deals and offers across Qatar — free, open-source, and updated automatically.",
+  description = "The finest tables in Doha at their best prices — live restaurant deals across Qatar, updated daily.",
 } = Astro.props;
 
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.href;
@@ -20,11 +20,11 @@ const ogImage = new URL(`${import.meta.env.BASE_URL}icon.svg`, canonical).href;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#8a1538" />
+    <meta name="theme-color" content="#7a1330" />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}icon.svg`} />
     <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}icon.svg`} />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="QA Deals" />
+    <meta name="apple-mobile-web-app-title" content="Qatar Deals" />
     <link rel="manifest" href={`${import.meta.env.BASE_URL}manifest.webmanifest`} />
 
     <link rel="canonical" href={canonical} />
@@ -43,13 +43,12 @@ const ogImage = new URL(`${import.meta.env.BASE_URL}icon.svg`, canonical).href;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&family=Cairo:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
 
     <title>{title}</title>
 
-    <!-- Restore language choice before paint to avoid a flash -->
     <script is:inline>
       (function () {
         try {
@@ -62,21 +61,19 @@ const ogImage = new URL(`${import.meta.env.BASE_URL}icon.svg`, canonical).href;
     </script>
   </head>
 
-  <body class="min-h-screen flex flex-col">
-    <header class="bg-brand-600 text-white shadow-md">
-      <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
-        <a href={import.meta.env.BASE_URL} class="flex items-center gap-2 group">
-          <span class="text-2xl" aria-hidden="true">🍽️</span>
+  <body class="min-h-screen flex flex-col bg-cream text-ink">
+    <header class="sticky top-0 z-30 border-b border-line bg-cream/90 backdrop-blur-sm">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
+        <a href={import.meta.env.BASE_URL} class="flex items-baseline gap-1.5 group">
           <span
-            class="i18n font-extrabold text-lg sm:text-xl tracking-tight"
-            data-en="Qatar Restaurant Deals"
-            data-ar="عروض مطاعم قطر">Qatar Restaurant Deals</span
-          >
+            class="i18n font-display text-2xl sm:text-[1.75rem] font-semibold text-maroon leading-none"
+            data-en="Qatar Deals" data-ar="عروض قطر">Qatar Deals</span>
+          <span class="text-gold text-sm translate-y-[-2px]" aria-hidden="true">◆</span>
         </a>
         <button
           id="lang-toggle"
           type="button"
-          class="rounded-full bg-white/15 hover:bg-white/25 px-4 py-1.5 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+          class="rounded-full border border-maroon/25 text-maroon hover:bg-maroon hover:text-cream px-4 py-1.5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
           data-en-aria="Switch to Arabic"
           data-ar-aria="التبديل إلى الإنجليزية"
           aria-label="Switch to Arabic"
@@ -86,23 +83,24 @@ const ogImage = new URL(`${import.meta.env.BASE_URL}icon.svg`, canonical).href;
       </div>
     </header>
 
-    <main class="flex-1 w-full mx-auto max-w-6xl px-4 py-6">
+    <main class="flex-1 w-full mx-auto max-w-6xl px-4 sm:px-6 pb-10">
       <slot />
     </main>
 
-    <footer class="border-t border-black/10 mt-8">
-      <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <span
-          class="i18n"
-          data-en="Free & open-source · No personal data collected"
-          data-ar="مجاني ومفتوح المصدر · لا نجمع أي بيانات شخصية"
-          >Free &amp; open-source · No personal data collected</span
-        >
-        <span class="i18n" data-en="Made for Qatar 🇶🇦" data-ar="صُنع لقطر 🇶🇦">Made for Qatar 🇶🇦</span>
+    <footer class="border-t border-line mt-6">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <span class="gold-rule"></span>
+          <span class="i18n text-sm text-ink-soft"
+            data-en="Free & open-source · No personal data collected"
+            data-ar="مجاني ومفتوح المصدر · لا نجمع أي بيانات شخصية"
+            >Free &amp; open-source · No personal data collected</span>
+        </div>
+        <span class="i18n font-display italic text-ink-soft" data-en="Made for Qatar" data-ar="صُنع لقطر">Made for Qatar</span>
       </div>
     </footer>
 
-    <!-- Language engine: swaps text, placeholders, and aria-labels; flips direction; persists choice -->
+    <!-- Language engine: swaps text, placeholders, and aria-labels; flips direction; persists -->
     <script is:inline>
       (function () {
         function applyLang(lang) {

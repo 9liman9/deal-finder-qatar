@@ -92,6 +92,31 @@ def infer_cuisine(text: str) -> str | None:
     return None
 
 
+_PRICE_NUM = re.compile(r"(?:QAR|QR)\s?([\d,]+)", re.I)
+_DELIVERY = re.compile(r"deliver|online order|order online|app[- ]?exclusive|promo code|use code|talabat|snoonu|pickup|take[- ]?away|carryout", re.I)
+_DINEIN = re.compile(r"dine.?in|set menu|set lunch|set dinner|buffet|afternoon tea|brunch|lounge|a la carte|sharing menu|\btable\b|iftar|suhoor|high tea", re.I)
+
+
+def parse_price_num(text: str) -> float | None:
+    m = _PRICE_NUM.search(text or "")
+    if not m:
+        return None
+    try:
+        return float(m.group(1).replace(",", ""))
+    except ValueError:
+        return None
+
+
+def infer_channel(text: str, deal_type: str | None) -> str:
+    has_delivery = bool(_DELIVERY.search(text or "")) or deal_type == "coupon"
+    has_dinein = bool(_DINEIN.search(text or ""))
+    if has_delivery and has_dinein:
+        return "both"
+    if has_delivery:
+        return "delivery"
+    return "dine_in"  # default — our sources skew dine-in
+
+
 def classify(text: str, pct: int | None) -> str:
     if pct is not None:
         return "discount_pct"
@@ -314,9 +339,22 @@ def main() -> int:
         except Exception as e:  # one bad site must not kill the run
             print(f"[scrape] {site['name']}: error {e!r} — skipping")
 
-    # Infer cuisine from the restaurant + offer text so the cuisine filter is useful.
+    # Drop junk restaurant names (CMS drafts / placeholders) before enriching.
+    def _valid_name(n: str | None) -> bool:
+        if not n:
+            return False
+        if re.search(r"auto.?draft|^untitled|^copy\b|^test\b|placeholder", n, re.I):
+            return False
+        return len(re.sub(r"[^A-Za-z؀-ۿ]", "", n)) >= 2
+
+    all_deals = [d for d in all_deals if _valid_name(d.get("restaurant_name"))]
+
+    # Enrich each deal: cuisine, numeric price, and dine-in/delivery channel.
     for d in all_deals:
-        d["cuisine"] = infer_cuisine(f"{d.get('restaurant_name','')} {d.get('title_en','')} {d.get('description_en') or ''}")
+        blob = f"{d.get('restaurant_name','')} {d.get('title_en','')} {d.get('description_en') or ''}"
+        d["cuisine"] = infer_cuisine(blob)
+        d["price"] = parse_price_num(f"{d.get('description_en') or ''} {d.get('title_en') or ''}")
+        d["channel"] = infer_channel(blob, d.get("deal_type"))
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(all_deals, ensure_ascii=False, indent=2), encoding="utf-8")

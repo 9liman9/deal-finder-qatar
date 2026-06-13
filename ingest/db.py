@@ -85,6 +85,8 @@ CREATE TABLE IF NOT EXISTS deals (
     description_ar TEXT,
     deal_type      TEXT,
     discount_value REAL,
+    price          REAL,
+    channel        TEXT,
     code           TEXT,
     valid_from     TEXT,
     valid_to       TEXT,
@@ -269,6 +271,8 @@ def insert_deal(conn: sqlite3.Connection, restaurant_id: int, d: dict, source: s
         "description_ar": d.get("description_ar"),
         "deal_type": d.get("deal_type") if d.get("deal_type") in DEAL_TYPES else "other",
         "discount_value": _to_float(d.get("discount_value")),
+        "price": _to_float(d.get("price")),
+        "channel": d.get("channel") if d.get("channel") in ("dine_in", "delivery", "both") else None,
         "code": code,
         "valid_from": valid_from,
         "valid_to": valid_to,
@@ -290,8 +294,8 @@ def insert_deal(conn: sqlite3.Connection, restaurant_id: int, d: dict, source: s
             """
             UPDATE deals SET
                 title_ar=:title_ar, description_en=:description_en, description_ar=:description_ar,
-                deal_type=:deal_type, discount_value=:discount_value, valid_from=:valid_from,
-                source=:source, source_url=:source_url, image_url=:image_url,
+                deal_type=:deal_type, discount_value=:discount_value, price=:price, channel=:channel,
+                valid_from=:valid_from, source=:source, source_url=:source_url, image_url=:image_url,
                 last_seen=:last_seen, status='active'
             WHERE content_hash=:content_hash
             """,
@@ -302,11 +306,11 @@ def insert_deal(conn: sqlite3.Connection, restaurant_id: int, d: dict, source: s
         """
         INSERT INTO deals
             (restaurant_id, title_en, title_ar, description_en, description_ar,
-             deal_type, discount_value, code, valid_from, valid_to,
+             deal_type, discount_value, price, channel, code, valid_from, valid_to,
              source, source_url, image_url, first_seen, last_seen, status, content_hash)
         VALUES
             (:restaurant_id, :title_en, :title_ar, :description_en, :description_ar,
-             :deal_type, :discount_value, :code, :valid_from, :valid_to,
+             :deal_type, :discount_value, :price, :channel, :code, :valid_from, :valid_to,
              :source, :source_url, :image_url, :first_seen, :last_seen, 'active', :content_hash)
         """,
         params,
@@ -400,7 +404,7 @@ def cmd_expire(conn: sqlite3.Connection) -> None:
 def _active_deals_query() -> str:
     return """
         SELECT d.id, d.title_en, d.title_ar, d.description_en, d.description_ar,
-               d.deal_type, d.discount_value, d.code, d.valid_from, d.valid_to,
+               d.deal_type, d.discount_value, d.price, d.channel, d.code, d.valid_from, d.valid_to,
                d.source, d.source_url, d.image_url, d.last_seen,
                r.slug AS r_slug, r.name_en AS r_name_en, r.name_ar AS r_name_ar,
                r.ig_handle AS r_ig_handle, r.cuisine AS r_cuisine, r.area AS r_area,
@@ -415,7 +419,7 @@ def _active_deals_query() -> str:
 def cmd_export_json(conn: sqlite3.Connection) -> None:
     rows = conn.execute(_active_deals_query()).fetchall()
     deals = []
-    cuisines, areas, deal_types = set(), set(), set()
+    cuisines, areas, deal_types, channels = set(), set(), set(), set()
     for row in rows:
         if row["r_cuisine"]:
             cuisines.add(row["r_cuisine"])
@@ -423,12 +427,16 @@ def cmd_export_json(conn: sqlite3.Connection) -> None:
             areas.add(row["r_area"])
         if row["deal_type"]:
             deal_types.add(row["deal_type"])
+        if row["channel"]:
+            channels.add(row["channel"])
         deals.append({
             "id": row["id"],
             "title": {"en": row["title_en"], "ar": row["title_ar"]},
             "description": {"en": row["description_en"], "ar": row["description_ar"]},
             "deal_type": row["deal_type"],
             "discount_value": row["discount_value"],
+            "price": row["price"],
+            "channel": row["channel"],
             "code": row["code"],
             "valid_from": row["valid_from"],
             "valid_to": row["valid_to"],
@@ -453,6 +461,7 @@ def cmd_export_json(conn: sqlite3.Connection) -> None:
             "cuisines": sorted(cuisines),
             "areas": sorted(areas),
             "deal_types": sorted(deal_types),
+            "channels": sorted(channels),
         },
         "deals": deals,
     }

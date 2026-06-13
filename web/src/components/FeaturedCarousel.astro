@@ -1,0 +1,131 @@
+---
+interface Props {
+  items: any[]; // [{ deal, dl }]
+}
+const { items } = Astro.props;
+
+function safeUrl(u: unknown): string | null {
+  if (typeof u !== "string" || !u) return null;
+  try {
+    const p = new URL(u);
+    return p.protocol === "http:" || p.protocol === "https:" ? u : null;
+  } catch {
+    return null;
+  }
+}
+
+const slides = items.map(({ deal, dl }: any) => {
+  const r = deal.restaurant ?? {};
+  let expEn = "Ongoing", expAr = "مستمر";
+  if (dl !== null) {
+    if (dl <= 0) { expEn = "Ends today"; expAr = "ينتهي اليوم"; }
+    else if (dl === 1) { expEn = "1 day left"; expAr = "متبقٍّ يوم واحد"; }
+    else { expEn = `${dl} days left`; expAr = `متبقّي ${dl} يوم`; }
+  }
+  return {
+    url: safeUrl(deal.source_url),
+    nameEn: r.name?.en ?? "Restaurant",
+    nameAr: r.name?.ar ?? r.name?.en ?? "مطعم",
+    cuisine: r.cuisine, area: r.area,
+    pct: typeof deal.discount_value === "number" && deal.discount_value > 0 ? deal.discount_value : null,
+    price: typeof deal.price === "number" ? Math.round(deal.price) : null,
+    expEn, expAr,
+  };
+});
+---
+
+<section aria-label="Featured deals" class="mb-9">
+  <div class="flex items-end justify-between mb-3.5">
+    <div class="flex items-center gap-3">
+      <span class="gold-rule"></span>
+      <h2 class="eyebrow text-ink-soft i18n" data-en="Featured this week" data-ar="مميّز هذا الأسبوع">Featured this week</h2>
+    </div>
+    <div class="flex gap-2">
+      <button id="fc-prev" type="button" aria-label="Previous"
+        class="w-9 h-9 rounded-full border border-maroon/25 text-maroon hover:bg-maroon hover:text-cream transition-colors flex items-center justify-center">‹</button>
+      <button id="fc-next" type="button" aria-label="Next"
+        class="w-9 h-9 rounded-full border border-maroon/25 text-maroon hover:bg-maroon hover:text-cream transition-colors flex items-center justify-center">›</button>
+    </div>
+  </div>
+
+  <div id="fc-track" class="fc-track">
+    {slides.map((s) => (
+      <a href={s.url ?? "#"} target="_blank" rel="noopener noreferrer"
+         class="fc-slide group relative block rounded-2xl bg-maroon-deep text-cream p-6 overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+        <span aria-hidden="true" class="absolute -right-4 -top-6 text-gold/15 font-display text-[7rem] leading-none select-none">◆</span>
+        <span class="eyebrow text-gold-soft i18n relative" data-en="Featured" data-ar="مميّز">Featured</span>
+
+        <div class="mt-5 mb-1 relative">
+          {s.pct ? (
+            <span class="font-display font-semibold text-gold-soft leading-none">
+              <span class="text-5xl">{s.pct}</span><span class="text-2xl align-top">%</span>
+              <span class="i18n text-xl ms-1" data-en="off" data-ar="خصم">off</span>
+            </span>
+          ) : s.price ? (
+            <span class="font-display text-4xl font-semibold text-gold-soft leading-none">QR {s.price}</span>
+          ) : (
+            <span class="font-display text-2xl font-semibold text-gold-soft i18n" data-en="Special offer" data-ar="عرض خاص">Special offer</span>
+          )}
+        </div>
+
+        <h3 class="font-display text-2xl leading-tight relative i18n" data-en={s.nameEn} data-ar={s.nameAr}>{s.nameEn}</h3>
+        {(s.cuisine || s.area) && (
+          <p class="text-sm text-cream/60 mt-1 relative">
+            {[s.cuisine, s.area].filter(Boolean).join(" · ")}
+          </p>
+        )}
+
+        <div class="mt-6 flex items-center justify-between relative">
+          <span class="text-xs text-gold-soft i18n" data-en={s.expEn} data-ar={s.expAr}>{s.expEn}</span>
+          <span class="i18n text-xs font-semibold text-cream/80 group-hover:text-gold-soft transition-colors" data-en="View →" data-ar="عرض ←">View →</span>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <script is:inline>
+    (function () {
+      const track = document.getElementById("fc-track");
+      if (!track) return;
+      const slides = Array.from(track.children);
+      if (slides.length < 2) return;
+      let i = 0;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function go(n) {
+        i = (n + slides.length) % slides.length;
+        slides[i].scrollIntoView({ behavior: reduce ? "auto" : "smooth", inline: "center", block: "nearest" });
+      }
+      const prev = document.getElementById("fc-prev");
+      const next = document.getElementById("fc-next");
+      if (prev) prev.addEventListener("click", () => go(i - 1));
+      if (next) next.addEventListener("click", () => go(i + 1));
+
+      // Keep the index roughly in sync if the user scrolls/swipes manually.
+      let scrollT;
+      track.addEventListener("scroll", () => {
+        clearTimeout(scrollT);
+        scrollT = setTimeout(() => {
+          const c = track.scrollLeft + track.clientWidth / 2;
+          let best = 0, bestD = Infinity;
+          slides.forEach((s, idx) => {
+            const center = s.offsetLeft + s.offsetWidth / 2;
+            const d = Math.abs(center - c);
+            if (d < bestD) { bestD = d; best = idx; }
+          });
+          i = best;
+        }, 120);
+      });
+
+      if (!reduce) {
+        let timer = setInterval(() => go(i + 1), 5000);
+        const stop = () => { clearInterval(timer); timer = null; };
+        const start = () => { if (!timer) timer = setInterval(() => go(i + 1), 5000); };
+        track.addEventListener("pointerenter", stop);
+        track.addEventListener("pointerleave", start);
+        track.addEventListener("focusin", stop);
+        track.addEventListener("focusout", start);
+      }
+    })();
+  </script>
+</section>

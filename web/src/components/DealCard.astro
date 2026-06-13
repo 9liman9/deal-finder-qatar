@@ -2,8 +2,9 @@
 interface Props {
   deal: any;
   daysLeft: number | null;
+  index?: number;
 }
-const { deal, daysLeft } = Astro.props;
+const { deal, daysLeft, index = 0 } = Astro.props;
 
 const r = deal.restaurant ?? {};
 const nameEn = r.name?.en ?? r.slug ?? "Restaurant";
@@ -12,9 +13,10 @@ const titleEn = deal.title?.en ?? "";
 const titleAr = deal.title?.ar ?? titleEn;
 const descEn = deal.description?.en ?? "";
 const descAr = deal.description?.ar ?? "";
+const price = typeof deal.price === "number" ? Math.round(deal.price) : null;
+const channel = deal.channel ?? "dine_in";
 
-// --- Defense in depth: sanitise URL + handle at the template boundary too ---
-// (db.py already sanitises on insert, but Phase B scraped data must never reach an href unchecked.)
+// Defense in depth: only http(s) URLs reach an href.
 function safeUrl(u: unknown): string | null {
   if (typeof u !== "string" || !u) return null;
   try {
@@ -29,102 +31,100 @@ const rawHandle = String(r.ig_handle ?? "").replace(/^@/, "");
 const igOk = /^[A-Za-z0-9._]{1,30}$/.test(rawHandle);
 const igUrl = igOk ? `https://instagram.com/${encodeURIComponent(rawHandle)}` : null;
 
-const TYPE_MAP: Record<string, { en: string; ar: string; cls: string }> = {
-  discount_pct: { en: "Discount", ar: "خصم", cls: "bg-brand-100 text-brand-700" },
-  bogo: { en: "Buy 1 Get 1", ar: "واحد + واحد", cls: "bg-emerald-100 text-emerald-700" },
-  set_menu: { en: "Set Menu", ar: "وجبة محددة", cls: "bg-sky-100 text-sky-700" },
-  coupon: { en: "Coupon", ar: "كوبون", cls: "bg-violet-100 text-violet-700" },
-  free_item: { en: "Freebie", ar: "هدية مجانية", cls: "bg-teal-100 text-teal-700" },
-  other: { en: "Offer", ar: "عرض", cls: "bg-stone-100 text-stone-600" },
+const TYPE_MAP: Record<string, { en: string; ar: string }> = {
+  discount_pct: { en: "Discount", ar: "خصم" },
+  bogo: { en: "Buy 1 Get 1", ar: "واحد + واحد" },
+  set_menu: { en: "Set Menu", ar: "وجبة محددة" },
+  coupon: { en: "Coupon", ar: "كوبون" },
+  free_item: { en: "Freebie", ar: "هدية مجانية" },
+  other: { en: "Offer", ar: "عرض" },
 };
 const type = TYPE_MAP[deal.deal_type] ?? TYPE_MAP.other;
+const showPct = typeof deal.discount_value === "number" && deal.discount_value > 0;
 
-const showPct =
-  (deal.deal_type === "discount_pct" || deal.deal_type === "coupon") &&
-  typeof deal.discount_value === "number";
-
-// Initial expiry badge text (recomputed client-side in Qatar time on load — see index.astro).
+// Initial expiry badge (recomputed client-side in Qatar time on load).
 let expEn: string, expAr: string, expUrgent = false;
-if (daysLeft === null) {
-  expEn = "Ongoing"; expAr = "مستمر";
-} else if (daysLeft <= 0) {
-  expEn = "Ends today"; expAr = "ينتهي اليوم"; expUrgent = true;
-} else if (daysLeft === 1) {
-  expEn = "1 day left"; expAr = "متبقٍّ يوم واحد"; expUrgent = true;
-} else {
-  expEn = `${daysLeft} days left`; expAr = `متبقّي ${daysLeft} يوم`; expUrgent = daysLeft <= 3;
-}
+if (daysLeft === null) { expEn = "Ongoing"; expAr = "مستمر"; }
+else if (daysLeft <= 0) { expEn = "Ends today"; expAr = "ينتهي اليوم"; expUrgent = true; }
+else if (daysLeft === 1) { expEn = "1 day left"; expAr = "متبقٍّ يوم واحد"; expUrgent = true; }
+else { expEn = `${daysLeft} days left`; expAr = `متبقّي ${daysLeft} يوم`; expUrgent = daysLeft <= 3; }
 
+const sourceLabel = String(deal.source ?? "").replace(/^./, (c) => c.toUpperCase());
 const searchBlob = [nameEn, nameAr, titleEn, titleAr, r.cuisine, r.area, deal.code]
-  .filter(Boolean)
-  .join(" ")
-  .toLowerCase();
+  .filter(Boolean).join(" ").toLowerCase();
+const delay = Math.min(index, 12) * 35;
 ---
 
 <article
-  class="deal-card relative flex flex-col rounded-2xl bg-white border border-black/5 shadow-sm overflow-hidden"
+  class="deal-card reveal flex flex-col rounded-xl bg-bone border border-line overflow-hidden"
+  style={`animation-delay:${delay}ms`}
   data-card
   data-valid-to={deal.valid_to ?? ""}
   data-cuisine={r.cuisine ?? ""}
   data-area={r.area ?? ""}
   data-type={deal.deal_type ?? "other"}
+  data-channel={channel}
+  data-price={price ?? ""}
   data-search={searchBlob}
 >
-  <div class="p-5 flex flex-col gap-3 flex-1">
-    <!-- top row: type + expiry -->
+  <div class="p-5 flex flex-col gap-2.5 flex-1">
     <div class="flex items-center justify-between gap-2">
-      <span class={`i18n inline-flex items-center rounded-full px-2.5 py-1 text-xs font-bold ${type.cls}`}
-        data-en={type.en} data-ar={type.ar}>{type.en}</span>
-      <span
-        class={`exp-badge i18n text-xs font-semibold ${expUrgent ? "text-red-600" : "text-stone-400"}`}
+      <span class="eyebrow text-gold-deep i18n" data-en={type.en} data-ar={type.ar}>{type.en}</span>
+      <span class={`exp-badge text-xs font-semibold i18n ${expUrgent ? "text-red-700" : "text-ink-soft/80"}`}
         data-en={expEn} data-ar={expAr}>{expEn}</span>
     </div>
 
-    <!-- restaurant -->
-    <div class="flex items-baseline gap-2 flex-wrap">
-      <h3 class="i18n font-extrabold text-brand-700 text-lg leading-tight" data-en={nameEn} data-ar={nameAr}>{nameEn}</h3>
-    </div>
-    <div class="flex flex-wrap gap-1.5 -mt-1">
-      {r.cuisine && <span class="inline-flex rounded-md bg-stone-100 px-2 py-0.5 text-xs text-stone-600">{r.cuisine}</span>}
-      {r.area && <span class="inline-flex rounded-md bg-stone-100 px-2 py-0.5 text-xs text-stone-600">📍 {r.area}</span>}
-    </div>
+    <h3 class="font-display text-xl leading-tight text-maroon i18n" data-en={nameEn} data-ar={nameAr}>{nameEn}</h3>
 
-    <!-- offer -->
-    <div class="flex items-start gap-3 mt-1">
-      {showPct && (
-        <div class="shrink-0 flex flex-col items-center justify-center rounded-xl bg-brand-600 text-white w-14 h-14">
-          <span class="text-lg font-extrabold leading-none">{deal.discount_value}%</span>
-          <span class="i18n text-[10px] font-semibold opacity-90" data-en="OFF" data-ar="خصم">OFF</span>
+    {(r.cuisine || r.area || channel !== "dine_in") && (
+      <p class="text-xs text-ink-soft -mt-0.5 flex flex-wrap items-center gap-x-1.5">
+        {r.cuisine && <span>{r.cuisine}</span>}
+        {r.cuisine && r.area && <span class="text-gold-soft">·</span>}
+        {r.area && <span>{r.area}</span>}
+        {channel === "delivery" && <span class="text-gold-soft">·</span>}
+        {channel === "delivery" && <span class="i18n" data-en="Delivery" data-ar="توصيل">Delivery</span>}
+      </p>
+    )}
+
+    <div class="flex items-start gap-3.5 mt-1">
+      {showPct ? (
+        <div class="shrink-0 w-14 h-14 rounded-full border-2 border-maroon/80 flex flex-col items-center justify-center text-maroon">
+          <span class="font-display text-lg font-semibold leading-none">{deal.discount_value}%</span>
+          <span class="text-[9px] tracking-[0.15em] font-semibold i18n" data-en="OFF" data-ar="خصم">OFF</span>
         </div>
-      )}
-      <div class="flex-1">
-        <p class="i18n font-semibold text-stone-900 leading-snug" data-en={titleEn} data-ar={titleAr}>{titleEn}</p>
+      ) : price ? (
+        <div class="shrink-0 text-maroon leading-none pt-0.5">
+          <span class="eyebrow text-gold-deep block mb-0.5 i18n" data-en="from" data-ar="من">from</span>
+          <span class="font-display text-2xl font-semibold">QR {price}</span>
+        </div>
+      ) : null}
+
+      <div class="flex-1 min-w-0">
+        <p class="font-medium text-ink leading-snug i18n" data-en={titleEn} data-ar={titleAr}>{titleEn}</p>
         {(descEn || descAr) && (
-          <p class="i18n text-sm text-stone-500 mt-1 leading-snug" data-en={descEn} data-ar={descAr}>{descEn}</p>
+          <p class="text-sm text-ink-soft mt-1 leading-snug i18n" data-en={descEn} data-ar={descAr}>{descEn}</p>
         )}
       </div>
     </div>
 
-    <!-- code -->
     {deal.code && (
       <div class="mt-1 flex items-center gap-2">
-        <span class="i18n text-xs text-stone-500" data-en="Code:" data-ar="الرمز:">Code:</span>
-        <code class="rounded-md border border-dashed border-brand-400 bg-brand-50 px-2 py-0.5 text-sm font-bold text-brand-700 tracking-wider">{deal.code}</code>
+        <span class="eyebrow text-ink-soft i18n" data-en="Code" data-ar="الرمز">Code</span>
+        <code class="rounded border border-dashed border-gold/70 bg-gold-50 px-2 py-0.5 text-sm font-bold text-maroon tracking-widest">{deal.code}</code>
       </div>
     )}
   </div>
 
-  <!-- footer -->
-  {(sourceUrl || igUrl) && (
-    <div class="px-5 py-3 border-t border-black/5 bg-stone-50/60 flex items-center justify-between">
-      {igUrl ? (
-        <a href={igUrl} target="_blank" rel="noopener noreferrer"
-           class="text-xs text-stone-500 hover:text-brand-600 transition">@{rawHandle}</a>
-      ) : <span></span>}
-      {sourceUrl && (
-        <a href={sourceUrl} target="_blank" rel="noopener noreferrer"
-           class="i18n text-xs font-semibold text-brand-600 hover:underline" data-en="View offer →" data-ar="عرض التفاصيل ←">View offer →</a>
-      )}
-    </div>
-  )}
+  <div class="px-5 py-2.5 border-t border-line bg-cream/40 flex items-center justify-between gap-2">
+    {igUrl ? (
+      <a href={igUrl} target="_blank" rel="noopener noreferrer" class="text-xs text-ink-soft hover:text-maroon transition-colors">@{rawHandle}</a>
+    ) : (
+      <span class="text-[11px] text-ink-soft/70 i18n" data-en={`via ${sourceLabel}`} data-ar={`عبر ${sourceLabel}`}>via {sourceLabel}</span>
+    )}
+    {sourceUrl && (
+      <a href={sourceUrl} target="_blank" rel="noopener noreferrer"
+         class="i18n text-xs font-semibold text-gold-deep hover:text-maroon transition-colors whitespace-nowrap"
+         data-en="View offer →" data-ar="عرض التفاصيل ←">View offer →</a>
+    )}
+  </div>
 </article>

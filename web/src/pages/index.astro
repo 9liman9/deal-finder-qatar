@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import DealCard from "../components/DealCard.astro";
-// Synced from repo-root data/deals.json by scripts/sync-data.mjs (predev/prebuild).
+import FeaturedCarousel from "../components/FeaturedCarousel.astro";
 import data from "../data/deals.json";
 
 const MS_PER_DAY = 86_400_000;
@@ -16,160 +16,163 @@ function daysLeft(validTo: string | null): number | null {
 }
 
 const deals = (data.deals ?? []).map((deal: any) => ({ deal, dl: daysLeft(deal.valid_to) }));
-const filters = data.filters ?? { cuisines: [], areas: [], deal_types: [] };
+const filters = data.filters ?? { cuisines: [], areas: [], deal_types: [], channels: [] };
+const count = deals.length;
 
 const TYPE_LABELS: Record<string, { en: string; ar: string }> = {
-  discount_pct: { en: "Discount", ar: "خصم" },
-  bogo: { en: "Buy 1 Get 1", ar: "واحد + واحد" },
-  set_menu: { en: "Set Menu", ar: "وجبة محددة" },
-  coupon: { en: "Coupon", ar: "كوبون" },
-  free_item: { en: "Freebie", ar: "هدية مجانية" },
-  other: { en: "Offer", ar: "عرض" },
+  discount_pct: { en: "Discount", ar: "خصم" }, bogo: { en: "Buy 1 Get 1", ar: "واحد + واحد" },
+  set_menu: { en: "Set Menu", ar: "وجبة محددة" }, coupon: { en: "Coupon", ar: "كوبون" },
+  free_item: { en: "Freebie", ar: "هدية مجانية" }, other: { en: "Offer", ar: "عرض" },
 };
-
-// Arabic labels for filter options (value stays the English key so filtering is stable).
+const CHANNEL_LABELS: Record<string, { en: string; ar: string }> = {
+  dine_in: { en: "Dine-in", ar: "في المطعم" }, delivery: { en: "Delivery", ar: "توصيل" }, both: { en: "Dine-in & Delivery", ar: "في المطعم وتوصيل" },
+};
 const CUISINE_AR: Record<string, string> = {
-  Lebanese: "لبناني", Indian: "هندي", Japanese: "ياباني", Italian: "إيطالي",
-  Cafe: "مقهى", Burgers: "برجر", Seafood: "مأكولات بحرية", Healthy: "صحي",
-  "Fast Casual": "وجبات سريعة",
+  Lebanese: "لبناني", Indian: "هندي", Japanese: "ياباني", Italian: "إيطالي", Cafe: "مقهى",
+  Burgers: "برجر", Seafood: "مأكولات بحرية", Healthy: "صحي", Persian: "فارسي", Chinese: "صيني",
+  Thai: "تايلندي", Turkish: "تركي", Mexican: "مكسيكي", Steakhouse: "ستيك", Chicken: "دجاج",
+  International: "عالمي", "Fast Casual": "وجبات سريعة",
 };
 const AREA_AR: Record<string, string> = {
-  "The Pearl": "اللؤلؤة", "Souq Waqif": "سوق واقف", "West Bay": "الخليج الغربي",
-  Lusail: "لوسيل", Msheireb: "مشيرب", Aspire: "أسباير", Katara: "كتارا",
-  "Al Sadd": "السد", Corniche: "الكورنيش", "Education City": "المدينة التعليمية",
+  "The Pearl": "اللؤلؤة", "Souq Waqif": "سوق واقف", "West Bay": "الخليج الغربي", Lusail: "لوسيل",
+  Msheireb: "مشيرب", Aspire: "أسباير", Katara: "كتارا", "Al Sadd": "السد", Corniche: "الكورنيش",
+  "Education City": "المدينة التعليمية", Doha: "الدوحة", "Al Wakra": "الوكرة",
 };
+const PRICE_BANDS = [
+  { v: "0-50", en: "Under QR 50", ar: "أقل من 50 ر.ق" },
+  { v: "50-100", en: "QR 50–100", ar: "50–100 ر.ق" },
+  { v: "100-200", en: "QR 100–200", ar: "100–200 ر.ق" },
+  { v: "200-", en: "QR 200+", ar: "200+ ر.ق" },
+];
 
-// Deals are aggregated from public Qatar listings (factqatar, etc.) — real but
-// third-party sourced, so we show a "confirm with the restaurant" disclaimer.
-const showSourceNote = true;
+// Featured = biggest discounts + notable prices + expiring soon, one per restaurant.
+const featured = (() => {
+  const seen = new Set<string>();
+  return [...deals]
+    .map((x: any) => ({
+      x,
+      score: (x.deal.discount_value || 0) * 4 + Math.min((x.deal.price || 0) / 40, 6) + (x.dl !== null && x.dl <= 3 ? 6 : 0),
+    }))
+    .sort((a, b) => b.score - a.score)
+    .filter(({ x }) => {
+      const k = x.deal.restaurant?.slug || String(x.deal.id);
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    })
+    .slice(0, 8)
+    .map(({ x }) => x);
+})();
 
-const selectCls =
-  "rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400";
-
-// Schema.org structured data so Google can surface the deals as rich results.
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.href;
 const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "Qatar Restaurant Deals",
-  numberOfItems: deals.length,
+  "@context": "https://schema.org", "@type": "ItemList", name: "Qatar Restaurant Deals", numberOfItems: count,
   itemListElement: deals.slice(0, 40).map(({ deal }: any, i: number) => ({
-    "@type": "ListItem",
-    position: i + 1,
+    "@type": "ListItem", position: i + 1,
     item: {
-      "@type": "Offer",
-      name: deal.title?.en,
-      url: deal.source_url || canonical,
-      category: deal.deal_type,
+      "@type": "Offer", name: deal.title?.en, url: deal.source_url || canonical, category: deal.deal_type,
       ...(deal.valid_to ? { validThrough: deal.valid_to } : {}),
-      seller: {
-        "@type": "Restaurant",
-        name: deal.restaurant?.name?.en,
-        ...(deal.restaurant?.area
-          ? { address: { "@type": "PostalAddress", addressLocality: deal.restaurant.area, addressCountry: "QA" } }
-          : {}),
-      },
+      ...(typeof deal.price === "number" ? { price: Math.round(deal.price), priceCurrency: "QAR" } : {}),
+      seller: { "@type": "Restaurant", name: deal.restaurant?.name?.en,
+        ...(deal.restaurant?.area ? { address: { "@type": "PostalAddress", addressLocality: deal.restaurant.area, addressCountry: "QA" } } : {}) },
     },
   })),
 };
+
+const ctrl = "rounded-full border border-line bg-bone px-4 py-2 text-sm text-ink hover:border-gold-soft focus:outline-none focus:ring-2 focus:ring-gold/50 transition-colors";
 ---
 
 <Layout>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
   <!-- Hero -->
-  <section class="mb-5">
-    <h1 class="i18n text-2xl sm:text-3xl font-extrabold text-brand-700"
-      data-en="Find the best restaurant deals in Qatar"
-      data-ar="اعثر على أفضل عروض المطاعم في قطر">Find the best restaurant deals in Qatar</h1>
-    <p class="i18n text-stone-500 mt-1"
-      data-en="Live offers across Doha — free, open-source, and updated automatically."
-      data-ar="عروض مباشرة في الدوحة — مجانية ومفتوحة المصدر وتُحدّث تلقائياً.">Live offers across Doha — free, open-source, and updated automatically.</p>
+  <section class="pt-8 sm:pt-10 pb-7">
+    <p class="eyebrow text-gold-deep flex items-center gap-2.5">
+      <span class="gold-rule"></span>
+      <span class="i18n" data-en="Doha · Dining offers" data-ar="الدوحة · عروض المطاعم">Doha · Dining offers</span>
+    </p>
+    <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.75rem] font-semibold text-maroon leading-[1.04] mt-3.5 max-w-3xl i18n"
+      data-en="The finest tables in Doha, at their best prices."
+      data-ar="أرقى الموائد في الدوحة، بأفضل الأسعار.">The finest tables in Doha, at their best prices.</h1>
+    <p class="mt-4 text-ink-soft text-base sm:text-lg max-w-xl i18n"
+      data-en={`${count} live offers across Qatar — gathered from public listings, refreshed every day.`}
+      data-ar={`${count} عرض حي في قطر — مُجمّعة من القوائم العامة، وتُحدَّث يومياً.`}>{count} live offers across Qatar — gathered from public listings, refreshed every day.</p>
   </section>
 
-  {showSourceNote && (
-    <div class="mb-5 rounded-xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-800 flex items-start gap-2">
-      <span aria-hidden="true">ℹ️</span>
-      <span class="i18n"
-        data-en="Deals are aggregated from public Qatar listings and may change — please confirm with the restaurant before visiting."
-        data-ar="تُجمع العروض من قوائم قطرية عامة وقد تتغيّر — يُرجى التأكد من المطعم قبل الزيارة.">Deals are aggregated from public Qatar listings and may change — please confirm with the restaurant before visiting.</span>
-    </div>
-  )}
+  {featured.length > 0 && <FeaturedCarousel items={featured} />}
+
+  <!-- Source note -->
+  <p class="flex items-start gap-2 text-xs text-ink-soft/80 mb-5 max-w-2xl">
+    <span class="text-gold-deep" aria-hidden="true">✦</span>
+    <span class="i18n" data-en="Deals are gathered from public Qatar listings and may change — please confirm with the restaurant before visiting."
+      data-ar="تُجمع العروض من قوائم قطرية عامة وقد تتغيّر — يُرجى التأكد من المطعم قبل الزيارة.">Deals are gathered from public Qatar listings and may change — please confirm with the restaurant before visiting.</span>
+  </p>
 
   <!-- Filter bar -->
-  <section class="mb-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+  <section class="mb-5 flex flex-wrap items-center gap-2.5">
     <input id="f-search" type="search"
-      class="sm:col-span-2 lg:col-span-1 rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
-      data-en-ph="Search deals or restaurants…" data-ar-ph="ابحث عن العروض أو المطاعم…"
+      class="grow min-w-[12rem] rounded-full border border-line bg-bone px-4 py-2 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-gold/50"
+      data-en-ph="Search restaurants or dishes…" data-ar-ph="ابحث عن المطاعم أو الأطباق…"
       data-en-aria="Search deals or restaurants" data-ar-aria="ابحث عن العروض أو المطاعم"
-      aria-label="Search deals or restaurants"
-      placeholder="Search deals or restaurants…" />
+      aria-label="Search deals or restaurants" placeholder="Search restaurants or dishes…" />
 
     {filters.cuisines.length > 0 && (
-      <select id="f-cuisine" class={selectCls}
-        data-en-aria="Filter by cuisine" data-ar-aria="تصفية حسب المطبخ" aria-label="Filter by cuisine">
+      <select id="f-cuisine" class={ctrl} data-en-aria="Filter by cuisine" data-ar-aria="تصفية حسب المطبخ" aria-label="Filter by cuisine">
         <option value="" class="i18n" data-en="All cuisines" data-ar="كل المطابخ">All cuisines</option>
-        {filters.cuisines.map((c: string) => (
-          <option value={c} class="i18n" data-en={c} data-ar={CUISINE_AR[c] ?? c}>{c}</option>
-        ))}
+        {filters.cuisines.map((c: string) => <option value={c} class="i18n" data-en={c} data-ar={CUISINE_AR[c] ?? c}>{c}</option>)}
       </select>
     )}
-
     {filters.areas.length > 0 && (
-      <select id="f-area" class={selectCls}
-        data-en-aria="Filter by area" data-ar-aria="تصفية حسب المنطقة" aria-label="Filter by area">
+      <select id="f-area" class={ctrl} data-en-aria="Filter by area" data-ar-aria="تصفية حسب المنطقة" aria-label="Filter by area">
         <option value="" class="i18n" data-en="All areas" data-ar="كل المناطق">All areas</option>
-        {filters.areas.map((a: string) => (
-          <option value={a} class="i18n" data-en={a} data-ar={AREA_AR[a] ?? a}>{a}</option>
-        ))}
+        {filters.areas.map((a: string) => <option value={a} class="i18n" data-en={a} data-ar={AREA_AR[a] ?? a}>{a}</option>)}
       </select>
     )}
-
+    <select id="f-price" class={ctrl} data-en-aria="Filter by price" data-ar-aria="تصفية حسب السعر" aria-label="Filter by price">
+      <option value="" class="i18n" data-en="Any price" data-ar="أي سعر">Any price</option>
+      {PRICE_BANDS.map((p) => <option value={p.v} class="i18n" data-en={p.en} data-ar={p.ar}>{p.en}</option>)}
+    </select>
     {filters.deal_types.length > 0 && (
-      <select id="f-type" class={selectCls}
-        data-en-aria="Filter by deal type" data-ar-aria="تصفية حسب نوع العرض" aria-label="Filter by deal type">
+      <select id="f-type" class={ctrl} data-en-aria="Filter by deal type" data-ar-aria="تصفية حسب نوع العرض" aria-label="Filter by deal type">
         <option value="" class="i18n" data-en="All types" data-ar="كل الأنواع">All types</option>
-        {filters.deal_types.map((t: string) => (
-          <option value={t} class="i18n" data-en={(TYPE_LABELS[t] ?? TYPE_LABELS.other).en} data-ar={(TYPE_LABELS[t] ?? TYPE_LABELS.other).ar}>{(TYPE_LABELS[t] ?? TYPE_LABELS.other).en}</option>
-        ))}
+        {filters.deal_types.map((t: string) => <option value={t} class="i18n" data-en={(TYPE_LABELS[t] ?? TYPE_LABELS.other).en} data-ar={(TYPE_LABELS[t] ?? TYPE_LABELS.other).ar}>{(TYPE_LABELS[t] ?? TYPE_LABELS.other).en}</option>)}
+      </select>
+    )}
+    {filters.channels.length > 1 && (
+      <select id="f-channel" class={ctrl} data-en-aria="Filter by dine-in or delivery" data-ar-aria="تصفية حسب المكان أو التوصيل" aria-label="Filter by dine-in or delivery">
+        <option value="" class="i18n" data-en="Anywhere" data-ar="في أي مكان">Anywhere</option>
+        {filters.channels.map((c: string) => <option value={c} class="i18n" data-en={(CHANNEL_LABELS[c] ?? CHANNEL_LABELS.dine_in).en} data-ar={(CHANNEL_LABELS[c] ?? CHANNEL_LABELS.dine_in).ar}>{(CHANNEL_LABELS[c] ?? CHANNEL_LABELS.dine_in).en}</option>)}
       </select>
     )}
   </section>
 
-  <!-- Result count + reset -->
-  <div class="mb-4 flex items-center justify-between text-sm">
-    <span class="text-stone-500" aria-live="polite">
-      <span id="result-count" class="font-bold text-brand-700">{deals.length}</span>
-      <span class="i18n" data-en="deals" data-ar="عرض">deals</span>
+  <div class="mb-5 flex items-center justify-between text-sm">
+    <span class="text-ink-soft" aria-live="polite">
+      <span id="result-count" class="font-display text-lg font-semibold text-maroon">{count}</span>
+      <span class="i18n ms-1" data-en="offers" data-ar="عرض">offers</span>
     </span>
-    <button id="f-reset" type="button" class="i18n text-stone-500 hover:text-brand-600 transition"
-      data-en="Reset filters" data-ar="إعادة تعيين">Reset filters</button>
+    <button id="f-reset" type="button" class="i18n text-ink-soft hover:text-maroon transition-colors"
+      data-en="Reset" data-ar="إعادة تعيين">Reset</button>
   </div>
 
-  <!-- Grid -->
   <section id="deal-grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    {deals.map(({ deal, dl }: any) => <DealCard deal={deal} daysLeft={dl} />)}
+    {deals.map(({ deal, dl }: any, i: number) => <DealCard deal={deal} daysLeft={dl} index={i} />)}
   </section>
 
-  <!-- Empty state -->
-  <div id="empty-state" class="is-hidden text-center py-16 text-stone-400">
-    <p class="text-4xl mb-2" aria-hidden="true">🔍</p>
-    <p class="i18n" data-en="No deals match your filters." data-ar="لا توجد عروض مطابقة.">No deals match your filters.</p>
+  <div id="empty-state" class="is-hidden text-center py-16 text-ink-soft">
+    <p class="font-display text-3xl text-gold-soft mb-2">—</p>
+    <p class="i18n" data-en="No offers match your filters." data-ar="لا توجد عروض مطابقة.">No offers match your filters.</p>
   </div>
 
-  <!-- Client-side: defensive Qatar-time expiry + live "days left" + filtering -->
+  <!-- Client-side: Qatar-time expiry + live day-counter + filtering -->
   <script is:inline>
     (function () {
-      const search = document.getElementById("f-search");
-      const cuisine = document.getElementById("f-cuisine");
-      const area = document.getElementById("f-area");
-      const type = document.getElementById("f-type");
-      const reset = document.getElementById("f-reset");
-      const count = document.getElementById("result-count");
-      const empty = document.getElementById("empty-state");
+      const $ = (id) => document.getElementById(id);
+      const search = $("f-search"), cuisine = $("f-cuisine"), area = $("f-area"),
+        price = $("f-price"), type = $("f-type"), channel = $("f-channel"),
+        reset = $("f-reset"), count = $("result-count"), empty = $("empty-state");
       const cards = Array.from(document.querySelectorAll("[data-card]"));
 
-      // "Today" anchored to Qatar (UTC+3), independent of the viewer's timezone.
       function qatarTodayUTC() {
         const d = new Date(Date.now() + 3 * 3600 * 1000);
         return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
@@ -181,11 +184,9 @@ const jsonLd = {
       const todayQ = qatarTodayUTC();
       const lang = document.documentElement.lang === "ar" ? "ar" : "en";
 
-      // Recompute expiry + the day-counter badge in the browser, so the live site
-      // never shows a deal that has expired since the last build (no cron needed).
       cards.forEach((card) => {
         const vt = dateToUTC(card.dataset.validTo);
-        if (vt === null) return; // ongoing
+        if (vt === null) return;
         const days = Math.round((vt - todayQ) / 86400000);
         if (days < 0) card.dataset.expired = "1";
         const badge = card.querySelector(".exp-badge");
@@ -197,15 +198,25 @@ const jsonLd = {
         badge.setAttribute("data-en", en);
         badge.setAttribute("data-ar", ar);
         badge.textContent = lang === "ar" ? ar : en;
-        badge.classList.toggle("text-red-600", urgent);
-        badge.classList.toggle("text-stone-400", !urgent);
+        badge.classList.toggle("text-red-700", urgent);
+        badge.classList.toggle("text-ink-soft/80", !urgent);
       });
+
+      function inBand(p, band) {
+        if (!band) return true;
+        const n = parseFloat(p);
+        if (isNaN(n)) return false;
+        const parts = band.split("-");
+        const lo = parts[0], hi = parts[1];
+        if (lo && n < +lo) return false;
+        if (hi && n > +hi) return false;
+        return true;
+      }
 
       function apply() {
         const q = (search && search.value || "").trim().toLowerCase();
-        const c = cuisine ? cuisine.value : "";
-        const a = area ? area.value : "";
-        const t = type ? type.value : "";
+        const c = cuisine ? cuisine.value : "", a = area ? area.value : "",
+          pr = price ? price.value : "", t = type ? type.value : "", ch = channel ? channel.value : "";
         let visible = 0;
         cards.forEach((card) => {
           if (card.dataset.expired === "1") { card.classList.add("is-hidden"); return; }
@@ -213,7 +224,9 @@ const jsonLd = {
             (!q || (card.dataset.search || "").includes(q)) &&
             (!c || card.dataset.cuisine === c) &&
             (!a || card.dataset.area === a) &&
-            (!t || card.dataset.type === t);
+            (!t || card.dataset.type === t) &&
+            (!ch || card.dataset.channel === ch) &&
+            inBand(card.dataset.price, pr);
           card.classList.toggle("is-hidden", !ok);
           if (ok) visible++;
         });
@@ -221,20 +234,15 @@ const jsonLd = {
         if (empty) empty.classList.toggle("is-hidden", visible !== 0);
       }
 
-      [search, cuisine, area, type].forEach((el) => {
+      [search, cuisine, area, price, type, channel].forEach((el) => {
         if (!el) return;
         el.addEventListener("input", apply);
         el.addEventListener("change", apply);
       });
-      if (reset) {
-        reset.addEventListener("click", () => {
-          if (search) search.value = "";
-          if (cuisine) cuisine.value = "";
-          if (area) area.value = "";
-          if (type) type.value = "";
-          apply();
-        });
-      }
+      if (reset) reset.addEventListener("click", () => {
+        [search, cuisine, area, price, type, channel].forEach((el) => { if (el) el.value = ""; });
+        apply();
+      });
       apply();
     })();
   </script>

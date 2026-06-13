@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-13T18:02:31+00:00",
-  "count": 183,
+  "generated_at": "2026-06-13T20:35:56+00:00",
+  "count": 182,
   "filters": {
     "cuisines": [
       "Burgers",
@@ -24,6 +24,9 @@
       "free_item",
       "other",
       "set_menu"
+    ],
+    "channels": [
+      "dine_in"
     ]
   },
   "deals": [
@@ -39,6 +42,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -71,6 +76,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -103,6 +110,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 140.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -124,38 +133,6 @@
       }
     },
     {
-      "id": 130,
-      "title": {
-        "en": "Special offer",
-        "ar": null
-      },
-      "description": {
-        "en": null,
-        "ar": null
-      },
-      "deal_type": "other",
-      "discount_value": null,
-      "code": null,
-      "valid_from": null,
-      "valid_to": "2026-07-04",
-      "source": "offernmenu",
-      "source_url": "https://offernmenu.com/offer/pinkberry/",
-      "image_url": null,
-      "restaurant": {
-        "slug": "auto-draft",
-        "name": {
-          "en": "AUTO-DRAFT",
-          "ar": null
-        },
-        "ig_handle": null,
-        "cuisine": null,
-        "area": "Doha",
-        "lat": null,
-        "lng": null,
-        "logo_url": null
-      }
-    },
-    {
       "id": 56,
       "title": {
         "en": "Sips Hour",
@@ -167,6 +144,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 30.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -199,6 +178,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -220,7 +201,7 @@
       }
     },
     {
-      "id": 139,
+      "id": 138,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -231,6 +212,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -252,7 +235,7 @@
       }
     },
     {
-      "id": 183,
+      "id": 182,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -263,6 +246,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 85.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -284,7 +269,7 @@
       }
     },
     {
-      "id": 153,
+      "id": 152,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -295,6 +280,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -316,7 +303,7 @@
       }
     },
     {
-      "id": 149,
+      "id": 148,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -327,6 +314,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -359,6 +348,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -380,7 +371,7 @@
       }
     },
     {
-      "id": 146,
+      "id": 145,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -391,6 +382,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -412,7 +405,7 @@
       }
     },
     {
-      "id": 177,
+      "id": 176,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -423,6 +416,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 195.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -444,7 +439,7 @@
       }
     },
     {
-      "id": 164,
+      "id": 163,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -455,6 +450,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -476,7 +473,7 @@
       }
     },
     {
-      "id": 172,
+      "id": 171,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -487,6 +484,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 98.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -519,6 +518,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 195.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -540,7 +541,7 @@
       }
     },
     {
-      "id": 176,
+      "id": 175,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -551,6 +552,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 75.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -583,6 +586,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -615,6 +620,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 250.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -647,6 +654,8 @@
       },
       "deal_type": "discount_pct",
       "discount_value": 30.0,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -679,6 +688,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -711,6 +722,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 36.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -743,6 +756,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -775,6 +790,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -807,6 +824,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 45.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -839,6 +858,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 60.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -871,6 +892,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -892,7 +915,7 @@
       }
     },
     {
-      "id": 145,
+      "id": 144,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -903,6 +926,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -924,7 +949,7 @@
       }
     },
     {
-      "id": 141,
+      "id": 140,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -935,6 +960,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -967,6 +994,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 165.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -999,6 +1028,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 260.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1020,7 +1051,7 @@
       }
     },
     {
-      "id": 182,
+      "id": 181,
       "title": {
         "en": "Set menu",
         "ar": null
@@ -1031,6 +1062,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1063,6 +1096,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 560.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1095,6 +1130,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 199.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1116,7 +1153,7 @@
       }
     },
     {
-      "id": 131,
+      "id": 130,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -1127,6 +1164,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1148,7 +1187,7 @@
       }
     },
     {
-      "id": 140,
+      "id": 139,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -1159,6 +1198,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1191,6 +1232,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1223,6 +1266,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 79.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1255,6 +1300,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 70.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1287,6 +1334,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 85.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1319,6 +1368,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1351,6 +1402,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 29.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1383,6 +1436,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 25.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1404,7 +1459,7 @@
       }
     },
     {
-      "id": 170,
+      "id": 169,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -1415,6 +1470,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 85.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1436,7 +1493,7 @@
       }
     },
     {
-      "id": 178,
+      "id": 177,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -1447,6 +1504,42 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "marhaba",
+      "source_url": "https://marhaba.qa/business-lunch-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "casa-verde",
+        "name": {
+          "en": "Casa Verde",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 178,
+      "title": {
+        "en": "Upgrade your main course for",
+        "ar": null
+      },
+      "description": {
+        "en": "QAR30",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 30.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1470,38 +1563,6 @@
     {
       "id": 179,
       "title": {
-        "en": "Upgrade your main course for",
-        "ar": null
-      },
-      "description": {
-        "en": "QAR30",
-        "ar": null
-      },
-      "deal_type": "other",
-      "discount_value": null,
-      "code": null,
-      "valid_from": null,
-      "valid_to": "2026-07-04",
-      "source": "marhaba",
-      "source_url": "https://marhaba.qa/business-lunch-deals-in-qatar/",
-      "image_url": null,
-      "restaurant": {
-        "slug": "casa-verde",
-        "name": {
-          "en": "Casa Verde",
-          "ar": null
-        },
-        "ig_handle": null,
-        "cuisine": null,
-        "area": null,
-        "lat": null,
-        "lng": null,
-        "logo_url": null
-      }
-    },
-    {
-      "id": 180,
-      "title": {
         "en": "Set menu",
         "ar": null
       },
@@ -1511,6 +1572,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 125.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1543,6 +1606,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 33.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1575,6 +1640,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1596,7 +1663,7 @@
       }
     },
     {
-      "id": 187,
+      "id": 186,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -1607,6 +1674,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 130.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1639,6 +1708,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 36.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1671,6 +1742,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 105.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1703,6 +1776,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 79.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1735,6 +1810,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 39.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1756,7 +1833,7 @@
       }
     },
     {
-      "id": 171,
+      "id": 170,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -1767,6 +1844,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 79.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1788,7 +1867,7 @@
       }
     },
     {
-      "id": 159,
+      "id": 158,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -1799,6 +1878,42 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 88.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "marhaba",
+      "source_url": "https://marhaba.qa/business-lunch-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "dalchini-restaurant",
+        "name": {
+          "en": "Dalchini Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Indian",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 159,
+      "title": {
+        "en": "10% off",
+        "ar": null
+      },
+      "description": {
+        "en": "QAR88",
+        "ar": null
+      },
+      "deal_type": "discount_pct",
+      "discount_value": 10.0,
+      "price": 88.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1822,38 +1937,6 @@
     {
       "id": 160,
       "title": {
-        "en": "10% off",
-        "ar": null
-      },
-      "description": {
-        "en": "QAR88",
-        "ar": null
-      },
-      "deal_type": "discount_pct",
-      "discount_value": 10.0,
-      "code": null,
-      "valid_from": null,
-      "valid_to": "2026-07-04",
-      "source": "marhaba",
-      "source_url": "https://marhaba.qa/business-lunch-deals-in-qatar/",
-      "image_url": null,
-      "restaurant": {
-        "slug": "dalchini-restaurant",
-        "name": {
-          "en": "Dalchini Restaurant",
-          "ar": null
-        },
-        "ig_handle": null,
-        "cuisine": "Indian",
-        "area": null,
-        "lat": null,
-        "lng": null,
-        "logo_url": null
-      }
-    },
-    {
-      "id": 161,
-      "title": {
         "en": "Six people and above 10% off",
         "ar": null
       },
@@ -1863,6 +1946,8 @@
       },
       "deal_type": "discount_pct",
       "discount_value": 10.0,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1884,7 +1969,7 @@
       }
     },
     {
-      "id": 166,
+      "id": 165,
       "title": {
         "en": "Price: Le Petit Menu:",
         "ar": null
@@ -1895,6 +1980,42 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "marhaba",
+      "source_url": "https://marhaba.qa/business-lunch-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "dejeuner-d-affaires-business-lunch",
+        "name": {
+          "en": "Dejeuner d'Affaires (Business Lunch)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 166,
+      "title": {
+        "en": "Le Petit Menu:",
+        "ar": null
+      },
+      "description": {
+        "en": "QAR150",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1918,38 +2039,6 @@
     {
       "id": 167,
       "title": {
-        "en": "Le Petit Menu:",
-        "ar": null
-      },
-      "description": {
-        "en": "QAR150",
-        "ar": null
-      },
-      "deal_type": "other",
-      "discount_value": null,
-      "code": null,
-      "valid_from": null,
-      "valid_to": "2026-07-04",
-      "source": "marhaba",
-      "source_url": "https://marhaba.qa/business-lunch-deals-in-qatar/",
-      "image_url": null,
-      "restaurant": {
-        "slug": "dejeuner-d-affaires-business-lunch",
-        "name": {
-          "en": "Dejeuner d'Affaires (Business Lunch)",
-          "ar": null
-        },
-        "ig_handle": null,
-        "cuisine": null,
-        "area": null,
-        "lat": null,
-        "lng": null,
-        "logo_url": null
-      }
-    },
-    {
-      "id": 168,
-      "title": {
         "en": "Le Grand Menu:",
         "ar": null
       },
@@ -1959,6 +2048,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 190.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -1991,6 +2082,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 120.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2023,6 +2116,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2055,6 +2150,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2087,6 +2184,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2119,6 +2218,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2140,7 +2241,7 @@
       }
     },
     {
-      "id": 156,
+      "id": 155,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -2151,6 +2252,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2183,6 +2286,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 250.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2204,7 +2309,7 @@
       }
     },
     {
-      "id": 136,
+      "id": 135,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -2215,6 +2320,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2236,7 +2343,7 @@
       }
     },
     {
-      "id": 173,
+      "id": 172,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -2247,6 +2354,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 145.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2279,6 +2388,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 275.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2311,6 +2422,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 34.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2343,6 +2456,8 @@
       },
       "deal_type": "discount_pct",
       "discount_value": 40.0,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2375,6 +2490,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2396,7 +2513,7 @@
       }
     },
     {
-      "id": 165,
+      "id": 164,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -2407,6 +2524,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 60.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2439,6 +2558,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2471,6 +2592,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2492,7 +2615,7 @@
       }
     },
     {
-      "id": 133,
+      "id": 132,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -2503,6 +2626,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2524,7 +2649,7 @@
       }
     },
     {
-      "id": 143,
+      "id": 142,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -2535,6 +2660,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2556,7 +2683,7 @@
       }
     },
     {
-      "id": 142,
+      "id": 141,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -2567,6 +2694,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2599,6 +2728,8 @@
       },
       "deal_type": "discount_pct",
       "discount_value": 50.0,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2631,6 +2762,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 100.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2663,6 +2796,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 100.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2695,6 +2830,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 120.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2727,6 +2864,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2759,6 +2898,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2791,6 +2932,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2823,6 +2966,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 130.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2855,6 +3000,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 32.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2887,6 +3034,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 295.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2908,7 +3057,7 @@
       }
     },
     {
-      "id": 152,
+      "id": 151,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -2919,6 +3068,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2951,6 +3102,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -2983,6 +3136,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 75.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3015,6 +3170,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 74.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3047,6 +3204,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 128.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3068,7 +3227,7 @@
       }
     },
     {
-      "id": 169,
+      "id": 168,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -3079,6 +3238,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 85.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3111,6 +3272,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 59.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3143,6 +3306,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 79.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3175,6 +3340,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 79.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3207,6 +3374,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 135.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3228,7 +3397,7 @@
       }
     },
     {
-      "id": 185,
+      "id": 184,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -3239,6 +3408,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 98.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3260,7 +3431,7 @@
       }
     },
     {
-      "id": 151,
+      "id": 150,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -3271,6 +3442,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3303,6 +3476,8 @@
       },
       "deal_type": "free_item",
       "discount_value": null,
+      "price": 475.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3335,6 +3510,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 280.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3367,6 +3544,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 145.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3399,6 +3578,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 45.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3431,6 +3612,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3463,6 +3646,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 85.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3495,6 +3680,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3527,6 +3714,8 @@
       },
       "deal_type": "discount_pct",
       "discount_value": 40.0,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3548,7 +3737,7 @@
       }
     },
     {
-      "id": 162,
+      "id": 161,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -3559,6 +3748,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 59.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3580,7 +3771,7 @@
       }
     },
     {
-      "id": 181,
+      "id": 180,
       "title": {
         "en": "Set menu",
         "ar": null
@@ -3591,6 +3782,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 120.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3623,6 +3816,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 32.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3644,7 +3839,7 @@
       }
     },
     {
-      "id": 184,
+      "id": 183,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -3655,6 +3850,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 98.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3676,7 +3873,7 @@
       }
     },
     {
-      "id": 137,
+      "id": 136,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -3687,6 +3884,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3719,6 +3918,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3751,6 +3952,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3783,6 +3986,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3804,7 +4009,7 @@
       }
     },
     {
-      "id": 175,
+      "id": 174,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -3815,6 +4020,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3847,6 +4054,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 50.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3879,6 +4088,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 690.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3911,6 +4122,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 350.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3943,6 +4156,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 108.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3964,7 +4179,7 @@
       }
     },
     {
-      "id": 157,
+      "id": 156,
       "title": {
         "en": "Signature 88 Guests can tuck into the Signature 88 Set Lunch from Satu",
         "ar": null
@@ -3975,6 +4190,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 88.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -3996,7 +4213,7 @@
       }
     },
     {
-      "id": 158,
+      "id": 157,
       "title": {
         "en": "Price: Three hour-course menu",
         "ar": null
@@ -4007,6 +4224,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 88.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4039,6 +4258,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 595.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4071,6 +4292,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 32.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4103,6 +4326,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 89.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4135,6 +4360,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4167,6 +4394,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4199,6 +4428,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4231,6 +4462,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4263,6 +4496,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4295,6 +4530,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 195.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4316,7 +4553,7 @@
       }
     },
     {
-      "id": 154,
+      "id": 153,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -4327,6 +4564,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 109.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4348,7 +4587,7 @@
       }
     },
     {
-      "id": 148,
+      "id": 147,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -4359,6 +4598,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4391,6 +4632,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 280.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4423,6 +4666,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4455,6 +4700,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 175.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4476,7 +4723,7 @@
       }
     },
     {
-      "id": 174,
+      "id": 173,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -4487,6 +4734,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4519,6 +4768,8 @@
       },
       "deal_type": "discount_pct",
       "discount_value": 50.0,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4551,6 +4802,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4572,7 +4825,7 @@
       }
     },
     {
-      "id": 132,
+      "id": 131,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -4583,6 +4836,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4615,6 +4870,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 85.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4647,6 +4904,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 88.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4668,7 +4927,7 @@
       }
     },
     {
-      "id": 144,
+      "id": 143,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -4679,6 +4938,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4711,6 +4972,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4743,6 +5006,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 175.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4775,6 +5040,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 35.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4807,6 +5074,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4828,7 +5097,7 @@
       }
     },
     {
-      "id": 147,
+      "id": 146,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -4839,6 +5108,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4871,6 +5142,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4903,6 +5176,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4935,6 +5210,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 37.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4967,6 +5244,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 50.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -4999,6 +5278,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5031,6 +5312,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5063,6 +5346,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5084,7 +5369,7 @@
       }
     },
     {
-      "id": 186,
+      "id": 185,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -5095,6 +5380,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 98.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5127,6 +5414,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5148,7 +5437,7 @@
       }
     },
     {
-      "id": 155,
+      "id": 154,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -5159,6 +5448,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 109.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5180,7 +5471,7 @@
       }
     },
     {
-      "id": 135,
+      "id": 134,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -5191,6 +5482,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5212,7 +5505,7 @@
       }
     },
     {
-      "id": 150,
+      "id": 149,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -5223,6 +5516,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5255,6 +5550,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 69.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5276,7 +5573,7 @@
       }
     },
     {
-      "id": 163,
+      "id": 162,
       "title": {
         "en": "Lunch offer",
         "ar": null
@@ -5287,6 +5584,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 125.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5319,6 +5618,8 @@
       },
       "deal_type": "discount_pct",
       "discount_value": 40.0,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5351,6 +5652,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 33.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5383,6 +5686,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5415,6 +5720,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 350.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5447,6 +5754,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5479,6 +5788,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 98.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5500,7 +5811,7 @@
       }
     },
     {
-      "id": 138,
+      "id": 137,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -5511,6 +5822,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5543,6 +5856,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5575,6 +5890,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 33.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5607,6 +5924,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 130.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5628,7 +5947,7 @@
       }
     },
     {
-      "id": 134,
+      "id": 133,
       "title": {
         "en": "Special offer",
         "ar": null
@@ -5639,6 +5958,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5671,6 +5992,8 @@
       },
       "deal_type": "set_menu",
       "discount_value": null,
+      "price": 145.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5703,6 +6026,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5735,6 +6060,8 @@
       },
       "deal_type": "discount_pct",
       "discount_value": 40.0,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5767,6 +6094,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5799,6 +6128,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5831,6 +6162,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": 10.0,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-04",
@@ -5863,6 +6196,8 @@
       },
       "deal_type": "other",
       "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-31",

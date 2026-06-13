@@ -1,39 +1,149 @@
 @import "tailwindcss";
 
-/* ---- Brand theme (Qatar maroon + warm sand) ---- */
+/* ============================================================
+   Editorial Luxe — a warm Doha dining guide
+   cream + deep maroon + gold · serif display + clean sans
+   ============================================================ */
 @theme {
-  --color-brand-50: #fdf2f4;
-  --color-brand-100: #fbe3e8;
-  --color-brand-200: #f6c6d1;
-  --color-brand-400: #d65f7c;
-  --color-brand-500: #b23355;
-  --color-brand-600: #8a1538;
-  --color-brand-700: #6f1530;
-  --color-brand-900: #45101f;
+  /* warm neutrals (no pure black/white) */
+  --color-cream: #f6efe2;
+  --color-cream-2: #f1e7d6;
+  --color-bone: #fffdf8;
+  --color-ink: #271e18;
+  --color-ink-soft: #6f6155;
+  --color-line: #e7dbc5;
 
-  --color-sand: #faf7f2;
-  --color-ink: #1c1917;
+  /* deep Qatar maroon */
+  --color-maroon-50: #f5e7ea;
+  --color-maroon-100: #ecd2d8;
+  --color-maroon: #7a1330;
+  --color-maroon-700: #66102a;
+  --color-maroon-deep: #4d0c20;
 
-  --font-sans: "Cairo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* gold accent */
+  --color-gold-50: #f7eed8;
+  --color-gold-soft: #d8b878;
+  --color-gold: #b0833a;
+  --color-gold-deep: #8a6328;
+
+  /* legacy aliases (kept so older refs don't break) */
+  --color-brand-600: #7a1330;
+  --color-brand-700: #66102a;
+
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: "Outfit", "Cairo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 html {
   font-family: var(--font-sans);
-  background: var(--color-sand);
+  background: var(--color-cream);
   color: var(--color-ink);
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Hidden helper used by the client-side filter script */
+::selection {
+  background: var(--color-maroon);
+  color: var(--color-gold-50);
+}
+
+/* Arabic: Fraunces has no Arabic glyphs — use Cairo for AR, including headings. */
+[dir="rtl"] {
+  font-family: "Cairo", "Outfit", sans-serif;
+}
+[dir="rtl"] .font-display {
+  font-family: "Cairo", serif;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+/* tighter, more characterful display headings */
+.font-display {
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+}
+
+/* small uppercase label (eyebrows, deal types) */
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* thin gold rule */
+.gold-rule {
+  height: 2px;
+  width: 3.5rem;
+  background: linear-gradient(90deg, var(--color-gold), transparent);
+}
+[dir="rtl"] .gold-rule {
+  background: linear-gradient(270deg, var(--color-gold), transparent);
+}
+
+/* Hidden helper used by the client-side filter/expiry script */
 .is-hidden {
   display: none !important;
 }
 
-/* Subtle card hover lift */
+/* ---- Featured carousel (the "wheel banner") ---- */
+.fc-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0.25rem 0.25rem 0.5rem;
+}
+.fc-track::-webkit-scrollbar {
+  display: none;
+}
+.fc-slide {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  width: clamp(248px, 78vw, 340px);
+}
+
+/* ---- Deal cards: refined, low-shadow, gold on hover ---- */
 .deal-card {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease,
+    box-shadow 0.28s ease;
 }
 .deal-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px -12px rgb(138 21 56 / 0.35);
+  transform: translateY(-4px);
+  border-color: var(--color-gold-soft);
+  box-shadow: 0 20px 44px -28px rgba(77, 12, 32, 0.45);
+}
+
+/* ---- Motion: one orchestrated staggered reveal on load ---- */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.reveal {
+  animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    animation: none;
+  }
+  .fc-track {
+    scroll-behavior: auto;
+  }
+  .deal-card:hover {
+    transform: none;
+  }
 }
