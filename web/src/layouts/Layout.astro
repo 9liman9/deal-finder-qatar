@@ -50,7 +50,7 @@ const {
     <header class="bg-brand-600 text-white shadow-md">
       <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
         <a href={import.meta.env.BASE_URL} class="flex items-center gap-2 group">
-          <span class="text-2xl">🍽️</span>
+          <span class="text-2xl" aria-hidden="true">🍽️</span>
           <span
             class="i18n font-extrabold text-lg sm:text-xl tracking-tight"
             data-en="Qatar Restaurant Deals"
@@ -61,7 +61,9 @@ const {
           id="lang-toggle"
           type="button"
           class="rounded-full bg-white/15 hover:bg-white/25 px-4 py-1.5 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-          aria-label="Switch language"
+          data-en-aria="Switch to Arabic"
+          data-ar-aria="التبديل إلى الإنجليزية"
+          aria-label="Switch to Arabic"
         >
           <span id="lang-toggle-label">العربية</span>
         </button>
@@ -84,7 +86,7 @@ const {
       </div>
     </footer>
 
-    <!-- Language engine: swaps text + placeholders, flips direction, persists choice -->
+    <!-- Language engine: swaps text, placeholders, and aria-labels; flips direction; persists choice -->
     <script is:inline>
       (function () {
         function applyLang(lang) {
@@ -99,6 +101,10 @@ const {
           document.querySelectorAll("[data-en-ph]").forEach((node) => {
             const val = node.getAttribute("data-" + lang + "-ph");
             if (val !== null) node.setAttribute("placeholder", val);
+          });
+          document.querySelectorAll("[data-en-aria]").forEach((node) => {
+            const val = node.getAttribute("data-" + lang + "-aria");
+            if (val !== null) node.setAttribute("aria-label", val);
           });
 
           const label = document.getElementById("lang-toggle-label");

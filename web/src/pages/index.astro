@@ -27,7 +27,22 @@ const TYPE_LABELS: Record<string, { en: string; ar: string }> = {
   other: { en: "Offer", ar: "عرض" },
 };
 
-const usingSampleData = deals.some((d: any) => d.deal.source === "manual");
+// Arabic labels for filter options (value stays the English key so filtering is stable).
+const CUISINE_AR: Record<string, string> = {
+  Lebanese: "لبناني", Indian: "هندي", Japanese: "ياباني", Italian: "إيطالي",
+  Cafe: "مقهى", Burgers: "برجر", Seafood: "مأكولات بحرية", Healthy: "صحي",
+  "Fast Casual": "وجبات سريعة",
+};
+const AREA_AR: Record<string, string> = {
+  "The Pearl": "اللؤلؤة", "Souq Waqif": "سوق واقف", "West Bay": "الخليج الغربي",
+  Lusail: "لوسيل", Msheireb: "مشيرب", Aspire: "أسباير", Katara: "كتارا",
+  "Al Sadd": "السد", Corniche: "الكورنيش", "Education City": "المدينة التعليمية",
+};
+
+// Phase A serves only hand-seeded sample data. Phase B will set this from a real
+// build flag once verified scraped deals exist. (Don't overload deal.source for this.)
+const usingSampleData = true;
+
 const selectCls =
   "rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400";
 ---
@@ -45,7 +60,7 @@ const selectCls =
 
   {usingSampleData && (
     <div class="mb-5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800 flex items-start gap-2">
-      <span>⚠️</span>
+      <span aria-hidden="true">⚠️</span>
       <span class="i18n"
         data-en="Showing sample deals for now. The live Instagram engine will replace these with verified, current offers."
         data-ar="نعرض عروضاً تجريبية حالياً. سيستبدلها محرّك إنستغرام المباشر بعروض حقيقية ومُحدّثة.">Showing sample deals for now. The live Instagram engine will replace these with verified, current offers.</span>
@@ -57,19 +72,28 @@ const selectCls =
     <input id="f-search" type="search"
       class="sm:col-span-2 lg:col-span-1 rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
       data-en-ph="Search deals or restaurants…" data-ar-ph="ابحث عن العروض أو المطاعم…"
+      data-en-aria="Search deals or restaurants" data-ar-aria="ابحث عن العروض أو المطاعم"
+      aria-label="Search deals or restaurants"
       placeholder="Search deals or restaurants…" />
 
-    <select id="f-cuisine" class={selectCls}>
+    <select id="f-cuisine" class={selectCls}
+      data-en-aria="Filter by cuisine" data-ar-aria="تصفية حسب المطبخ" aria-label="Filter by cuisine">
       <option value="" class="i18n" data-en="All cuisines" data-ar="كل المطابخ">All cuisines</option>
-      {filters.cuisines.map((c: string) => <option value={c}>{c}</option>)}
+      {filters.cuisines.map((c: string) => (
+        <option value={c} class="i18n" data-en={c} data-ar={CUISINE_AR[c] ?? c}>{c}</option>
+      ))}
     </select>
 
-    <select id="f-area" class={selectCls}>
+    <select id="f-area" class={selectCls}
+      data-en-aria="Filter by area" data-ar-aria="تصفية حسب المنطقة" aria-label="Filter by area">
       <option value="" class="i18n" data-en="All areas" data-ar="كل المناطق">All areas</option>
-      {filters.areas.map((a: string) => <option value={a}>{a}</option>)}
+      {filters.areas.map((a: string) => (
+        <option value={a} class="i18n" data-en={a} data-ar={AREA_AR[a] ?? a}>{a}</option>
+      ))}
     </select>
 
-    <select id="f-type" class={selectCls}>
+    <select id="f-type" class={selectCls}
+      data-en-aria="Filter by deal type" data-ar-aria="تصفية حسب نوع العرض" aria-label="Filter by deal type">
       <option value="" class="i18n" data-en="All types" data-ar="كل الأنواع">All types</option>
       {filters.deal_types.map((t: string) => (
         <option value={t} class="i18n" data-en={(TYPE_LABELS[t] ?? TYPE_LABELS.other).en} data-ar={(TYPE_LABELS[t] ?? TYPE_LABELS.other).ar}>{(TYPE_LABELS[t] ?? TYPE_LABELS.other).en}</option>
@@ -79,7 +103,7 @@ const selectCls =
 
   <!-- Result count + reset -->
   <div class="mb-4 flex items-center justify-between text-sm">
-    <span class="text-stone-500">
+    <span class="text-stone-500" aria-live="polite">
       <span id="result-count" class="font-bold text-brand-700">{deals.length}</span>
       <span class="i18n" data-en="deals" data-ar="عرض">deals</span>
     </span>
@@ -94,11 +118,11 @@ const selectCls =
 
   <!-- Empty state -->
   <div id="empty-state" class="is-hidden text-center py-16 text-stone-400">
-    <p class="text-4xl mb-2">🔍</p>
+    <p class="text-4xl mb-2" aria-hidden="true">🔍</p>
     <p class="i18n" data-en="No deals match your filters." data-ar="لا توجد عروض مطابقة.">No deals match your filters.</p>
   </div>
 
-  <!-- Client-side filtering -->
+  <!-- Client-side: defensive Qatar-time expiry + live "days left" + filtering -->
   <script is:inline>
     (function () {
       const search = document.getElementById("f-search");
@@ -110,15 +134,46 @@ const selectCls =
       const empty = document.getElementById("empty-state");
       const cards = Array.from(document.querySelectorAll("[data-card]"));
 
+      // "Today" anchored to Qatar (UTC+3), independent of the viewer's timezone.
+      function qatarTodayUTC() {
+        const d = new Date(Date.now() + 3 * 3600 * 1000);
+        return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+      }
+      function dateToUTC(s) {
+        const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || "");
+        return m ? Date.UTC(+m[1], +m[2] - 1, +m[3]) : null;
+      }
+      const todayQ = qatarTodayUTC();
+      const lang = document.documentElement.lang === "ar" ? "ar" : "en";
+
+      // Recompute expiry + the day-counter badge in the browser, so the live site
+      // never shows a deal that has expired since the last build (no cron needed).
+      cards.forEach((card) => {
+        const vt = dateToUTC(card.dataset.validTo);
+        if (vt === null) return; // ongoing
+        const days = Math.round((vt - todayQ) / 86400000);
+        if (days < 0) card.dataset.expired = "1";
+        const badge = card.querySelector(".exp-badge");
+        if (!badge) return;
+        let en, ar, urgent = false;
+        if (days <= 0) { en = "Ends today"; ar = "ينتهي اليوم"; urgent = true; }
+        else if (days === 1) { en = "1 day left"; ar = "متبقٍّ يوم واحد"; urgent = true; }
+        else { en = days + " days left"; ar = "متبقّي " + days + " يوم"; urgent = days <= 3; }
+        badge.setAttribute("data-en", en);
+        badge.setAttribute("data-ar", ar);
+        badge.textContent = lang === "ar" ? ar : en;
+        badge.classList.toggle("text-red-600", urgent);
+        badge.classList.toggle("text-stone-400", !urgent);
+      });
+
       function apply() {
         const q = (search.value || "").trim().toLowerCase();
-        const c = cuisine.value;
-        const a = area.value;
-        const t = type.value;
+        const c = cuisine.value, a = area.value, t = type.value;
         let visible = 0;
         cards.forEach((card) => {
+          if (card.dataset.expired === "1") { card.classList.add("is-hidden"); return; }
           const ok =
-            (!q || card.dataset.search.includes(q)) &&
+            (!q || (card.dataset.search || "").includes(q)) &&
             (!c || card.dataset.cuisine === c) &&
             (!a || card.dataset.area === a) &&
             (!t || card.dataset.type === t);
@@ -136,10 +191,7 @@ const selectCls =
       });
       if (reset) {
         reset.addEventListener("click", () => {
-          search.value = "";
-          cuisine.value = "";
-          area.value = "";
-          type.value = "";
+          search.value = ""; cuisine.value = ""; area.value = ""; type.value = "";
           apply();
         });
       }

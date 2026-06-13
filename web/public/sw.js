@@ -43,6 +43,23 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  // Data files are network-first: never serve a stale (possibly expired) dataset
+  // from cache while online. Stale deals carry legal weight in Qatar.
+  if (url.pathname.endsWith(".json")) {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          if (res && res.status === 200) {
+            const copy = res.clone();
+            caches.open(CACHE_VERSION).then((c) => c.put(req, copy));
+          }
+          return res;
+        })
+        .catch(() => caches.match(req))
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(req).then((cached) => {
       const network = fetch(req)

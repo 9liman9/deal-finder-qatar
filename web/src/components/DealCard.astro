@@ -13,6 +13,22 @@ const titleAr = deal.title?.ar ?? titleEn;
 const descEn = deal.description?.en ?? "";
 const descAr = deal.description?.ar ?? "";
 
+// --- Defense in depth: sanitise URL + handle at the template boundary too ---
+// (db.py already sanitises on insert, but Phase B scraped data must never reach an href unchecked.)
+function safeUrl(u: unknown): string | null {
+  if (typeof u !== "string" || !u) return null;
+  try {
+    const p = new URL(u);
+    return p.protocol === "http:" || p.protocol === "https:" ? u : null;
+  } catch {
+    return null;
+  }
+}
+const sourceUrl = safeUrl(deal.source_url);
+const rawHandle = String(r.ig_handle ?? "").replace(/^@/, "");
+const igOk = /^[A-Za-z0-9._]{1,30}$/.test(rawHandle);
+const igUrl = igOk ? `https://instagram.com/${encodeURIComponent(rawHandle)}` : null;
+
 const TYPE_MAP: Record<string, { en: string; ar: string; cls: string }> = {
   discount_pct: { en: "Discount", ar: "خصم", cls: "bg-brand-100 text-brand-700" },
   bogo: { en: "Buy 1 Get 1", ar: "واحد + واحد", cls: "bg-emerald-100 text-emerald-700" },
@@ -27,23 +43,16 @@ const showPct =
   (deal.deal_type === "discount_pct" || deal.deal_type === "coupon") &&
   typeof deal.discount_value === "number";
 
-// Expiry badge text (baked at build; cron rebuilds keep it fresh)
+// Initial expiry badge text (recomputed client-side in Qatar time on load — see index.astro).
 let expEn: string, expAr: string, expUrgent = false;
 if (daysLeft === null) {
-  expEn = "Ongoing";
-  expAr = "مستمر";
+  expEn = "Ongoing"; expAr = "مستمر";
 } else if (daysLeft <= 0) {
-  expEn = "Ends today";
-  expAr = "ينتهي اليوم";
-  expUrgent = true;
+  expEn = "Ends today"; expAr = "ينتهي اليوم"; expUrgent = true;
 } else if (daysLeft === 1) {
-  expEn = "1 day left";
-  expAr = "متبقٍّ يوم واحد";
-  expUrgent = true;
+  expEn = "1 day left"; expAr = "متبقٍّ يوم واحد"; expUrgent = true;
 } else {
-  expEn = `${daysLeft} days left`;
-  expAr = `متبقّي ${daysLeft} يوم`;
-  expUrgent = daysLeft <= 3;
+  expEn = `${daysLeft} days left`; expAr = `متبقّي ${daysLeft} يوم`; expUrgent = daysLeft <= 3;
 }
 
 const searchBlob = [nameEn, nameAr, titleEn, titleAr, r.cuisine, r.area, deal.code]
@@ -55,6 +64,7 @@ const searchBlob = [nameEn, nameAr, titleEn, titleAr, r.cuisine, r.area, deal.co
 <article
   class="deal-card relative flex flex-col rounded-2xl bg-white border border-black/5 shadow-sm overflow-hidden"
   data-card
+  data-valid-to={deal.valid_to ?? ""}
   data-cuisine={r.cuisine ?? ""}
   data-area={r.area ?? ""}
   data-type={deal.deal_type ?? "other"}
@@ -66,7 +76,7 @@ const searchBlob = [nameEn, nameAr, titleEn, titleAr, r.cuisine, r.area, deal.co
       <span class={`i18n inline-flex items-center rounded-full px-2.5 py-1 text-xs font-bold ${type.cls}`}
         data-en={type.en} data-ar={type.ar}>{type.en}</span>
       <span
-        class={`i18n text-xs font-semibold ${expUrgent ? "text-red-600" : "text-stone-400"}`}
+        class={`exp-badge i18n text-xs font-semibold ${expUrgent ? "text-red-600" : "text-stone-400"}`}
         data-en={expEn} data-ar={expAr}>{expEn}</span>
     </div>
 
@@ -105,14 +115,14 @@ const searchBlob = [nameEn, nameAr, titleEn, titleAr, r.cuisine, r.area, deal.co
   </div>
 
   <!-- footer -->
-  {(deal.source_url || r.ig_handle) && (
+  {(sourceUrl || igUrl) && (
     <div class="px-5 py-3 border-t border-black/5 bg-stone-50/60 flex items-center justify-between">
-      {r.ig_handle ? (
-        <a href={`https://instagram.com/${r.ig_handle}`} target="_blank" rel="noopener"
-           class="text-xs text-stone-500 hover:text-brand-600 transition">@{r.ig_handle}</a>
+      {igUrl ? (
+        <a href={igUrl} target="_blank" rel="noopener noreferrer"
+           class="text-xs text-stone-500 hover:text-brand-600 transition">@{rawHandle}</a>
       ) : <span></span>}
-      {deal.source_url && (
-        <a href={deal.source_url} target="_blank" rel="noopener"
+      {sourceUrl && (
+        <a href={sourceUrl} target="_blank" rel="noopener noreferrer"
            class="i18n text-xs font-semibold text-brand-600 hover:underline" data-en="View offer →" data-ar="عرض التفاصيل ←">View offer →</a>
       )}
     </div>

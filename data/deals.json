@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T14:19:18+00:00",
+  "generated_at": "2026-06-13T15:03:00+00:00",
   "count": 13,
   "filters": {
     "cuisines": [
@@ -62,7 +62,7 @@
         "area": "Al Sadd",
         "lat": 25.279,
         "lng": 51.49,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -94,7 +94,7 @@
         "area": "Msheireb",
         "lat": 25.287,
         "lng": 51.529,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -126,7 +126,7 @@
         "area": "West Bay",
         "lat": 25.321,
         "lng": 51.53,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -158,7 +158,7 @@
         "area": "Souq Waqif",
         "lat": 25.2877,
         "lng": 51.5333,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -190,7 +190,7 @@
         "area": "Corniche",
         "lat": 25.296,
         "lng": 51.536,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -222,7 +222,7 @@
         "area": "Katara",
         "lat": 25.359,
         "lng": 51.526,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -254,7 +254,7 @@
         "area": "The Pearl",
         "lat": 25.369,
         "lng": 51.551,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -286,7 +286,7 @@
         "area": "The Pearl",
         "lat": 25.369,
         "lng": 51.551,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -318,7 +318,7 @@
         "area": "Lusail",
         "lat": 25.43,
         "lng": 51.49,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -350,7 +350,7 @@
         "area": "Aspire",
         "lat": 25.263,
         "lng": 51.447,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -382,7 +382,7 @@
         "area": "Education City",
         "lat": 25.315,
         "lng": 51.435,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -414,7 +414,7 @@
         "area": "Lusail",
         "lat": 25.435,
         "lng": 51.495,
-        "logo_url": ""
+        "logo_url": null
       }
     },
     {
@@ -446,7 +446,7 @@
         "area": "West Bay",
         "lat": 25.321,
         "lng": 51.53,
-        "logo_url": ""
+        "logo_url": null
       }
     }
   ]
