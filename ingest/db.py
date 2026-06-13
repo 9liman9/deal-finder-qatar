@@ -47,6 +47,7 @@ EXPORTS_DIR = DATA_DIR / "exports"
 DB_PATH = DATA_DIR / "deals.db"
 RESTAURANTS_CSV = DATA_DIR / "restaurants.csv"
 SEED_DEALS_JSON = DATA_DIR / "seed_deals.json"
+INSTAGRAM_DEALS_JSON = DATA_DIR / "instagram_deals.json"
 DEALS_JSON = DATA_DIR / "deals.json"
 
 # Qatar has a fixed UTC+3 offset year-round (no DST), so a fixed offset is correct
@@ -332,6 +333,25 @@ def cmd_load_seed(conn: sqlite3.Connection) -> None:
     print(f"[load-seed] inserted {inserted} new deals ({len(deals)} in seed file)")
 
 
+def cmd_load_instagram(conn: sqlite3.Connection) -> None:
+    """Load extract_offers.py output (data/instagram_deals.json) as source='instagram'."""
+    if not INSTAGRAM_DEALS_JSON.exists():
+        print(f"[load-instagram] no {INSTAGRAM_DEALS_JSON} — skipping")
+        return
+    slug_to_id = {row["slug"]: row["id"] for row in conn.execute("SELECT id, slug FROM restaurants")}
+    deals = json.loads(INSTAGRAM_DEALS_JSON.read_text(encoding="utf-8"))
+    inserted = 0
+    for d in deals:
+        slug = d.get("restaurant_slug")
+        if slug not in slug_to_id:
+            print(f"[load-instagram] WARN: unknown restaurant '{slug}', skipping")
+            continue
+        if insert_deal(conn, slug_to_id[slug], d, source="instagram"):
+            inserted += 1
+    conn.commit()
+    print(f"[load-instagram] inserted {inserted} new deals ({len(deals)} candidates)")
+
+
 def cmd_expire(conn: sqlite3.Connection) -> None:
     today = today_qatar()
     cur = conn.execute(
@@ -443,6 +463,7 @@ def main(argv: list[str]) -> int:
     p = argparse.ArgumentParser(description="Qatar Restaurant Deals data layer")
     p.add_argument("--init", action="store_true", help="create the schema")
     p.add_argument("--load-seed", action="store_true", help="load restaurants.csv + seed_deals.json")
+    p.add_argument("--load-instagram", action="store_true", help="load data/instagram_deals.json (source=instagram)")
     p.add_argument("--expire", action="store_true", help="mark deals past valid_to as expired (Qatar time)")
     p.add_argument("--export-json", action="store_true", help="write data/deals.json")
     p.add_argument("--export-csv", action="store_true", help="write data/exports/*.csv")
@@ -460,6 +481,8 @@ def main(argv: list[str]) -> int:
             cmd_init(conn)
         if args.load_seed:
             cmd_load_seed(conn)
+        if args.load_instagram:
+            cmd_load_instagram(conn)
         if args.expire:
             cmd_expire(conn)
         if args.export_json:

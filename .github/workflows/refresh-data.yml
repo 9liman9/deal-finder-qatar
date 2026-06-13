@@ -19,12 +19,25 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    env:
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python ingest/db.py --expire --export-json --export-csv
+      # Phase B: only runs once you've added the IG_ACCESS_TOKEN secret. Until then
+      # this step is skipped and the job just expires/exports existing deals.
+      - name: Fetch + extract Instagram deals
+        if: ${{ env.IG_ACCESS_TOKEN != '' }}
+        run: |
+          pip install -r ingest/requirements.txt
+          python ingest/fetch_instagram.py
+          python ingest/extract_offers.py
+          python ingest/db.py --load-instagram
+      - name: Expire + export
+        run: python ingest/db.py --expire --export-json --export-csv
       - name: Commit data if changed
         run: |
           git config user.name "github-actions[bot]"
