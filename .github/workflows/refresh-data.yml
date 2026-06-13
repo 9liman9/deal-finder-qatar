@@ -27,12 +27,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      # Phase B: only runs once you've added the IG_ACCESS_TOKEN secret. Until then
-      # this step is skipped and the job just expires/exports existing deals.
-      - name: Fetch + extract Instagram deals
+      - name: Install deps
+        run: pip install -r ingest/requirements.txt
+      # Primary source: public Qatar deal-listing sites (no credentials needed).
+      - name: Scrape public Qatar deal sites
+        run: |
+          python ingest/fetch_deal_sites.py
+          python ingest/db.py --load-scraped
+      # Optional: Instagram, only once the IG_ACCESS_TOKEN secret is set.
+      - name: Fetch Instagram deals
         if: ${{ env.IG_ACCESS_TOKEN != '' }}
         run: |
-          pip install -r ingest/requirements.txt
           python ingest/fetch_instagram.py
           python ingest/extract_offers.py
           python ingest/db.py --load-instagram

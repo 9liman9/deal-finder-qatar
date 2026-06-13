@@ -48,6 +48,7 @@ DB_PATH = DATA_DIR / "deals.db"
 RESTAURANTS_CSV = DATA_DIR / "restaurants.csv"
 SEED_DEALS_JSON = DATA_DIR / "seed_deals.json"
 INSTAGRAM_DEALS_JSON = DATA_DIR / "instagram_deals.json"
+SCRAPED_DEALS_JSON = DATA_DIR / "scraped_deals.json"
 DEALS_JSON = DATA_DIR / "deals.json"
 
 # Qatar has a fixed UTC+3 offset year-round (no DST), so a fixed offset is correct
@@ -187,6 +188,11 @@ def _to_float(v):
         return float(v)
     except (TypeError, ValueError):
         return None
+
+
+def slugify(name: str) -> str:
+    s = re.sub(r"[^a-z0-9]+", "-", (name or "").lower()).strip("-")
+    return s or "restaurant"
 
 
 # ---------------------------------------------------------------------------
@@ -352,6 +358,31 @@ def cmd_load_instagram(conn: sqlite3.Connection) -> None:
     print(f"[load-instagram] inserted {inserted} new deals ({len(deals)} candidates)")
 
 
+def cmd_load_scraped(conn: sqlite3.Connection) -> None:
+    """Load fetch_deal_sites.py output (data/scraped_deals.json). Restaurants arrive as
+    names (not slugs/handles), so we auto-create them by slugified name."""
+    if not SCRAPED_DEALS_JSON.exists():
+        print(f"[load-scraped] no {SCRAPED_DEALS_JSON} — skipping")
+        return
+    deals = json.loads(SCRAPED_DEALS_JSON.read_text(encoding="utf-8"))
+    inserted = 0
+    for d in deals:
+        name = (d.get("restaurant_name") or "").strip()
+        if not name:
+            continue
+        rid = upsert_restaurant(conn, {
+            "slug": slugify(name), "name_en": name, "name_ar": None,
+            "ig_handle": None, "cuisine": d.get("cuisine"), "area": d.get("area"),
+            "lat": None, "lng": None, "logo_url": None,
+        })
+        if rid is None:
+            continue
+        if insert_deal(conn, rid, d, source=d.get("source", "scraped")):
+            inserted += 1
+    conn.commit()
+    print(f"[load-scraped] inserted {inserted} new deals ({len(deals)} candidates)")
+
+
 def cmd_expire(conn: sqlite3.Connection) -> None:
     today = today_qatar()
     cur = conn.execute(
@@ -464,6 +495,7 @@ def main(argv: list[str]) -> int:
     p.add_argument("--init", action="store_true", help="create the schema")
     p.add_argument("--load-seed", action="store_true", help="load restaurants.csv + seed_deals.json")
     p.add_argument("--load-instagram", action="store_true", help="load data/instagram_deals.json (source=instagram)")
+    p.add_argument("--load-scraped", action="store_true", help="load data/scraped_deals.json (auto-create restaurants)")
     p.add_argument("--expire", action="store_true", help="mark deals past valid_to as expired (Qatar time)")
     p.add_argument("--export-json", action="store_true", help="write data/deals.json")
     p.add_argument("--export-csv", action="store_true", help="write data/exports/*.csv")
@@ -483,6 +515,8 @@ def main(argv: list[str]) -> int:
             cmd_load_seed(conn)
         if args.load_instagram:
             cmd_load_instagram(conn)
+        if args.load_scraped:
+            cmd_load_scraped(conn)
         if args.expire:
             cmd_expire(conn)
         if args.export_json:

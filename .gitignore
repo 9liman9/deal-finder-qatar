@@ -21,9 +21,10 @@ ingest/.env
 .DS_Store
 Thumbs.db
 
-# Phase B transient pipeline artifacts (regenerated each cron run)
+# Transient ingestion artifacts (regenerated each cron run)
 data/raw_instagram.json
 data/instagram_deals.json
+data/scraped_deals.json
 
 # NOTE: data/deals.db, data/deals.json and data/exports/ ARE committed on purpose —
 # the "git-scraping" pattern stores the SQLite DB + exports in the repo so the

@@ -39,9 +39,9 @@ const AREA_AR: Record<string, string> = {
   "Al Sadd": "السد", Corniche: "الكورنيش", "Education City": "المدينة التعليمية",
 };
 
-// Phase A serves only hand-seeded sample data. Phase B will set this from a real
-// build flag once verified scraped deals exist. (Don't overload deal.source for this.)
-const usingSampleData = true;
+// Deals are aggregated from public Qatar listings (factqatar, etc.) — real but
+// third-party sourced, so we show a "confirm with the restaurant" disclaimer.
+const showSourceNote = true;
 
 const selectCls =
   "rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400";
@@ -58,12 +58,12 @@ const selectCls =
       data-ar="عروض مباشرة في الدوحة — مجانية ومفتوحة المصدر وتُحدّث تلقائياً.">Live offers across Doha — free, open-source, and updated automatically.</p>
   </section>
 
-  {usingSampleData && (
-    <div class="mb-5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800 flex items-start gap-2">
-      <span aria-hidden="true">⚠️</span>
+  {showSourceNote && (
+    <div class="mb-5 rounded-xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-800 flex items-start gap-2">
+      <span aria-hidden="true">ℹ️</span>
       <span class="i18n"
-        data-en="Showing sample deals for now. The live Instagram engine will replace these with verified, current offers."
-        data-ar="نعرض عروضاً تجريبية حالياً. سيستبدلها محرّك إنستغرام المباشر بعروض حقيقية ومُحدّثة.">Showing sample deals for now. The live Instagram engine will replace these with verified, current offers.</span>
+        data-en="Deals are aggregated from public Qatar listings and may change — please confirm with the restaurant before visiting."
+        data-ar="تُجمع العروض من قوائم قطرية عامة وقد تتغيّر — يُرجى التأكد من المطعم قبل الزيارة.">Deals are aggregated from public Qatar listings and may change — please confirm with the restaurant before visiting.</span>
     </div>
   )}
 
@@ -76,29 +76,35 @@ const selectCls =
       aria-label="Search deals or restaurants"
       placeholder="Search deals or restaurants…" />
 
-    <select id="f-cuisine" class={selectCls}
-      data-en-aria="Filter by cuisine" data-ar-aria="تصفية حسب المطبخ" aria-label="Filter by cuisine">
-      <option value="" class="i18n" data-en="All cuisines" data-ar="كل المطابخ">All cuisines</option>
-      {filters.cuisines.map((c: string) => (
-        <option value={c} class="i18n" data-en={c} data-ar={CUISINE_AR[c] ?? c}>{c}</option>
-      ))}
-    </select>
+    {filters.cuisines.length > 0 && (
+      <select id="f-cuisine" class={selectCls}
+        data-en-aria="Filter by cuisine" data-ar-aria="تصفية حسب المطبخ" aria-label="Filter by cuisine">
+        <option value="" class="i18n" data-en="All cuisines" data-ar="كل المطابخ">All cuisines</option>
+        {filters.cuisines.map((c: string) => (
+          <option value={c} class="i18n" data-en={c} data-ar={CUISINE_AR[c] ?? c}>{c}</option>
+        ))}
+      </select>
+    )}
 
-    <select id="f-area" class={selectCls}
-      data-en-aria="Filter by area" data-ar-aria="تصفية حسب المنطقة" aria-label="Filter by area">
-      <option value="" class="i18n" data-en="All areas" data-ar="كل المناطق">All areas</option>
-      {filters.areas.map((a: string) => (
-        <option value={a} class="i18n" data-en={a} data-ar={AREA_AR[a] ?? a}>{a}</option>
-      ))}
-    </select>
+    {filters.areas.length > 0 && (
+      <select id="f-area" class={selectCls}
+        data-en-aria="Filter by area" data-ar-aria="تصفية حسب المنطقة" aria-label="Filter by area">
+        <option value="" class="i18n" data-en="All areas" data-ar="كل المناطق">All areas</option>
+        {filters.areas.map((a: string) => (
+          <option value={a} class="i18n" data-en={a} data-ar={AREA_AR[a] ?? a}>{a}</option>
+        ))}
+      </select>
+    )}
 
-    <select id="f-type" class={selectCls}
-      data-en-aria="Filter by deal type" data-ar-aria="تصفية حسب نوع العرض" aria-label="Filter by deal type">
-      <option value="" class="i18n" data-en="All types" data-ar="كل الأنواع">All types</option>
-      {filters.deal_types.map((t: string) => (
-        <option value={t} class="i18n" data-en={(TYPE_LABELS[t] ?? TYPE_LABELS.other).en} data-ar={(TYPE_LABELS[t] ?? TYPE_LABELS.other).ar}>{(TYPE_LABELS[t] ?? TYPE_LABELS.other).en}</option>
-      ))}
-    </select>
+    {filters.deal_types.length > 0 && (
+      <select id="f-type" class={selectCls}
+        data-en-aria="Filter by deal type" data-ar-aria="تصفية حسب نوع العرض" aria-label="Filter by deal type">
+        <option value="" class="i18n" data-en="All types" data-ar="كل الأنواع">All types</option>
+        {filters.deal_types.map((t: string) => (
+          <option value={t} class="i18n" data-en={(TYPE_LABELS[t] ?? TYPE_LABELS.other).en} data-ar={(TYPE_LABELS[t] ?? TYPE_LABELS.other).ar}>{(TYPE_LABELS[t] ?? TYPE_LABELS.other).en}</option>
+        ))}
+      </select>
+    )}
   </section>
 
   <!-- Result count + reset -->
@@ -167,8 +173,10 @@ const selectCls =
       });
 
       function apply() {
-        const q = (search.value || "").trim().toLowerCase();
-        const c = cuisine.value, a = area.value, t = type.value;
+        const q = (search && search.value || "").trim().toLowerCase();
+        const c = cuisine ? cuisine.value : "";
+        const a = area ? area.value : "";
+        const t = type ? type.value : "";
         let visible = 0;
         cards.forEach((card) => {
           if (card.dataset.expired === "1") { card.classList.add("is-hidden"); return; }
@@ -191,7 +199,10 @@ const selectCls =
       });
       if (reset) {
         reset.addEventListener("click", () => {
-          search.value = ""; cuisine.value = ""; area.value = ""; type.value = "";
+          if (search) search.value = "";
+          if (cuisine) cuisine.value = "";
+          if (area) area.value = "";
+          if (type) type.value = "";
           apply();
         });
       }

@@ -1,15 +1,107 @@
 ﻿id,restaurant_id,title_en,title_ar,deal_type,discount_value,code,valid_from,valid_to,source,source_url,status
-4,3,Lunch set menu — QAR 79,قائمة غداء — 79 ريال,set_menu,,,,,manual,,active
-13,11,15% off all healthy bowls,خصم 15٪ على جميع الأطباق الصحية,discount_pct,15.0,,,,manual,,active
-10,8,25% off the seafood platter,خصم 25٪ على طبق المأكولات البحرية,discount_pct,25.0,,,2026-05-31,manual,,expired
-11,9,Buy one biryani get one free,اشترِ برياني واحصل على آخر مجاناً,bogo,,,,2026-06-20,manual,,active
-7,5,Free karak with any breakfast,كرك مجاني مع أي فطور,free_item,,,,2026-06-25,manual,,active
-5,3,20% off with code SUSHI20,خصم 20٪ مع رمز SUSHI20,coupon,20.0,SUSHI20,,2026-06-28,manual,,active
-3,2,"Buy one biryani, get one free",اشترِ برياني واحصل على آخر مجاناً,bogo,,,,2026-06-30,manual,,active
-12,10,Free dessert with weekend brunch,حلوى مجانية مع برانش نهاية الأسبوع,free_item,,,,2026-07-05,manual,,active
-9,7,Mezze platter for two — QAR 99,طبق مزة لشخصين — 99 ريال,set_menu,,,,2026-07-10,manual,,active
-1,1,20% off all dinner mains,خصم 20٪ على جميع أطباق العشاء,discount_pct,20.0,,,2026-07-15,manual,,active
-2,1,Family Feast set menu — QAR 199,وجبة العائلة — 199 ريال,set_menu,,,,2026-07-20,manual,,active
-6,4,15% off with code PIZZA15,خصم 15٪ مع رمز PIZZA15,coupon,15.0,PIZZA15,,2026-07-31,manual,,active
-8,6,30% off every Tuesday,خصم 30٪ كل يوم ثلاثاء,discount_pct,30.0,,,2026-08-31,manual,,active
-14,12,10% student discount with code STUDENT10,خصم 10٪ للطلاب مع رمز STUDENT10,coupon,10.0,STUDENT10,,2026-09-30,manual,,active
+89,90,Broth and Beats,,other,,,,2026-02-15,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,expired
+9,9,Signature 88 Set Lunch,,set_menu,,,,2026-02-17,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,expired
+13,12,After Work at The Salt Road,,discount_pct,50.0,,,2026-02-17,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,expired
+1,1,Afternoon Tea,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+2,2,Outstanding Breakfast,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+3,2,Go Healthy,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+4,4,Lunch Set Menu,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+5,4,Persian Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+6,4,Unlimited Family Style Set Menu,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+7,7,Midday Escape,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+8,7,After Hours,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+10,9,Yum Seng Hour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+11,11,Hop O' Clock,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+12,12,Lunch Decisions,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+14,14,Chic Mornings,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+15,14,Express Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+16,14,Afternoon Tea,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+17,17,Coastal Business Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+18,18,The High Note,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+19,19,Dine under the Stars,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+20,20,Cakes at Antoinette's,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+21,20,3D and Bespoke Cake,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+22,22,Business Lunch,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+23,23,French Breakfast,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+24,23,Late Breakfast,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+25,23,Express Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+26,23,Award-Winning Afternoon Tea - Voted Doha's Favourite,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+27,27,Express Lunch,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+28,28,Ladies Brekke,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+29,28,Express Menu,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+30,28,Afternoon Par-Tea,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+31,31,Spritz and Cicchetti,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+32,31,Pausa Pranzo - Business Lunch,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+33,31,Limitless Pizza and Pasta,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+34,34,Breakfast,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+35,35,Afternoon Tea,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+36,35,Sweet Combo,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+37,35,Gourmet Combo,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+38,35,Weekend Breakfast,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+39,39,Social Hour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+40,40,Sundowner Evenings,,discount_pct,30.0,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+41,40,Crafted Beverages and Pizza,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+42,42,Winter Afternoon Tea,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+43,43,Timings:,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+44,44,Vibrant Sips Mocktail Class,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+45,44,Business Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+46,44,Express Dinner,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+47,44,Weekend Wakeup,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+48,44,BYOM for a Latte Love,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+49,44,Sips of Winter,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+50,50,Flavour Lab Mixed Beverage Class,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+51,50,Power Hour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+52,50,Farmore Birthday Feast,,discount_pct,40.0,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+53,50,Hookah and Sip,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+54,54,Sundowner Hours,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+55,54,Savour The Flavour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+56,56,Sips Hour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+57,57,Power Hour at Champions,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+58,58,Power Hour at Crossroads Kitchen,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+59,58,Express Business Lunch Buffet,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+60,60,Pranzo Expresso Business Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+61,60,Aroma d'Italia,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+62,62,Churrascaria Dinner,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+63,63,Quickbites Hour,,discount_pct,50.0,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+64,64,Tulum Hour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+65,64,Hookah Bliss,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+66,66,Alice in Wonderland Afternoon Tea,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+67,67,Wonderland Afternoon Tea,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+68,68,Burger Lovers,,discount_pct,50.0,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+69,69,Express Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+70,69,Longest Breakfast in Town,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+71,71,After Work,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+72,71,An Oceanic Four-Hand Omakase Journey,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+73,71,Art of Nigiri,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+74,74,The Tomahawk Experience,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+75,75,Buffet Breakfast,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+76,75,Buffet Lunch,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+77,75,Buffet Dinner,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+78,78,Business Lunch,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+79,78,Steak Diane,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+80,78,Happy Hour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+81,81,Happy Hour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+82,82,Happy Hour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+83,82,Hookah,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+84,85,Hong Shi Banya (Catch of the Day),,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+85,85,Grape & Dine 88,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+86,87,Happy Hour,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+87,87,Taste of Africa,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+88,87,S & S Roast,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+90,90,B-Lunch,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+91,92,Timings:,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+92,93,The Sunset Social,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+93,94,Parisian Breakfast,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+94,94,Business Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+95,96,Business Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+96,96,Saturday Roast,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+97,96,Happy Times,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+98,99,Timings:,,free_item,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+99,100,Afternoon Tea - Les Délices de Ledoux,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+100,101,Business Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+101,101,Happy Hour,,discount_pct,40.0,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+102,103,Afternoon Tea,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+103,104,Happy Hour,,discount_pct,40.0,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+104,105,Breakfast Market,,set_menu,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+105,106,Business Lunch,,other,,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active
+106,106,Happy Hour,,discount_pct,40.0,,,2026-07-04,factqatar,https://factqatar.com/the-best-dining-deals-in-qatar/,active

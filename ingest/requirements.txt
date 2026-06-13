@@ -1,4 +1,5 @@
 # Phase A (db.py) uses only the Python standard library (sqlite3, csv, json).
-# These are needed for Phase B (the autonomous Instagram ingestion engine):
+# Needed for the ingestion engines (Instagram + public deal-site scraping):
 requests>=2.31
 dateparser>=1.2
+beautifulsoup4>=4.12
