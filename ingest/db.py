@@ -216,9 +216,13 @@ def upsert_restaurant(conn: sqlite3.Connection, r: dict) -> int | None:
         INSERT INTO restaurants (slug, name_en, name_ar, ig_handle, cuisine, area, lat, lng, logo_url)
         VALUES (:slug, :name_en, :name_ar, :ig_handle, :cuisine, :area, :lat, :lng, :logo_url)
         ON CONFLICT(slug) DO UPDATE SET
-            name_en=excluded.name_en, name_ar=excluded.name_ar, ig_handle=excluded.ig_handle,
-            cuisine=excluded.cuisine, area=excluded.area, lat=excluded.lat, lng=excluded.lng,
-            logo_url=excluded.logo_url
+            name_en=excluded.name_en, name_ar=excluded.name_ar,
+            ig_handle=COALESCE(excluded.ig_handle, restaurants.ig_handle),
+            cuisine=COALESCE(excluded.cuisine, restaurants.cuisine),
+            area=COALESCE(excluded.area, restaurants.area),
+            lat=COALESCE(excluded.lat, restaurants.lat),
+            lng=COALESCE(excluded.lng, restaurants.lng),
+            logo_url=COALESCE(excluded.logo_url, restaurants.logo_url)
         """,
         {
             "slug": slug,

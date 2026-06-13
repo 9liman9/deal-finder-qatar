@@ -9,6 +9,9 @@ const {
   title = "Qatar Restaurant Deals",
   description = "Live restaurant deals and offers across Qatar — free, open-source, and updated automatically.",
 } = Astro.props;
+
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.href;
+const ogImage = new URL(`${import.meta.env.BASE_URL}icon.svg`, canonical).href;
 ---
 
 <!doctype html>
@@ -23,6 +26,19 @@ const {
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="QA Deals" />
     <link rel="manifest" href={`${import.meta.env.BASE_URL}manifest.webmanifest`} />
+
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Qatar Restaurant Deals" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_QA" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

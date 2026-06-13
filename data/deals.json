@@ -1,8 +1,18 @@
 {
-  "generated_at": "2026-06-13T17:46:48+00:00",
+  "generated_at": "2026-06-13T18:02:31+00:00",
   "count": 183,
   "filters": {
-    "cuisines": [],
+    "cuisines": [
+      "Burgers",
+      "Cafe",
+      "Healthy",
+      "Indian",
+      "International",
+      "Italian",
+      "Lebanese",
+      "Persian",
+      "Steakhouse"
+    ],
     "areas": [
       "Al Sadd",
       "Doha",
@@ -42,7 +52,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Italian",
         "area": "Lusail",
         "lat": null,
         "lng": null,
@@ -74,7 +84,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Italian",
         "area": "Lusail",
         "lat": null,
         "lng": null,
@@ -106,7 +116,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Italian",
         "area": "Lusail",
         "lat": null,
         "lng": null,
@@ -330,7 +340,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": null,
         "lat": null,
         "lng": null,
@@ -394,7 +404,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": null,
         "lat": null,
         "lng": null,
@@ -522,7 +532,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -586,7 +596,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Healthy",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -618,7 +628,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Healthy",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -650,7 +660,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Italian",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -682,7 +692,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Italian",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -810,7 +820,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -842,7 +852,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -874,7 +884,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -1002,7 +1012,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -1130,7 +1140,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -1227,7 +1237,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1259,7 +1269,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1291,7 +1301,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1323,7 +1333,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1355,7 +1365,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1387,7 +1397,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1419,7 +1429,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1579,7 +1589,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1611,7 +1621,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1642,7 +1652,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "International",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -1674,7 +1684,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "International",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -1707,7 +1717,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1739,7 +1749,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1771,7 +1781,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1802,7 +1812,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Indian",
         "area": null,
         "lat": null,
         "lng": null,
@@ -1834,7 +1844,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Indian",
         "area": null,
         "lat": null,
         "lng": null,
@@ -1866,7 +1876,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Indian",
         "area": null,
         "lat": null,
         "lng": null,
@@ -1994,7 +2004,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Healthy",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2026,7 +2036,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Healthy",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2186,7 +2196,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2282,7 +2292,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Burgers",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2314,7 +2324,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Burgers",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2346,7 +2356,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Burgers",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2378,7 +2388,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Burgers",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2506,7 +2516,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": null,
         "lat": null,
         "lng": null,
@@ -2602,7 +2612,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Burgers",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2634,7 +2644,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "International",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2666,7 +2676,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "International",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2698,7 +2708,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "International",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2794,7 +2804,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Steakhouse",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2826,7 +2836,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Steakhouse",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2858,7 +2868,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Steakhouse",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -2922,7 +2932,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": null,
         "lat": null,
         "lng": null,
@@ -2986,7 +2996,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -3018,7 +3028,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -3050,7 +3060,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -3114,7 +3124,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -3146,7 +3156,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -3178,7 +3188,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -3210,7 +3220,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -3338,7 +3348,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "West Bay",
         "lat": null,
         "lng": null,
@@ -3370,7 +3380,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Lusail",
         "lat": null,
         "lng": null,
@@ -3402,7 +3412,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Lusail",
         "lat": null,
         "lng": null,
@@ -3434,7 +3444,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Lusail",
         "lat": null,
         "lng": null,
@@ -3466,7 +3476,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Lusail",
         "lat": null,
         "lng": null,
@@ -3947,7 +3957,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -3979,7 +3989,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -4011,7 +4021,7 @@
         },
         "ig_handle": null,
         "cuisine": null,
-        "area": null,
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -4138,7 +4148,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": null,
         "lat": null,
         "lng": null,
@@ -4170,7 +4180,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "International",
         "area": null,
         "lat": null,
         "lng": null,
@@ -4202,7 +4212,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Italian",
         "area": null,
         "lat": null,
         "lng": null,
@@ -4234,8 +4244,8 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
-        "area": null,
+        "cuisine": "Persian",
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -4266,8 +4276,8 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
-        "area": null,
+        "cuisine": "Persian",
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -4298,8 +4308,8 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
-        "area": null,
+        "cuisine": "Persian",
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -4330,8 +4340,8 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
-        "area": null,
+        "cuisine": "Persian",
+        "area": "Doha",
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -4362,7 +4372,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": null,
         "lat": null,
         "lng": null,
@@ -4394,7 +4404,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "West Bay",
         "lat": null,
         "lng": null,
@@ -4426,7 +4436,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Italian",
         "area": null,
         "lat": null,
         "lng": null,
@@ -4682,7 +4692,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": null,
         "lat": null,
         "lng": null,
@@ -4842,7 +4852,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": null,
         "lat": null,
         "lng": null,
@@ -5066,7 +5076,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": null,
         "lat": null,
         "lng": null,
@@ -5162,7 +5172,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Indian",
         "area": null,
         "lat": null,
         "lng": null,
@@ -5226,7 +5236,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": null,
         "lat": null,
         "lng": null,
@@ -5386,7 +5396,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Lebanese",
         "area": null,
         "lat": null,
         "lng": null,
@@ -5674,7 +5684,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Cafe",
         "area": "Doha",
         "lat": null,
         "lng": null,
@@ -5770,7 +5780,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Italian",
         "area": null,
         "lat": null,
         "lng": null,
@@ -5866,7 +5876,7 @@
           "ar": null
         },
         "ig_handle": null,
-        "cuisine": null,
+        "cuisine": "Indian",
         "area": null,
         "lat": null,
         "lng": null,

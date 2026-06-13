@@ -45,9 +45,38 @@ const showSourceNote = true;
 
 const selectCls =
   "rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400";
+
+// Schema.org structured data so Google can surface the deals as rich results.
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.href;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Qatar Restaurant Deals",
+  numberOfItems: deals.length,
+  itemListElement: deals.slice(0, 40).map(({ deal }: any, i: number) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Offer",
+      name: deal.title?.en,
+      url: deal.source_url || canonical,
+      category: deal.deal_type,
+      ...(deal.valid_to ? { validThrough: deal.valid_to } : {}),
+      seller: {
+        "@type": "Restaurant",
+        name: deal.restaurant?.name?.en,
+        ...(deal.restaurant?.area
+          ? { address: { "@type": "PostalAddress", addressLocality: deal.restaurant.area, addressCountry: "QA" } }
+          : {}),
+      },
+    },
+  })),
+};
 ---
 
 <Layout>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
   <!-- Hero -->
   <section class="mb-5">
     <h1 class="i18n text-2xl sm:text-3xl font-extrabold text-brand-700"

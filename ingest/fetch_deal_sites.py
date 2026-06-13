@@ -63,6 +63,35 @@ def detect_area(text: str) -> str | None:
     return None
 
 
+# Keyword → cuisine (specific first, generic last). Used to restore the cuisine filter.
+CUISINE_KEYWORDS = [
+    ("Italian", ["pizza", "pizzeria", "italian", "pasta", "trattoria", "napoli", "risotto"]),
+    ("Japanese", ["sushi", "japanese", "ramen", "teppanyaki", "izakaya", "sashimi", "nikkei", "robata"]),
+    ("Indian", ["biryani", "indian", "tandoor", "curry", "masala", "dosa", "punjab", "mughlai", "dalchini", "taj rasoi", "rasoi"]),
+    ("Persian", ["persian", "iranian", "parisa", "shiraz", "saffron"]),
+    ("Chinese", ["chinese", "dim sum", "szechuan", "cantonese", "peking", "wok"]),
+    ("Thai", ["thai", "pad thai", "tom yum"]),
+    ("Turkish", ["turkish", "ottoman", "anatolia"]),
+    ("Mexican", ["mexican", "taco", "burrito", "cantina"]),
+    ("Seafood", ["seafood", "oyster", "lobster", "prawn", "fish market"]),
+    ("Steakhouse", ["steakhouse", "steak", "prime cut", "grill house"]),
+    ("Burgers", ["burger", "smash"]),
+    ("Lebanese", ["lebanese", "mezze", "shawarma", "arabic", "levant", "manakish", "zaatar", "kebab", "mandi", "shisha"]),
+    ("Cafe", ["cafe", "coffee", "karak", "bakery", "patisserie", "roastery", "afternoon tea", "high tea"]),
+    ("Healthy", ["healthy", "salad", "poke", "vegan", "organic"]),
+    ("Chicken", ["fried chicken", "broasted", "jollibee"]),
+    ("International", ["buffet", "international", "brunch", "world cuisine"]),
+]
+
+
+def infer_cuisine(text: str) -> str | None:
+    t = (text or "").lower()
+    for cuisine, kws in CUISINE_KEYWORDS:
+        if any(k in t for k in kws):
+            return cuisine
+    return None
+
+
 def classify(text: str, pct: int | None) -> str:
     if pct is not None:
         return "discount_pct"
@@ -284,6 +313,10 @@ def main() -> int:
             all_deals.extend(deals)
         except Exception as e:  # one bad site must not kill the run
             print(f"[scrape] {site['name']}: error {e!r} — skipping")
+
+    # Infer cuisine from the restaurant + offer text so the cuisine filter is useful.
+    for d in all_deals:
+        d["cuisine"] = infer_cuisine(f"{d.get('restaurant_name','')} {d.get('title_en','')} {d.get('description_en') or ''}")
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(all_deals, ensure_ascii=False, indent=2), encoding="utf-8")
