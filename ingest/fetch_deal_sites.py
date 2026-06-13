@@ -145,8 +145,70 @@ def parse_factqatar(html: bytes, url: str, today: datetime) -> list[dict]:
     return deals
 
 
+def _offernmenu_name(alt: str) -> str:
+    name = alt or ""
+    for pat in (r"\(copy\)", r"restaurant offer in qatar", r"\boffers?\b", r"\bdoha\b"):
+        name = re.sub(pat, "", name, flags=re.I)
+    return clean_ws(name).strip(" -,")
+
+
+def parse_offernmenu(html: bytes, url: str, today: datetime) -> list[dict]:
+    soup = BeautifulSoup(html, "html.parser")
+    default_to = (today + timedelta(days=DEFAULT_TTL_DAYS)).date().isoformat()
+    deals, seen = [], set()
+
+    for a in soup.select('a[href*="/offer/"]'):
+        href = a.get("href")
+        if not href or href in seen:
+            continue
+        seen.add(href)
+        cont = a.find_parent(["article", "li", "div"]) or a
+        text = clean_ws(norm(cont.get_text(" ", strip=True)))
+        img = cont.find("img")
+        name = _offernmenu_name(img.get("alt", "") if img else "")
+        if not name or len(name) < 2:
+            continue
+
+        pct_m = _PCT.search(text)
+        pct = int(pct_m.group(1)) if pct_m and 1 <= int(pct_m.group(1)) <= 99 else None
+        price_m = re.search(r"(\d+)\s*QAR", text, re.I)
+
+        valid_to = default_to
+        exp = re.search(r"EXPIRES?\s*IN\s*(\d{1,2}/\d{1,2}/\d{4})", text, re.I)
+        gone = re.search(r"Offer\s*Expired!?\s*([A-Za-z]+\s+\d{1,2},?\s+\d{4})", text, re.I)
+        if exp:
+            dt = dateparser.parse(exp.group(1), settings={"DATE_ORDER": "MDY", "RETURN_AS_TIMEZONE_AWARE": False})
+            if dt:
+                valid_to = dt.date().isoformat()
+        elif gone:
+            dt = dateparser.parse(gone.group(1), settings={"RETURN_AS_TIMEZONE_AWARE": False})
+            if dt:
+                valid_to = dt.date().isoformat()  # past → will be expired
+
+        if pct is not None:
+            title, dtype = f"{pct}% off", "discount_pct"
+        elif price_m:
+            title, dtype = f"Offer from QR {price_m.group(1)}", "other"
+        else:
+            title, dtype = "Special offer", "other"
+
+        deals.append({
+            "restaurant_name": name.title() if name.islower() else name,
+            "area": detect_area(text),
+            "title_en": title,
+            "description_en": (f"From QR {price_m.group(1)}" if price_m and pct is None else None),
+            "deal_type": dtype,
+            "discount_value": pct,
+            "valid_to": valid_to,
+            "source": "offernmenu",
+            "source_url": href,
+        })
+    return deals
+
+
 SITES = [
     {"name": "factqatar", "url": "https://factqatar.com/the-best-dining-deals-in-qatar/", "parser": parse_factqatar},
+    {"name": "offernmenu", "url": "https://offernmenu.com/", "parser": parse_offernmenu},
 ]
 
 

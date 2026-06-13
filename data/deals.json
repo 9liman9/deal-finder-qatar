@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-13T16:52:42+00:00",
-  "count": 103,
+  "generated_at": "2026-06-13T17:23:19+00:00",
+  "count": 149,
   "filters": {
     "cuisines": [],
     "areas": [
@@ -114,6 +114,38 @@
       }
     },
     {
+      "id": 130,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/pinkberry/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "auto-draft",
+        "name": {
+          "en": "AUTO-DRAFT",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 56,
       "title": {
         "en": "Sips Hour",
@@ -146,6 +178,134 @@
       }
     },
     {
+      "id": 118,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/absolute-barbecues-doha-offer/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "absolute-barbecues",
+        "name": {
+          "en": "Absolute Barbecues",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 139,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/ahmad-alabdalla-chicken-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ahmad-alabdalla-chicken",
+        "name": {
+          "en": "Ahmad AlAbdalla Chicken",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 153,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/ahwet-zeitouna-restaurant-shisha/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ahwet-zeitouna-restaurant",
+        "name": {
+          "en": "Ahwet Zeitouna Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 149,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/al-arzeh-premium-restaurant-3/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "al-arzeh-premium-restaurant-shisha",
+        "name": {
+          "en": "Al ARZEH PREMIUM RESTAURANT (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 22,
       "title": {
         "en": "Business Lunch",
@@ -172,6 +332,38 @@
         "ig_handle": null,
         "cuisine": null,
         "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 146,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/al-jalsa-garden-lounge-3/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "al-jalsa-garden-lounge-shisha",
+        "name": {
+          "en": "Al Jalsa Garden Lounge Shisha",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -402,6 +594,38 @@
       }
     },
     {
+      "id": 124,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/asiana-restaurant-banquet-hall-buffet/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "asiana-restaurant-banquet-hall",
+        "name": {
+          "en": "Asiana Restaurant & Banquet Hall",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 14,
       "title": {
         "en": "Chic Mornings",
@@ -487,6 +711,70 @@
         "slug": "atteatude",
         "name": {
           "en": "AtTeatude",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 145,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/ayam-al-taybeen/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ayam-al-taybeen",
+        "name": {
+          "en": "Ayam Al Taybeen",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 141,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/azima-restaurant/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "azima-restaurant",
+        "name": {
+          "en": "Azima Restaurant",
           "ar": null
         },
         "ig_handle": null,
@@ -620,6 +908,102 @@
         "ig_handle": null,
         "cuisine": null,
         "area": "Al Sadd",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 131,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/brooks-cafe-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "brooks-cafe",
+        "name": {
+          "en": "Brooks Cafe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 140,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/brorito-restaurant/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "brorito-restaurant",
+        "name": {
+          "en": "Brorito Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 112,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/cup-go-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "cup-go",
+        "name": {
+          "en": "CUP & GO",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -839,6 +1223,38 @@
         "slug": "champions-sports-bar",
         "name": {
           "en": "Champions Sports Bar",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 125,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/coya-doha-buffet/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "coya",
+        "name": {
+          "en": "Coya",
           "ar": null
         },
         "ig_handle": null,
@@ -1170,6 +1586,38 @@
       }
     },
     {
+      "id": 136,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/erodu-amman-mess/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "erodu-amman-mess",
+        "name": {
+          "en": "Erodu Amman Mess",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 50,
       "title": {
         "en": "Flavour Lab Mixed Beverage Class",
@@ -1298,6 +1746,38 @@
       }
     },
     {
+      "id": 120,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/fudo-restaurant-4/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "f-do-restaurant",
+        "name": {
+          "en": "Fūdo Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 92,
       "title": {
         "en": "The Sunset Social",
@@ -1324,6 +1804,102 @@
         "ig_handle": null,
         "cuisine": null,
         "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 133,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/happy-truffles-cafe/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "happy-truffles-cafe",
+        "name": {
+          "en": "Happy Truffles Cafe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 143,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/hemaliya-restaurant-barwa/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "hemaliya-restaurant-barwa",
+        "name": {
+          "en": "Hemaliya Restaurant Barwa",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 142,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/hot-chicken-al-wakrah/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "hot-chicken",
+        "name": {
+          "en": "Hot Chicken",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -1650,6 +2226,70 @@
       }
     },
     {
+      "id": 152,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/khan-farouk-tarab-cafe-shisha/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "khan-farouk-tarab-cafe-shisha",
+        "name": {
+          "en": "Khan Farouk Tarab Cafe (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 129,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/leaf-and-roll-1780535295578/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "leaf-and-roll",
+        "name": {
+          "en": "LEAF AND ROLL",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 28,
       "title": {
         "en": "Ladies Brekke",
@@ -1868,6 +2508,38 @@
         "ig_handle": null,
         "cuisine": null,
         "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 151,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/layali-babal-hara-%d9%84%d9%8a%d8%a7%d9%84%d9%8a-%d8%a8%d8%a7%d8%a8-%d8%a7%d9%84%d8%ad%d8%a7%d8%b1%d8%a9-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "layali-babal-hara",
+        "name": {
+          "en": "Layali Babal Hara - ليالي باب الحارة",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -2162,6 +2834,70 @@
       }
     },
     {
+      "id": 137,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/matka-junction/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "matka-junction",
+        "name": {
+          "en": "Matka Junction",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 115,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/maxs-restaurant-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "max-s-restaurant",
+        "name": {
+          "en": "Max's Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 69,
       "title": {
         "en": "Express Lunch",
@@ -2450,6 +3186,102 @@
       }
     },
     {
+      "id": 111,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/oryx-zaatar-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "oryx-zaatar",
+        "name": {
+          "en": "Oryx Zaatar",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 123,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/osha-asian-bistro-buffet/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "osha-asian-bistro-buffet",
+        "name": {
+          "en": "Osha Asian Bistro (Buffet)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 113,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/papa-johns-pizza-39/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "papa-john-s-pizza",
+        "name": {
+          "en": "Papa John's Pizza",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 4,
       "title": {
         "en": "Lunch Set Menu",
@@ -2546,6 +3378,38 @@
       }
     },
     {
+      "id": 148,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/patio-walima-shisha/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "patio-walima-shisha",
+        "name": {
+          "en": "Patio Walima (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 102,
       "title": {
         "en": "Afternoon Tea",
@@ -2572,6 +3436,38 @@
         "ig_handle": null,
         "cuisine": null,
         "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 110,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/pizza-box-offer/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "pizza-box",
+        "name": {
+          "en": "Pizza Box",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -2642,6 +3538,70 @@
       }
     },
     {
+      "id": 126,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/d-grill-restaurant-1781028071189/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "restaurant",
+        "name": {
+          "en": "Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 132,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/riyadh-al-oasis-wakra/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "riyadh-al-oasis",
+        "name": {
+          "en": "Riyadh Al Oasis",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 84,
       "title": {
         "en": "Hong Shi Banya (Catch of the Day)",
@@ -2700,6 +3660,38 @@
         "ig_handle": null,
         "cuisine": null,
         "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 144,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/stanley-cafe-%d9%85%d9%82%d9%87%d9%89-%d8%b3%d8%aa%d8%a7%d9%86%d9%84%d9%89/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "stanley-cafe",
+        "name": {
+          "en": "STANLEY CAFE مقهى ستانلى",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -2796,6 +3788,70 @@
         "ig_handle": null,
         "cuisine": null,
         "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 122,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/sahra-restaurant-and-lounge-buffet/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "sahra-restaurant-and-lounge",
+        "name": {
+          "en": "Sahra Restaurant and Lounge",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 147,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/sahra-restaurant-and-lounge-shisha/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "sahra-restaurant-and-lounge-shisha",
+        "name": {
+          "en": "Sahra Restaurant and Lounge (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -2962,6 +4018,166 @@
       }
     },
     {
+      "id": 121,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/sherao-restaurant/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "sherao-restaurant",
+        "name": {
+          "en": "Sherao Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 116,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/shisha-garden-la-cigale-hotel/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "shisha-garden-la-cigale-hotel",
+        "name": {
+          "en": "Shisha Garden -La Cigale Hotel",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 114,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/swiss-bellinn-doha-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "swiss-bellinn",
+        "name": {
+          "en": "Swiss-Bellinn",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 135,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/tannour-al-thumama/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "tannour-al-thumama",
+        "name": {
+          "en": "Tannour Al Thumama",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 150,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/terrace-by-21-high-st-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "terrace-by-21-high-st-shisha",
+        "name": {
+          "en": "Terrace by 21 High St. (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 27,
       "title": {
         "en": "Express Lunch",
@@ -3058,6 +4274,38 @@
       }
     },
     {
+      "id": 127,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/the-lebanese-bakery-1780540279156/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "the-lebanese-bakery",
+        "name": {
+          "en": "The Lebanese Bakery",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 43,
       "title": {
         "en": "Timings:",
@@ -3090,6 +4338,38 @@
       }
     },
     {
+      "id": 128,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/the-raclette-1780537879265/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "the-raclette",
+        "name": {
+          "en": "The Raclette",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 12,
       "title": {
         "en": "Lunch Decisions",
@@ -3116,6 +4396,38 @@
         "ig_handle": null,
         "cuisine": null,
         "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 138,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/treffen-house/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "treffen-house",
+        "name": {
+          "en": "Treffen House",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
         "lat": null,
         "lng": null,
         "logo_url": null
@@ -3218,6 +4530,38 @@
       }
     },
     {
+      "id": 134,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/utika/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "utika",
+        "name": {
+          "en": "Utika",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
       "id": 66,
       "title": {
         "en": "Alice in Wonderland Afternoon Tea",
@@ -3308,6 +4652,134 @@
         "ig_handle": null,
         "cuisine": null,
         "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 119,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/yellow-cab-pizza/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "yellow-cab-pizza",
+        "name": {
+          "en": "Yellow Cab Pizza",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 117,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/yummy-taste-restaurant-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "yummy-taste-restaurant",
+        "name": {
+          "en": "Yummy taste restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 107,
+      "title": {
+        "en": "Offer from QR 10",
+        "ar": null
+      },
+      "description": {
+        "en": "From QR 10",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-04",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/dairy-queen-offer-doha-10-qar-1781028938188/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "dairy-queen",
+        "name": {
+          "en": "dairy Queen",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 109,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-31",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/dalchini-restaurant-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "dalchini-restaurant",
+        "name": {
+          "en": "Dalchini Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
         "lat": null,
         "lng": null,
         "logo_url": null
