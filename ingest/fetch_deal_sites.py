@@ -39,7 +39,7 @@ DEFAULT_TTL_DAYS = 21
 QATAR_AREAS = ["Lusail", "Al Sadd", "West Bay", "The Pearl", "Pearl", "Msheireb",
                "Katara", "Aspire", "Corniche", "Education City", "Al Wakra", "Doha"]
 
-_PRICE = re.compile(r"QR\s?[\d,]+(?:\.\d+)?", re.I)
+_PRICE = re.compile(r"(?:QAR|QR)\s?[\d,]+(?:\.\d+)?", re.I)
 _PCT = re.compile(r"(\d{1,2})\s*%")
 _TIME = re.compile(r"\d{1,2}(?:[:.]\d{2})?\s*(?:am|pm)\s*(?:-|–|—|to)\s*\d{1,2}(?:[:.]\d{2})?\s*(?:am|pm)", re.I)
 _END = re.compile(r"(?:valid\s+until|until|till|ends?|through|up\s+to)\s+([A-Za-z0-9 ,]{3,22})", re.I)
@@ -206,9 +206,67 @@ def parse_offernmenu(html: bytes, url: str, today: datetime) -> list[dict]:
     return deals
 
 
+_SECTION_WORDS = re.compile(r"deals?\b|offers?\b|read|popular|top stories|related|comments|share|business lunch deals in qatar", re.I)
+
+
+def parse_marhaba(html: bytes, url: str, today: datetime) -> list[dict]:
+    """Marhaba article: headings (h2-h4) are restaurant names, following <p>/<li> hold the offer."""
+    soup = BeautifulSoup(html, "html.parser")
+    art = (soup.find("article")
+           or soup.find("div", class_=re.compile(r"entry-content|post-content|td-post-content|content", re.I))
+           or soup)
+    default_to = (today + timedelta(days=DEFAULT_TTL_DAYS)).date().isoformat()
+    restaurant = None
+    deals: list[dict] = []
+
+    for el in art.find_all(["h2", "h3", "h4", "p", "li"]):
+        if el.name in ("h2", "h3", "h4"):
+            t = clean_ws(norm(el.get_text(" ", strip=True)))
+            if t and len(t) < 60 and not _SECTION_WORDS.search(t):
+                restaurant = t
+            continue
+        if not restaurant:
+            continue
+        text = clean_ws(norm(el.get_text(" ", strip=True)))
+        if not text:
+            continue
+        price_m = _PRICE.search(text)
+        pct_m = _PCT.search(text)
+        if not price_m and not pct_m:
+            continue
+        pct = int(pct_m.group(1)) if pct_m and 1 <= int(pct_m.group(1)) <= 99 else None
+
+        dtype = classify(text, pct)
+        before_price = text.split(price_m.group())[0] if price_m else text
+        cand = clean_ws(re.sub(r"\bprices?\b\s*:?\s*$", "", before_price, flags=re.I))
+        TYPE_LABEL = {"discount_pct": (f"{pct}% off" if pct else "Discount"), "bogo": "Buy 1 Get 1",
+                      "set_menu": "Set menu", "free_item": "Freebie", "coupon": "Coupon", "other": "Lunch offer"}
+        title = cand[:70] if len(cand) >= 5 else TYPE_LABEL[dtype]
+        bits = []
+        if price_m:
+            bits.append(price_m.group().upper())
+        tm = _TIME.search(text)
+        if tm:
+            bits.append(tm.group())
+
+        deals.append({
+            "restaurant_name": restaurant,
+            "area": detect_area(text),
+            "title_en": title,
+            "description_en": clean_ws(" · ".join(bits)) or None,
+            "deal_type": dtype,
+            "discount_value": pct,
+            "valid_to": end_date(text, today) or default_to,
+            "source": "marhaba",
+            "source_url": url,
+        })
+    return deals
+
+
 SITES = [
     {"name": "factqatar", "url": "https://factqatar.com/the-best-dining-deals-in-qatar/", "parser": parse_factqatar},
     {"name": "offernmenu", "url": "https://offernmenu.com/", "parser": parse_offernmenu},
+    {"name": "marhaba", "url": "https://marhaba.qa/business-lunch-deals-in-qatar/", "parser": parse_marhaba},
 ]
 
 
