@@ -1,0 +1,13 @@
+﻿id,slug,name_en,name_ar,ig_handle,cuisine,area,lat,lng,logo_url
+8,al-bandar-seafood,Al Bandar Seafood,البندر للمأكولات البحرية,albandarseafood,Seafood,The Pearl,25.37,51.552,
+11,banana-island-bites,Banana Island Bites,بنانا آيلاند بايتس,bananaislandbites,Healthy,Lusail,25.435,51.495,
+10,corniche-cafe,Corniche Cafe,كورنيش كافيه,cornichecafe_qa,Cafe,Corniche,25.296,51.536,
+6,doha-burger-joint,Doha Burger Joint,دوحة برجر,dohaburgerjoint,Burgers,Aspire,25.263,51.447,
+12,education-city-eats,Education City Eats,إديوكيشن سيتي إيتس,educiteats,Fast Casual,Education City,25.315,51.435,
+5,karak-and-co,Karak & Co,كرك آند كو,karakandco_qa,Cafe,Msheireb,25.287,51.529,
+7,katara-mezze,Katara Mezze,كتارا مزة,kataramezze,Lebanese,Katara,25.359,51.526,
+4,lusail-pizza-co,Lusail Pizza Co.,لوسيل بيتزا,lusailpizzaco,Italian,Lusail,25.43,51.49,
+1,pearl-grill-house,Pearl Grill House,بيرل جريل هاوس,pearlgrillhouse_qa,Lebanese,The Pearl,25.369,51.551,
+9,saffron-biryani-house,Saffron Biryani House,زعفران برياني,saffronbiryaniqa,Indian,Al Sadd,25.279,51.49,
+2,souq-spice,Souq Spice,سوق سبايس,souqspice_qa,Indian,Souq Waqif,25.2877,51.5333,
+3,west-bay-sushi,West Bay Sushi,ويست باي سوشي,westbaysushi_qa,Japanese,West Bay,25.321,51.53,

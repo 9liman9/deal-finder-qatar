@@ -1,0 +1,6 @@
+# Normalize line endings: store as LF in the repo, check out native locally.
+# Keeps the Linux CI build consistent and stops CRLF churn on Windows.
+* text=auto eol=lf
+*.png binary
+*.svg text eol=lf
+*.db binary

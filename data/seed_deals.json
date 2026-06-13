@@ -1,0 +1,159 @@
+[
+  {
+    "restaurant_slug": "pearl-grill-house",
+    "title_en": "20% off all dinner mains",
+    "title_ar": "خصم 20٪ على جميع أطباق العشاء",
+    "description_en": "Sample deal — 20% off charcoal-grilled mains, daily after 7pm.",
+    "description_ar": "عرض تجريبي — خصم 20٪ على المشاوي يومياً بعد الساعة 7 مساءً.",
+    "deal_type": "discount_pct",
+    "discount_value": 20,
+    "valid_to": "2026-07-15",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "pearl-grill-house",
+    "title_en": "Family Feast set menu — QAR 199",
+    "title_ar": "وجبة العائلة — 199 ريال",
+    "description_en": "Sample deal — mixed grill platter, sides and drinks for four.",
+    "description_ar": "عرض تجريبي — طبق مشاوي مشكلة مع المقبلات والمشروبات لأربعة أشخاص.",
+    "deal_type": "set_menu",
+    "discount_value": null,
+    "valid_to": "2026-07-20",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "souq-spice",
+    "title_en": "Buy one biryani, get one free",
+    "title_ar": "اشترِ برياني واحصل على آخر مجاناً",
+    "description_en": "Sample deal — applies to chicken & mutton biryani, dine-in only.",
+    "description_ar": "عرض تجريبي — يشمل برياني الدجاج والغنم، لتناول الطعام في المطعم فقط.",
+    "deal_type": "bogo",
+    "discount_value": null,
+    "valid_to": "2026-06-30",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "west-bay-sushi",
+    "title_en": "Lunch set menu — QAR 79",
+    "title_ar": "قائمة غداء — 79 ريال",
+    "description_en": "Sample deal — 8-piece roll, miso soup and green tea, 12–4pm.",
+    "description_ar": "عرض تجريبي — 8 قطع رول، حساء ميسو وشاي أخضر، من 12 ظهراً حتى 4 عصراً.",
+    "deal_type": "set_menu",
+    "discount_value": null,
+    "valid_to": null,
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "west-bay-sushi",
+    "title_en": "20% off with code SUSHI20",
+    "title_ar": "خصم 20٪ مع رمز SUSHI20",
+    "description_en": "Sample deal — online orders, minimum QAR 100.",
+    "description_ar": "عرض تجريبي — للطلبات عبر الإنترنت، الحد الأدنى 100 ريال.",
+    "deal_type": "coupon",
+    "discount_value": 20,
+    "code": "SUSHI20",
+    "valid_to": "2026-06-28",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "lusail-pizza-co",
+    "title_en": "15% off with code PIZZA15",
+    "title_ar": "خصم 15٪ مع رمز PIZZA15",
+    "description_en": "Sample deal — any large pizza, delivery or pickup.",
+    "description_ar": "عرض تجريبي — أي بيتزا كبيرة، توصيل أو استلام.",
+    "deal_type": "coupon",
+    "discount_value": 15,
+    "code": "PIZZA15",
+    "valid_to": "2026-07-31",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "karak-and-co",
+    "title_en": "Free karak with any breakfast",
+    "title_ar": "كرك مجاني مع أي فطور",
+    "description_en": "Sample deal — one free karak per breakfast order, before 11am.",
+    "description_ar": "عرض تجريبي — كرك مجاني واحد مع كل طلب فطور، قبل الساعة 11 صباحاً.",
+    "deal_type": "free_item",
+    "discount_value": null,
+    "valid_to": "2026-06-25",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "doha-burger-joint",
+    "title_en": "30% off every Tuesday",
+    "title_ar": "خصم 30٪ كل يوم ثلاثاء",
+    "description_en": "Sample deal — all smash burgers, dine-in and takeaway.",
+    "description_ar": "عرض تجريبي — جميع برجر سماش، لتناول الطعام في المطعم أو السفري.",
+    "deal_type": "discount_pct",
+    "discount_value": 30,
+    "valid_to": "2026-08-31",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "katara-mezze",
+    "title_en": "Mezze platter for two — QAR 99",
+    "title_ar": "طبق مزة لشخصين — 99 ريال",
+    "description_en": "Sample deal — 12 cold & hot mezze with fresh bread.",
+    "description_ar": "عرض تجريبي — 12 نوعاً من المزة الباردة والساخنة مع الخبز الطازج.",
+    "deal_type": "set_menu",
+    "discount_value": null,
+    "valid_to": "2026-07-10",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "al-bandar-seafood",
+    "title_en": "25% off the seafood platter",
+    "title_ar": "خصم 25٪ على طبق المأكولات البحرية",
+    "description_en": "Sample deal — EXPIRED example (used to demo auto-expiry).",
+    "description_ar": "عرض تجريبي — مثال منتهي (لعرض الإخفاء التلقائي للعروض المنتهية).",
+    "deal_type": "discount_pct",
+    "discount_value": 25,
+    "valid_to": "2026-05-31",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "saffron-biryani-house",
+    "title_en": "Buy one biryani get one free",
+    "title_ar": "اشترِ برياني واحصل على آخر مجاناً",
+    "description_en": "Sample deal — weekdays only, dine-in.",
+    "description_ar": "عرض تجريبي — أيام الأسبوع فقط، لتناول الطعام في المطعم.",
+    "deal_type": "bogo",
+    "discount_value": null,
+    "valid_to": "2026-06-20",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "corniche-cafe",
+    "title_en": "Free dessert with weekend brunch",
+    "title_ar": "حلوى مجانية مع برانش نهاية الأسبوع",
+    "description_en": "Sample deal — one dessert per brunch, Fri & Sat.",
+    "description_ar": "عرض تجريبي — حلوى واحدة مع كل برانش، الجمعة والسبت.",
+    "deal_type": "free_item",
+    "discount_value": null,
+    "valid_to": "2026-07-05",
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "banana-island-bites",
+    "title_en": "15% off all healthy bowls",
+    "title_ar": "خصم 15٪ على جميع الأطباق الصحية",
+    "description_en": "Sample deal — poke, acai and grain bowls.",
+    "description_ar": "عرض تجريبي — بوكي، أساي وأطباق الحبوب.",
+    "deal_type": "discount_pct",
+    "discount_value": 15,
+    "valid_to": null,
+    "source": "manual"
+  },
+  {
+    "restaurant_slug": "education-city-eats",
+    "title_en": "10% student discount with code STUDENT10",
+    "title_ar": "خصم 10٪ للطلاب مع رمز STUDENT10",
+    "description_en": "Sample deal — valid student ID required at pickup.",
+    "description_ar": "عرض تجريبي — يتطلب بطاقة طالب سارية عند الاستلام.",
+    "deal_type": "coupon",
+    "discount_value": 10,
+    "code": "STUDENT10",
+    "valid_to": "2026-09-30",
+    "source": "manual"
+  }
+]

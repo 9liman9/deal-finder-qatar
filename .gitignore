@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / Astro
+web/node_modules/
+web/dist/
+web/.astro/
+# generated copy of data/deals.json (see scripts/sync-data.mjs)
+web/src/data/
+node_modules/
+
+# Auto-deploy workflow is withheld from the repo until the `workflow` OAuth scope
+# is granted (`gh auth refresh -h github.com -s workflow`). Until then the site is
+# published via the gh-pages branch. To enable Actions auto-deploy: remove this line,
+# `git add .github/workflows/deploy.yml`, and push (with the scope).
+.github/workflows/
+
+# Secrets — NEVER commit Instagram tokens etc.
+.env
+*.env
+ingest/.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NOTE: data/deals.db, data/deals.json and data/exports/ ARE committed on purpose —
+# the "git-scraping" pattern stores the SQLite DB + exports in the repo so the
+# scheduled job can persist state and the static site can read the data.

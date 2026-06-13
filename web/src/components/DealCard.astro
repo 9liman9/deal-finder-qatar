@@ -1,0 +1,120 @@
+---
+interface Props {
+  deal: any;
+  daysLeft: number | null;
+}
+const { deal, daysLeft } = Astro.props;
+
+const r = deal.restaurant ?? {};
+const nameEn = r.name?.en ?? r.slug ?? "Restaurant";
+const nameAr = r.name?.ar ?? nameEn;
+const titleEn = deal.title?.en ?? "";
+const titleAr = deal.title?.ar ?? titleEn;
+const descEn = deal.description?.en ?? "";
+const descAr = deal.description?.ar ?? "";
+
+const TYPE_MAP: Record<string, { en: string; ar: string; cls: string }> = {
+  discount_pct: { en: "Discount", ar: "خصم", cls: "bg-brand-100 text-brand-700" },
+  bogo: { en: "Buy 1 Get 1", ar: "واحد + واحد", cls: "bg-emerald-100 text-emerald-700" },
+  set_menu: { en: "Set Menu", ar: "وجبة محددة", cls: "bg-sky-100 text-sky-700" },
+  coupon: { en: "Coupon", ar: "كوبون", cls: "bg-violet-100 text-violet-700" },
+  free_item: { en: "Freebie", ar: "هدية مجانية", cls: "bg-teal-100 text-teal-700" },
+  other: { en: "Offer", ar: "عرض", cls: "bg-stone-100 text-stone-600" },
+};
+const type = TYPE_MAP[deal.deal_type] ?? TYPE_MAP.other;
+
+const showPct =
+  (deal.deal_type === "discount_pct" || deal.deal_type === "coupon") &&
+  typeof deal.discount_value === "number";
+
+// Expiry badge text (baked at build; cron rebuilds keep it fresh)
+let expEn: string, expAr: string, expUrgent = false;
+if (daysLeft === null) {
+  expEn = "Ongoing";
+  expAr = "مستمر";
+} else if (daysLeft <= 0) {
+  expEn = "Ends today";
+  expAr = "ينتهي اليوم";
+  expUrgent = true;
+} else if (daysLeft === 1) {
+  expEn = "1 day left";
+  expAr = "متبقٍّ يوم واحد";
+  expUrgent = true;
+} else {
+  expEn = `${daysLeft} days left`;
+  expAr = `متبقّي ${daysLeft} يوم`;
+  expUrgent = daysLeft <= 3;
+}
+
+const searchBlob = [nameEn, nameAr, titleEn, titleAr, r.cuisine, r.area, deal.code]
+  .filter(Boolean)
+  .join(" ")
+  .toLowerCase();
+---
+
+<article
+  class="deal-card relative flex flex-col rounded-2xl bg-white border border-black/5 shadow-sm overflow-hidden"
+  data-card
+  data-cuisine={r.cuisine ?? ""}
+  data-area={r.area ?? ""}
+  data-type={deal.deal_type ?? "other"}
+  data-search={searchBlob}
+>
+  <div class="p-5 flex flex-col gap-3 flex-1">
+    <!-- top row: type + expiry -->
+    <div class="flex items-center justify-between gap-2">
+      <span class={`i18n inline-flex items-center rounded-full px-2.5 py-1 text-xs font-bold ${type.cls}`}
+        data-en={type.en} data-ar={type.ar}>{type.en}</span>
+      <span
+        class={`i18n text-xs font-semibold ${expUrgent ? "text-red-600" : "text-stone-400"}`}
+        data-en={expEn} data-ar={expAr}>{expEn}</span>
+    </div>
+
+    <!-- restaurant -->
+    <div class="flex items-baseline gap-2 flex-wrap">
+      <h3 class="i18n font-extrabold text-brand-700 text-lg leading-tight" data-en={nameEn} data-ar={nameAr}>{nameEn}</h3>
+    </div>
+    <div class="flex flex-wrap gap-1.5 -mt-1">
+      {r.cuisine && <span class="inline-flex rounded-md bg-stone-100 px-2 py-0.5 text-xs text-stone-600">{r.cuisine}</span>}
+      {r.area && <span class="inline-flex rounded-md bg-stone-100 px-2 py-0.5 text-xs text-stone-600">📍 {r.area}</span>}
+    </div>
+
+    <!-- offer -->
+    <div class="flex items-start gap-3 mt-1">
+      {showPct && (
+        <div class="shrink-0 flex flex-col items-center justify-center rounded-xl bg-brand-600 text-white w-14 h-14">
+          <span class="text-lg font-extrabold leading-none">{deal.discount_value}%</span>
+          <span class="i18n text-[10px] font-semibold opacity-90" data-en="OFF" data-ar="خصم">OFF</span>
+        </div>
+      )}
+      <div class="flex-1">
+        <p class="i18n font-semibold text-stone-900 leading-snug" data-en={titleEn} data-ar={titleAr}>{titleEn}</p>
+        {(descEn || descAr) && (
+          <p class="i18n text-sm text-stone-500 mt-1 leading-snug" data-en={descEn} data-ar={descAr}>{descEn}</p>
+        )}
+      </div>
+    </div>
+
+    <!-- code -->
+    {deal.code && (
+      <div class="mt-1 flex items-center gap-2">
+        <span class="i18n text-xs text-stone-500" data-en="Code:" data-ar="الرمز:">Code:</span>
+        <code class="rounded-md border border-dashed border-brand-400 bg-brand-50 px-2 py-0.5 text-sm font-bold text-brand-700 tracking-wider">{deal.code}</code>
+      </div>
+    )}
+  </div>
+
+  <!-- footer -->
+  {(deal.source_url || r.ig_handle) && (
+    <div class="px-5 py-3 border-t border-black/5 bg-stone-50/60 flex items-center justify-between">
+      {r.ig_handle ? (
+        <a href={`https://instagram.com/${r.ig_handle}`} target="_blank" rel="noopener"
+           class="text-xs text-stone-500 hover:text-brand-600 transition">@{r.ig_handle}</a>
+      ) : <span></span>}
+      {deal.source_url && (
+        <a href={deal.source_url} target="_blank" rel="noopener"
+           class="i18n text-xs font-semibold text-brand-600 hover:underline" data-en="View offer →" data-ar="عرض التفاصيل ←">View offer →</a>
+      )}
+    </div>
+  )}
+</article>

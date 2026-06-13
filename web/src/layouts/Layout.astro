@@ -1,0 +1,138 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = "Qatar Restaurant Deals",
+  description = "Live restaurant deals and offers across Qatar — free, open-source, and updated automatically.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#8a1538" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}icon.svg`} />
+    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}icon.svg`} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="QA Deals" />
+    <link rel="manifest" href={`${import.meta.env.BASE_URL}manifest.webmanifest`} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+
+    <!-- Restore language choice before paint to avoid a flash -->
+    <script is:inline>
+      (function () {
+        try {
+          const lang = localStorage.getItem("lang") || "en";
+          const el = document.documentElement;
+          el.lang = lang;
+          el.dir = lang === "ar" ? "rtl" : "ltr";
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <header class="bg-brand-600 text-white shadow-md">
+      <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
+        <a href={import.meta.env.BASE_URL} class="flex items-center gap-2 group">
+          <span class="text-2xl">🍽️</span>
+          <span
+            class="i18n font-extrabold text-lg sm:text-xl tracking-tight"
+            data-en="Qatar Restaurant Deals"
+            data-ar="عروض مطاعم قطر">Qatar Restaurant Deals</span
+          >
+        </a>
+        <button
+          id="lang-toggle"
+          type="button"
+          class="rounded-full bg-white/15 hover:bg-white/25 px-4 py-1.5 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+          aria-label="Switch language"
+        >
+          <span id="lang-toggle-label">العربية</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="flex-1 w-full mx-auto max-w-6xl px-4 py-6">
+      <slot />
+    </main>
+
+    <footer class="border-t border-black/10 mt-8">
+      <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <span
+          class="i18n"
+          data-en="Free & open-source · No personal data collected"
+          data-ar="مجاني ومفتوح المصدر · لا نجمع أي بيانات شخصية"
+          >Free &amp; open-source · No personal data collected</span
+        >
+        <span class="i18n" data-en="Made for Qatar 🇶🇦" data-ar="صُنع لقطر 🇶🇦">Made for Qatar 🇶🇦</span>
+      </div>
+    </footer>
+
+    <!-- Language engine: swaps text + placeholders, flips direction, persists choice -->
+    <script is:inline>
+      (function () {
+        function applyLang(lang) {
+          const el = document.documentElement;
+          el.lang = lang;
+          el.dir = lang === "ar" ? "rtl" : "ltr";
+
+          document.querySelectorAll("[data-en]").forEach((node) => {
+            const val = node.getAttribute("data-" + lang);
+            if (val !== null) node.textContent = val;
+          });
+          document.querySelectorAll("[data-en-ph]").forEach((node) => {
+            const val = node.getAttribute("data-" + lang + "-ph");
+            if (val !== null) node.setAttribute("placeholder", val);
+          });
+
+          const label = document.getElementById("lang-toggle-label");
+          if (label) label.textContent = lang === "ar" ? "English" : "العربية";
+
+          try {
+            localStorage.setItem("lang", lang);
+          } catch (e) {}
+          document.dispatchEvent(new CustomEvent("langchange", { detail: { lang } }));
+        }
+
+        let current = "en";
+        try {
+          current = localStorage.getItem("lang") || "en";
+        } catch (e) {}
+        applyLang(current);
+
+        const btn = document.getElementById("lang-toggle");
+        if (btn) {
+          btn.addEventListener("click", () => {
+            current = document.documentElement.lang === "ar" ? "en" : "ar";
+            applyLang(current);
+          });
+        }
+      })();
+    </script>
+
+    <!-- PWA: register the service worker (HTTPS / localhost only) -->
+    <script is:inline define:vars={{ base: import.meta.env.BASE_URL }}>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register(base + "sw.js", { scope: base }).catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>

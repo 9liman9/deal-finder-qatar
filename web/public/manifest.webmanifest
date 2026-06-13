@@ -1,0 +1,19 @@
+{
+  "name": "Qatar Restaurant Deals",
+  "short_name": "QA Deals",
+  "description": "Live restaurant deals and offers across Qatar — free, open-source, updated automatically.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf7f2",
+  "theme_color": "#8a1538",
+  "lang": "en",
+  "dir": "auto",
+  "categories": ["food", "shopping", "lifestyle"],
+  "icons": [
+    { "src": "./icon.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./icon.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

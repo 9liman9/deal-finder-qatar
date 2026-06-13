@@ -1,0 +1,149 @@
+---
+import Layout from "../layouts/Layout.astro";
+import DealCard from "../components/DealCard.astro";
+// Synced from repo-root data/deals.json by scripts/sync-data.mjs (predev/prebuild).
+import data from "../data/deals.json";
+
+const MS_PER_DAY = 86_400_000;
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+function daysLeft(validTo: string | null): number | null {
+  if (!validTo) return null;
+  const d = new Date(validTo + "T00:00:00");
+  if (isNaN(d.getTime())) return null;
+  return Math.ceil((d.getTime() - today.getTime()) / MS_PER_DAY);
+}
+
+const deals = (data.deals ?? []).map((deal: any) => ({ deal, dl: daysLeft(deal.valid_to) }));
+const filters = data.filters ?? { cuisines: [], areas: [], deal_types: [] };
+
+const TYPE_LABELS: Record<string, { en: string; ar: string }> = {
+  discount_pct: { en: "Discount", ar: "خصم" },
+  bogo: { en: "Buy 1 Get 1", ar: "واحد + واحد" },
+  set_menu: { en: "Set Menu", ar: "وجبة محددة" },
+  coupon: { en: "Coupon", ar: "كوبون" },
+  free_item: { en: "Freebie", ar: "هدية مجانية" },
+  other: { en: "Offer", ar: "عرض" },
+};
+
+const usingSampleData = deals.some((d: any) => d.deal.source === "manual");
+const selectCls =
+  "rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400";
+---
+
+<Layout>
+  <!-- Hero -->
+  <section class="mb-5">
+    <h1 class="i18n text-2xl sm:text-3xl font-extrabold text-brand-700"
+      data-en="Find the best restaurant deals in Qatar"
+      data-ar="اعثر على أفضل عروض المطاعم في قطر">Find the best restaurant deals in Qatar</h1>
+    <p class="i18n text-stone-500 mt-1"
+      data-en="Live offers across Doha — free, open-source, and updated automatically."
+      data-ar="عروض مباشرة في الدوحة — مجانية ومفتوحة المصدر وتُحدّث تلقائياً.">Live offers across Doha — free, open-source, and updated automatically.</p>
+  </section>
+
+  {usingSampleData && (
+    <div class="mb-5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800 flex items-start gap-2">
+      <span>⚠️</span>
+      <span class="i18n"
+        data-en="Showing sample deals for now. The live Instagram engine will replace these with verified, current offers."
+        data-ar="نعرض عروضاً تجريبية حالياً. سيستبدلها محرّك إنستغرام المباشر بعروض حقيقية ومُحدّثة.">Showing sample deals for now. The live Instagram engine will replace these with verified, current offers.</span>
+    </div>
+  )}
+
+  <!-- Filter bar -->
+  <section class="mb-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <input id="f-search" type="search"
+      class="sm:col-span-2 lg:col-span-1 rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
+      data-en-ph="Search deals or restaurants…" data-ar-ph="ابحث عن العروض أو المطاعم…"
+      placeholder="Search deals or restaurants…" />
+
+    <select id="f-cuisine" class={selectCls}>
+      <option value="" class="i18n" data-en="All cuisines" data-ar="كل المطابخ">All cuisines</option>
+      {filters.cuisines.map((c: string) => <option value={c}>{c}</option>)}
+    </select>
+
+    <select id="f-area" class={selectCls}>
+      <option value="" class="i18n" data-en="All areas" data-ar="كل المناطق">All areas</option>
+      {filters.areas.map((a: string) => <option value={a}>{a}</option>)}
+    </select>
+
+    <select id="f-type" class={selectCls}>
+      <option value="" class="i18n" data-en="All types" data-ar="كل الأنواع">All types</option>
+      {filters.deal_types.map((t: string) => (
+        <option value={t} class="i18n" data-en={(TYPE_LABELS[t] ?? TYPE_LABELS.other).en} data-ar={(TYPE_LABELS[t] ?? TYPE_LABELS.other).ar}>{(TYPE_LABELS[t] ?? TYPE_LABELS.other).en}</option>
+      ))}
+    </select>
+  </section>
+
+  <!-- Result count + reset -->
+  <div class="mb-4 flex items-center justify-between text-sm">
+    <span class="text-stone-500">
+      <span id="result-count" class="font-bold text-brand-700">{deals.length}</span>
+      <span class="i18n" data-en="deals" data-ar="عرض">deals</span>
+    </span>
+    <button id="f-reset" type="button" class="i18n text-stone-500 hover:text-brand-600 transition"
+      data-en="Reset filters" data-ar="إعادة تعيين">Reset filters</button>
+  </div>
+
+  <!-- Grid -->
+  <section id="deal-grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {deals.map(({ deal, dl }: any) => <DealCard deal={deal} daysLeft={dl} />)}
+  </section>
+
+  <!-- Empty state -->
+  <div id="empty-state" class="is-hidden text-center py-16 text-stone-400">
+    <p class="text-4xl mb-2">🔍</p>
+    <p class="i18n" data-en="No deals match your filters." data-ar="لا توجد عروض مطابقة.">No deals match your filters.</p>
+  </div>
+
+  <!-- Client-side filtering -->
+  <script is:inline>
+    (function () {
+      const search = document.getElementById("f-search");
+      const cuisine = document.getElementById("f-cuisine");
+      const area = document.getElementById("f-area");
+      const type = document.getElementById("f-type");
+      const reset = document.getElementById("f-reset");
+      const count = document.getElementById("result-count");
+      const empty = document.getElementById("empty-state");
+      const cards = Array.from(document.querySelectorAll("[data-card]"));
+
+      function apply() {
+        const q = (search.value || "").trim().toLowerCase();
+        const c = cuisine.value;
+        const a = area.value;
+        const t = type.value;
+        let visible = 0;
+        cards.forEach((card) => {
+          const ok =
+            (!q || card.dataset.search.includes(q)) &&
+            (!c || card.dataset.cuisine === c) &&
+            (!a || card.dataset.area === a) &&
+            (!t || card.dataset.type === t);
+          card.classList.toggle("is-hidden", !ok);
+          if (ok) visible++;
+        });
+        if (count) count.textContent = String(visible);
+        if (empty) empty.classList.toggle("is-hidden", visible !== 0);
+      }
+
+      [search, cuisine, area, type].forEach((el) => {
+        if (!el) return;
+        el.addEventListener("input", apply);
+        el.addEventListener("change", apply);
+      });
+      if (reset) {
+        reset.addEventListener("click", () => {
+          search.value = "";
+          cuisine.value = "";
+          area.value = "";
+          type.value = "";
+          apply();
+        });
+      }
+      apply();
+    })();
+  </script>
+</Layout>
