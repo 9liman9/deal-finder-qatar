@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Qatar Restaurant Deals">
+  <rect width="512" height="512" rx="110" fill="#8a1538"/>
+  <!-- stylized percent sign = deals -->
+  <g stroke="#ffffff" stroke-width="30" stroke-linecap="round" fill="none">
+    <line x1="178" y1="356" x2="334" y2="156"/>
+    <circle cx="200" cy="196" r="40"/>
+    <circle cx="312" cy="316" r="40"/>
+  </g>
+</svg>
