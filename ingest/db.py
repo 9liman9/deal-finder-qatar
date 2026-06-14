@@ -49,6 +49,7 @@ RESTAURANTS_CSV = DATA_DIR / "restaurants.csv"
 SEED_DEALS_JSON = DATA_DIR / "seed_deals.json"
 INSTAGRAM_DEALS_JSON = DATA_DIR / "instagram_deals.json"
 SCRAPED_DEALS_JSON = DATA_DIR / "scraped_deals.json"
+LOGOS_JSON = DATA_DIR / "logos.json"
 DEALS_JSON = DATA_DIR / "deals.json"
 
 # Qatar has a fixed UTC+3 offset year-round (no DST), so a fixed offset is correct
@@ -416,6 +417,35 @@ def _active_deals_query() -> str:
     """
 
 
+def cmd_load_logos(conn: sqlite3.Connection) -> None:
+    """Apply resolver output (data/logos.json) — set logo_url only where still missing.
+
+    Logos are produced by ingest/resolve_logos.py (network/bs4); this keeps db.py itself
+    stdlib-only. URLs pass the same http(s) allow-list as every other external value.
+    """
+    if not LOGOS_JSON.exists():
+        print(f"[load-logos] no {LOGOS_JSON} — skipping")
+        return
+    try:
+        items = json.loads(LOGOS_JSON.read_text(encoding="utf-8"))
+    except (ValueError, OSError) as e:
+        print(f"[load-logos] WARN: could not read {LOGOS_JSON}: {e!r}")
+        return
+    n = 0
+    for it in items if isinstance(items, list) else []:
+        slug = (it.get("slug") or "").strip()
+        url = safe_url(it.get("logo_url"))
+        if not slug or not url:
+            continue
+        cur = conn.execute(
+            "UPDATE restaurants SET logo_url=? WHERE slug=? AND (logo_url IS NULL OR logo_url='')",
+            (url, slug),
+        )
+        n += cur.rowcount
+    conn.commit()
+    print(f"[load-logos] set logo_url on {n} restaurant(s) from {LOGOS_JSON}")
+
+
 def cmd_export_json(conn: sqlite3.Connection) -> None:
     rows = conn.execute(_active_deals_query()).fetchall()
     deals = []
@@ -509,6 +539,7 @@ def main(argv: list[str]) -> int:
     p.add_argument("--load-seed", action="store_true", help="load restaurants.csv + seed_deals.json")
     p.add_argument("--load-instagram", action="store_true", help="load data/instagram_deals.json (source=instagram)")
     p.add_argument("--load-scraped", action="store_true", help="load data/scraped_deals.json (auto-create restaurants)")
+    p.add_argument("--load-logos", action="store_true", help="apply data/logos.json (brand logos from resolve_logos.py)")
     p.add_argument("--expire", action="store_true", help="mark deals past valid_to as expired (Qatar time)")
     p.add_argument("--export-json", action="store_true", help="write data/deals.json")
     p.add_argument("--export-csv", action="store_true", help="write data/exports/*.csv")
@@ -530,6 +561,8 @@ def main(argv: list[str]) -> int:
             cmd_load_instagram(conn)
         if args.load_scraped:
             cmd_load_scraped(conn)
+        if args.load_logos:
+            cmd_load_logos(conn)
         if args.expire:
             cmd_expire(conn)
         if args.export_json:

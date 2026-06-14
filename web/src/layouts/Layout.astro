@@ -4,14 +4,19 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  ogImage?: string;
 }
 const {
   title = "Qatar Restaurant Deals",
   description = "The finest tables in Doha at their best prices — live restaurant deals across Qatar, updated daily.",
+  ogImage: ogImageProp,
 } = Astro.props;
 
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.href;
-const ogImage = new URL(`${import.meta.env.BASE_URL}icon.svg`, canonical).href;
+// Per-page OG image (e.g. a resolved brand logo) falls back to the site icon.
+const ogImage = ogImageProp
+  ? new URL(ogImageProp, canonical).href
+  : new URL(`${import.meta.env.BASE_URL}icon.svg`, canonical).href;
 ---
 
 <!doctype html>
@@ -143,6 +148,41 @@ const ogImage = new URL(`${import.meta.env.BASE_URL}icon.svg`, canonical).href;
             applyLang(current);
           });
         }
+      })();
+    </script>
+
+    <!-- Share: Web Share API with clipboard fallback (used by cards + deal pages) -->
+    <script is:inline>
+      (function () {
+        let toast;
+        function showToast(msg) {
+          if (!toast) {
+            toast = document.createElement("div");
+            toast.className = "share-toast";
+            document.body.appendChild(toast);
+          }
+          toast.textContent = msg;
+          toast.classList.add("is-visible");
+          clearTimeout(toast._t);
+          toast._t = setTimeout(function () { toast.classList.remove("is-visible"); }, 1800);
+        }
+        document.addEventListener("click", function (e) {
+          const el = e.target.closest("[data-share]");
+          if (!el) return;
+          e.preventDefault();
+          const url = new URL(el.getAttribute("data-share-url") || location.href, location.href).href;
+          const title = el.getAttribute("data-share-title") || document.title;
+          const ar = document.documentElement.lang === "ar";
+          if (navigator.share) {
+            navigator.share({ title: title, url: url }).catch(function () {});
+          } else if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url)
+              .then(function () { showToast(ar ? "تم نسخ الرابط" : "Link copied"); })
+              .catch(function () { showToast(ar ? "تعذّر النسخ" : "Couldn’t copy"); });
+          } else {
+            showToast(url);
+          }
+        });
       })();
     </script>
 

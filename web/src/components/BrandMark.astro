@@ -1,0 +1,110 @@
+---
+/*
+ * BrandMark — the per-venue visual.
+ *  - If a brand logo_url resolved (defensible nominative use), show it on a light field.
+ *  - Otherwise render a deterministic Fraunces-monogram tile: an on-brand colour pair +
+ *    a faint motif, both seeded from the restaurant slug so a venue always looks the same.
+ * The fallback is pure SVG/CSS — zero network — so every card looks designed, always.
+ * No promotional creatives are ever used (Qatar Copyright Law 7/2002).
+ */
+interface Props {
+  name: string;
+  slug?: string | null;
+  logoUrl?: string | null;
+  variant?: "banner" | "chip";
+  class?: string;
+}
+const { name, slug, logoUrl, variant = "banner", class: className = "" } = Astro.props;
+
+function safeUrl(u: unknown): string | null {
+  if (typeof u !== "string" || !u) return null;
+  try {
+    const p = new URL(u);
+    return p.protocol === "http:" || p.protocol === "https:" ? u : null;
+  } catch {
+    return null;
+  }
+}
+const logo = safeUrl(logoUrl);
+
+// Deterministic 32-bit hash from the slug (or name) — stable per venue.
+const key = String(slug || name || "x").toLowerCase();
+let h = 0;
+for (let i = 0; i < key.length; i++) h = (Math.imul(h, 31) + key.charCodeAt(i)) >>> 0;
+
+// Curated, on-brand pairs only — warm maroon / gold / cream / ink. Never rainbow.
+const PALETTES = [
+  { bg: "#7a1330", fg: "#ecca86", motif: "#b0833a" }, // maroon · gold
+  { bg: "#4d0c20", fg: "#f3e6cf", motif: "#b0833a" }, // deep maroon · cream
+  { bg: "#b0833a", fg: "#3a0e1c", motif: "#7a1330" }, // gold · maroon
+  { bg: "#271e18", fg: "#ecca86", motif: "#8a6328" }, // ink · gold
+  { bg: "#9a3b54", fg: "#fdf6e9", motif: "#e7dbc5" }, // rose maroon · cream
+  { bg: "#66102a", fg: "#d8b878", motif: "#b0833a" }, // maroon-700 · gold-soft
+];
+const pal = PALETTES[h % PALETTES.length];
+const motifKind = Math.floor(h / 13) % 3; // 0 diamonds · 1 diagonals · 2 rings
+const uid = "bm" + h.toString(36) + variant[0];
+
+// Initials: prefer two Latin word-initials; fall back to one, then to the first glyph
+// (handles Arabic-only names without crashing).
+const words = String(name || "")
+  .replace(/[^A-Za-z؀-ۿ\s]/g, " ")
+  .trim()
+  .split(/\s+/)
+  .filter(Boolean);
+const latin = words.map((w) => w[0]).filter((c) => /[A-Za-z]/.test(c));
+let initials: string;
+if (latin.length >= 2) initials = (latin[0] + latin[1]).toUpperCase();
+else if (latin.length === 1) initials = latin[0].toUpperCase();
+else initials = (words[0]?.[0] ?? "◆").toUpperCase();
+
+const isBanner = variant === "banner";
+const initialSize = isBanner ? "clamp(2rem, 7vw, 2.9rem)" : "1.1rem";
+const wrapBase = isBanner
+  ? "relative w-full aspect-[16/7] overflow-hidden"
+  : "relative w-11 h-11 rounded-lg overflow-hidden shrink-0";
+const logoMax = isBanner ? "max-h-[56%] max-w-[64%]" : "max-h-[68%] max-w-[72%]";
+---
+
+{logo ? (
+  <div
+    class={`${wrapBase} ${isBanner ? "border-b border-line" : "border border-line"} bg-bone flex items-center justify-center ${className}`}
+  >
+    <img
+      src={logo}
+      alt={name}
+      loading="lazy"
+      decoding="async"
+      class={`${logoMax} object-contain`}
+    />
+  </div>
+) : (
+  <div
+    class={`${wrapBase} flex items-center justify-center ${className}`}
+    style={`background:${pal.bg}`}
+    aria-hidden="true"
+  >
+    <svg class="absolute inset-0 w-full h-full" style="opacity:0.22" preserveAspectRatio="none">
+      <defs>
+        <pattern id={uid} width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(8)">
+          {motifKind === 0 && (
+            <path d="M12 3 L21 12 L12 21 L3 12 Z" fill="none" stroke={pal.motif} stroke-width="1.1" />
+          )}
+          {motifKind === 1 && (
+            <path d="M-4 4 L4 -4 M0 24 L24 0 M20 28 L28 20" stroke={pal.motif} stroke-width="1.2" />
+          )}
+          {motifKind === 2 && (
+            <circle cx="12" cy="12" r="8" fill="none" stroke={pal.motif} stroke-width="1.1" />
+          )}
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill={`url(#${uid})`} />
+    </svg>
+    <span
+      class="font-display font-semibold relative select-none"
+      style={`color:${pal.fg};font-size:${initialSize};line-height:1;letter-spacing:-0.01em`}
+    >
+      {initials}
+    </span>
+  </div>
+)}

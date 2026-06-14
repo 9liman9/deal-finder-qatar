@@ -34,6 +34,13 @@ jobs:
         run: |
           python ingest/fetch_deal_sites.py
           python ingest/db.py --load-scraped
+      # Best-effort: resolve brand logos for venues missing one (hotlinked, cached).
+      # Never blocks the refresh — venues without a logo fall back to a generated tile.
+      - name: Resolve brand logos
+        continue-on-error: true
+        run: |
+          python ingest/resolve_logos.py --limit 60
+          python ingest/db.py --load-logos
       # Optional: Instagram, only once the IG_ACCESS_TOKEN secret is set.
       - name: Fetch Instagram deals
         if: ${{ env.IG_ACCESS_TOKEN != '' }}

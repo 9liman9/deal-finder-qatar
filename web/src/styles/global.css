@@ -87,6 +87,93 @@ html {
   display: none !important;
 }
 
+/* ---- Segmented sort control ---- */
+.sort-btn {
+  padding: 0.3rem 0.72rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.sort-btn:hover {
+  color: var(--color-maroon);
+}
+.sort-btn[aria-pressed="true"] {
+  background: var(--color-maroon);
+  color: var(--color-cream);
+}
+
+/* ---- Active-filter chips ---- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 9999px;
+  background: var(--color-maroon-50);
+  color: var(--color-maroon);
+  padding: 0.25rem 0.4rem 0.25rem 0.7rem;
+  font-size: 0.74rem;
+  font-weight: 500;
+}
+[dir="rtl"] .chip {
+  padding: 0.25rem 0.7rem 0.25rem 0.4rem;
+}
+.chip button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--color-maroon) 14%, transparent);
+  line-height: 1;
+  font-size: 0.7rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.chip button:hover {
+  background: var(--color-maroon);
+  color: var(--color-cream);
+}
+
+/* ---- Share toast (clipboard-fallback feedback) ---- */
+.share-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%) translateY(1rem);
+  background: var(--color-ink);
+  color: var(--color-cream);
+  padding: 0.5rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 60;
+  box-shadow: 0 12px 32px -12px rgba(39, 30, 24, 0.55);
+}
+.share-toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ---- "Surprise me" spotlight pulse ---- */
+@keyframes spot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(176, 131, 58, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 16px rgba(176, 131, 58, 0);
+  }
+}
+.spotlight {
+  animation: spot 1s ease-out 1;
+  border-color: var(--color-gold) !important;
+}
+
 /* ---- Featured carousel (the "wheel banner") ---- */
 .fc-track {
   display: flex;
@@ -145,5 +232,8 @@ html {
   }
   .deal-card:hover {
     transform: none;
+  }
+  .spotlight {
+    animation: none;
   }
 }

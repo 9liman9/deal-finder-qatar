@@ -1,4 +1,6 @@
 ---
+import BrandMark from "./BrandMark.astro";
+
 interface Props {
   items: any[]; // [{ deal, dl }]
 }
@@ -26,6 +28,7 @@ const slides = items.map(({ deal, dl }: any) => {
     url: safeUrl(deal.source_url),
     nameEn: r.name?.en ?? "Restaurant",
     nameAr: r.name?.ar ?? r.name?.en ?? "مطعم",
+    slug: r.slug, logoUrl: r.logo_url,
     cuisine: r.cuisine, area: r.area,
     pct: typeof deal.discount_value === "number" && deal.discount_value > 0 ? deal.discount_value : null,
     price: typeof deal.price === "number" ? Math.round(deal.price) : null,
@@ -52,7 +55,11 @@ const slides = items.map(({ deal, dl }: any) => {
     {slides.map((s) => (
       <a href={s.url ?? "#"} target="_blank" rel="noopener noreferrer"
          class="fc-slide group relative block rounded-2xl bg-maroon-deep text-cream p-6 overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
-        <span aria-hidden="true" class="absolute -right-4 -top-6 text-gold/15 font-display text-[7rem] leading-none select-none">◆</span>
+        {s.logoUrl ? (
+          <BrandMark variant="chip" name={s.nameEn} slug={s.slug} logoUrl={s.logoUrl} class="absolute right-4 top-4 shadow-sm" />
+        ) : (
+          <span aria-hidden="true" class="absolute -right-4 -top-6 text-gold/15 font-display text-[7rem] leading-none select-none">◆</span>
+        )}
         <span class="eyebrow text-gold-soft i18n relative" data-en="Featured" data-ar="مميّز">Featured</span>
 
         <div class="mt-5 mb-1 relative">

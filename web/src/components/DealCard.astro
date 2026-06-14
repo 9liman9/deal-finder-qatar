@@ -1,4 +1,6 @@
 ---
+import BrandMark from "./BrandMark.astro";
+
 interface Props {
   deal: any;
   daysLeft: number | null;
@@ -53,6 +55,7 @@ const sourceLabel = String(deal.source ?? "").replace(/^./, (c) => c.toUpperCase
 const searchBlob = [nameEn, nameAr, titleEn, titleAr, r.cuisine, r.area, deal.code]
   .filter(Boolean).join(" ").toLowerCase();
 const delay = Math.min(index, 12) * 35;
+const dealUrl = `${import.meta.env.BASE_URL}deal/${deal.id}/`;
 ---
 
 <article
@@ -65,8 +68,13 @@ const delay = Math.min(index, 12) * 35;
   data-type={deal.deal_type ?? "other"}
   data-channel={channel}
   data-price={price ?? ""}
+  data-discount={showPct ? deal.discount_value : ""}
   data-search={searchBlob}
 >
+  <a href={dealUrl} class="block" aria-label={`${nameEn} — offer details`} tabindex="-1">
+    <BrandMark variant="banner" name={nameEn} slug={r.slug} logoUrl={r.logo_url} />
+  </a>
+
   <div class="p-5 flex flex-col gap-2.5 flex-1">
     <div class="flex items-center justify-between gap-2">
       <span class="eyebrow text-gold-deep i18n" data-en={type.en} data-ar={type.ar}>{type.en}</span>
@@ -74,7 +82,9 @@ const delay = Math.min(index, 12) * 35;
         data-en={expEn} data-ar={expAr}>{expEn}</span>
     </div>
 
-    <h3 class="font-display text-xl leading-tight text-maroon i18n" data-en={nameEn} data-ar={nameAr}>{nameEn}</h3>
+    <h3 class="font-display text-xl leading-tight">
+      <a href={dealUrl} class="text-maroon hover:text-maroon-deep transition-colors i18n" data-en={nameEn} data-ar={nameAr}>{nameEn}</a>
+    </h3>
 
     {(r.cuisine || r.area || channel !== "dine_in") && (
       <p class="text-xs text-ink-soft -mt-0.5 flex flex-wrap items-center gap-x-1.5">
@@ -121,10 +131,17 @@ const delay = Math.min(index, 12) * 35;
     ) : (
       <span class="text-[11px] text-ink-soft/70 i18n" data-en={`via ${sourceLabel}`} data-ar={`عبر ${sourceLabel}`}>via {sourceLabel}</span>
     )}
-    {sourceUrl && (
-      <a href={sourceUrl} target="_blank" rel="noopener noreferrer"
-         class="i18n text-xs font-semibold text-gold-deep hover:text-maroon transition-colors whitespace-nowrap"
-         data-en="View offer →" data-ar="عرض التفاصيل ←">View offer →</a>
-    )}
+    <div class="flex items-center gap-3.5">
+      <button type="button" data-share data-share-url={dealUrl} data-share-title={`${nameEn} — ${titleEn}`}
+        class="text-ink-soft hover:text-maroon transition-colors" aria-label="Share"
+        data-en-aria="Share offer" data-ar-aria="مشاركة العرض">
+        <span aria-hidden="true" class="text-sm">⤴</span>
+      </button>
+      {sourceUrl && (
+        <a href={sourceUrl} target="_blank" rel="noopener noreferrer"
+           class="i18n text-xs font-semibold text-gold-deep hover:text-maroon transition-colors whitespace-nowrap"
+           data-en="View offer →" data-ar="عرض التفاصيل ←">View offer →</a>
+      )}
+    </div>
   </div>
 </article>

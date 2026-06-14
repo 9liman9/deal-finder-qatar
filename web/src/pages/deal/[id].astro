@@ -1,0 +1,192 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BrandMark from "../../components/BrandMark.astro";
+import data from "../../data/deals.json";
+
+export function getStaticPaths() {
+  return (data.deals ?? []).map((deal: any) => ({
+    params: { id: String(deal.id) },
+    props: { deal },
+  }));
+}
+
+const { deal } = Astro.props as { deal: any };
+const r = deal.restaurant ?? {};
+const nameEn = r.name?.en ?? r.slug ?? "Restaurant";
+const nameAr = r.name?.ar ?? nameEn;
+const titleEn = deal.title?.en ?? "";
+const titleAr = deal.title?.ar ?? titleEn;
+const descEn = deal.description?.en ?? "";
+const descAr = deal.description?.ar ?? "";
+const price = typeof deal.price === "number" ? Math.round(deal.price) : null;
+const channel = deal.channel ?? "dine_in";
+const showPct = typeof deal.discount_value === "number" && deal.discount_value > 0;
+
+function safeUrl(u: unknown): string | null {
+  if (typeof u !== "string" || !u) return null;
+  try {
+    const p = new URL(u);
+    return p.protocol === "http:" || p.protocol === "https:" ? u : null;
+  } catch {
+    return null;
+  }
+}
+const sourceUrl = safeUrl(deal.source_url);
+const logo = safeUrl(r.logo_url);
+
+const TYPE_MAP: Record<string, { en: string; ar: string }> = {
+  discount_pct: { en: "Discount", ar: "خصم" },
+  bogo: { en: "Buy 1 Get 1", ar: "واحد + واحد" },
+  set_menu: { en: "Set Menu", ar: "وجبة محددة" },
+  coupon: { en: "Coupon", ar: "كوبون" },
+  free_item: { en: "Freebie", ar: "هدية مجانية" },
+  other: { en: "Offer", ar: "عرض" },
+};
+const type = TYPE_MAP[deal.deal_type] ?? TYPE_MAP.other;
+const CHANNEL_MAP: Record<string, { en: string; ar: string }> = {
+  dine_in: { en: "Dine-in", ar: "في المطعم" },
+  delivery: { en: "Delivery", ar: "توصيل" },
+  both: { en: "Dine-in & Delivery", ar: "في المطعم وتوصيل" },
+};
+const chan = CHANNEL_MAP[channel] ?? CHANNEL_MAP.dine_in;
+const sourceLabel = String(deal.source ?? "").replace(/^./, (c) => c.toUpperCase());
+
+const base = import.meta.env.BASE_URL;
+const metaTitle = `${nameEn} — ${titleEn || type.en} | Qatar Deals`;
+const metaDesc =
+  descEn ||
+  `${titleEn || type.en} at ${nameEn}${r.area ? ` in ${r.area}` : ""}, Qatar. Live dining offer, refreshed daily.`;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : Astro.url.href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  name: titleEn || type.en,
+  category: deal.deal_type,
+  ...(deal.valid_to ? { validThrough: deal.valid_to } : {}),
+  ...(price !== null ? { price, priceCurrency: "QAR" } : {}),
+  ...(showPct ? { description: `${deal.discount_value}% off` } : {}),
+  url: sourceUrl || canonical,
+  seller: {
+    "@type": "Restaurant",
+    name: nameEn,
+    ...(r.cuisine ? { servesCuisine: r.cuisine } : {}),
+    ...(r.area
+      ? { address: { "@type": "PostalAddress", addressLocality: r.area, addressCountry: "QA" } }
+      : {}),
+  },
+};
+---
+
+<Layout title={metaTitle} description={metaDesc} ogImage={logo ?? undefined}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <nav class="pt-7 pb-5">
+    <a href={base} class="inline-flex items-center gap-1.5 text-sm text-ink-soft hover:text-maroon transition-colors">
+      <span aria-hidden="true">‹</span>
+      <span class="i18n" data-en="All offers" data-ar="كل العروض">All offers</span>
+    </a>
+  </nav>
+
+  <article class="max-w-2xl">
+    <div class="rounded-2xl overflow-hidden border border-line bg-bone">
+      <BrandMark variant="banner" name={nameEn} slug={r.slug} logoUrl={r.logo_url} />
+
+      <div class="p-6 sm:p-8 flex flex-col gap-4">
+        <div class="flex items-center justify-between gap-3">
+          <span class="eyebrow text-gold-deep i18n" data-en={type.en} data-ar={type.ar}>{type.en}</span>
+          <span class="exp-badge text-sm font-semibold text-ink-soft/80 i18n"
+            data-valid-to={deal.valid_to ?? ""}
+            data-en="" data-ar=""></span>
+        </div>
+
+        <h1 class="font-display text-3xl sm:text-4xl leading-tight text-maroon i18n"
+          data-en={nameEn} data-ar={nameAr}>{nameEn}</h1>
+
+        {(r.cuisine || r.area) && (
+          <p class="-mt-1 text-sm text-ink-soft flex flex-wrap items-center gap-x-2">
+            {r.cuisine && <span>{r.cuisine}</span>}
+            {r.cuisine && r.area && <span class="text-gold-soft">·</span>}
+            {r.area && <span>{r.area}</span>}
+            <span class="text-gold-soft">·</span>
+            <span class="i18n" data-en={chan.en} data-ar={chan.ar}>{chan.en}</span>
+          </p>
+        )}
+
+        <div class="flex items-start gap-5 mt-1">
+          {showPct ? (
+            <div class="shrink-0 w-20 h-20 rounded-full border-2 border-maroon/80 flex flex-col items-center justify-center text-maroon">
+              <span class="font-display text-2xl font-semibold leading-none">{deal.discount_value}%</span>
+              <span class="text-[10px] tracking-[0.18em] font-semibold i18n" data-en="OFF" data-ar="خصم">OFF</span>
+            </div>
+          ) : price !== null ? (
+            <div class="shrink-0 text-maroon leading-none">
+              <span class="eyebrow text-gold-deep block mb-1 i18n" data-en="from" data-ar="من">from</span>
+              <span class="font-display text-4xl font-semibold">QR {price}</span>
+            </div>
+          ) : null}
+
+          <div class="flex-1 min-w-0">
+            <p class="font-medium text-lg text-ink leading-snug i18n" data-en={titleEn} data-ar={titleAr}>{titleEn}</p>
+            {(descEn || descAr) && (
+              <p class="text-ink-soft mt-1.5 leading-relaxed i18n" data-en={descEn} data-ar={descAr}>{descEn}</p>
+            )}
+          </div>
+        </div>
+
+        {deal.code && (
+          <div class="flex items-center gap-2 mt-1">
+            <span class="eyebrow text-ink-soft i18n" data-en="Code" data-ar="الرمز">Code</span>
+            <code class="rounded border border-dashed border-gold/70 bg-gold-50 px-2.5 py-1 text-base font-bold text-maroon tracking-widest">{deal.code}</code>
+          </div>
+        )}
+
+        <div class="flex flex-wrap items-center gap-3 pt-3 mt-1 border-t border-line">
+          {sourceUrl && (
+            <a href={sourceUrl} target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 rounded-full bg-maroon text-cream px-5 py-2.5 text-sm font-semibold hover:bg-maroon-deep transition-colors i18n"
+              data-en="View original offer →" data-ar="عرض العرض الأصلي ←">View original offer →</a>
+          )}
+          <button type="button"
+            data-share data-share-title={`${nameEn} — ${titleEn}`}
+            class="inline-flex items-center gap-1.5 rounded-full border border-maroon/30 text-maroon px-5 py-2.5 text-sm font-semibold hover:bg-maroon hover:text-cream transition-colors">
+            <span aria-hidden="true">⤴</span>
+            <span class="i18n" data-en="Share" data-ar="مشاركة">Share</span>
+          </button>
+        </div>
+
+        <p class="text-xs text-ink-soft/70 mt-1 i18n"
+          data-en={`Listed via ${sourceLabel} · facts only, no images copied · confirm with the restaurant before visiting.`}
+          data-ar={`مُدرج عبر ${sourceLabel} · حقائق فقط دون نسخ الصور · يُرجى التأكد من المطعم قبل الزيارة.`}>
+          Listed via {sourceLabel} · facts only, no images copied · confirm with the restaurant before visiting.
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Recompute the expiry badge in Qatar time, client-side -->
+  <script is:inline>
+    (function () {
+      const badge = document.querySelector(".exp-badge");
+      if (!badge) return;
+      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(badge.dataset.validTo || "");
+      const lang = document.documentElement.lang === "ar" ? "ar" : "en";
+      let en, ar;
+      if (!m) { en = "Ongoing"; ar = "مستمر"; }
+      else {
+        const vt = Date.UTC(+m[1], +m[2] - 1, +m[3]);
+        const n = new Date(Date.now() + 3 * 3600 * 1000);
+        const todayQ = Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate());
+        const days = Math.round((vt - todayQ) / 86400000);
+        if (days < 0) { en = "Expired"; ar = "منتهي"; }
+        else if (days === 0) { en = "Ends today"; ar = "ينتهي اليوم"; }
+        else if (days === 1) { en = "1 day left"; ar = "متبقٍّ يوم واحد"; }
+        else { en = days + " days left"; ar = "متبقّي " + days + " يوم"; }
+        if (days <= 3) badge.classList.add("text-red-700");
+      }
+      badge.setAttribute("data-en", en);
+      badge.setAttribute("data-ar", ar);
+      badge.textContent = lang === "ar" ? ar : en;
+    })();
+  </script>
+</Layout>

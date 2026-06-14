@@ -146,13 +146,30 @@ const ctrl = "rounded-full border border-line bg-bone px-4 py-2 text-sm text-ink
     )}
   </section>
 
-  <div class="mb-5 flex items-center justify-between text-sm">
+  <!-- Active filter chips (built client-side) -->
+  <div id="active-filters" class="mb-4 flex flex-wrap items-center gap-2 is-hidden"></div>
+
+  <div class="mb-5 flex flex-wrap items-center justify-between gap-3 text-sm">
     <span class="text-ink-soft" aria-live="polite">
       <span id="result-count" class="font-display text-lg font-semibold text-maroon">{count}</span>
       <span class="i18n ms-1" data-en="offers" data-ar="عرض">offers</span>
     </span>
-    <button id="f-reset" type="button" class="i18n text-ink-soft hover:text-maroon transition-colors"
-      data-en="Reset" data-ar="إعادة تعيين">Reset</button>
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="eyebrow text-ink-soft/70 hidden sm:inline i18n" data-en="Sort" data-ar="ترتيب">Sort</span>
+      <div id="sort-group" class="inline-flex rounded-full border border-line bg-bone p-0.5"
+        role="group" data-en-aria="Sort offers" data-ar-aria="ترتيب العروض" aria-label="Sort offers">
+        <button type="button" class="sort-btn" data-sort="ending" aria-pressed="true">
+          <span class="i18n" data-en="Ending soon" data-ar="ينتهي قريباً">Ending soon</span></button>
+        <button type="button" class="sort-btn" data-sort="discount" aria-pressed="false">
+          <span class="i18n" data-en="Top % off" data-ar="أعلى خصم">Top % off</span></button>
+        <button type="button" class="sort-btn" data-sort="price" aria-pressed="false">
+          <span class="i18n" data-en="Lowest price" data-ar="الأقل سعراً">Lowest price</span></button>
+        <button type="button" class="sort-btn" data-sort="surprise" aria-pressed="false">
+          <span class="i18n" data-en="Surprise me" data-ar="فاجئني">Surprise me</span></button>
+      </div>
+      <button id="f-reset" type="button" class="i18n text-ink-soft hover:text-maroon transition-colors ms-1"
+        data-en="Reset" data-ar="إعادة تعيين">Reset</button>
+    </div>
   </div>
 
   <section id="deal-grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -171,6 +188,7 @@ const ctrl = "rounded-full border border-line bg-bone px-4 py-2 text-sm text-ink
       const search = $("f-search"), cuisine = $("f-cuisine"), area = $("f-area"),
         price = $("f-price"), type = $("f-type"), channel = $("f-channel"),
         reset = $("f-reset"), count = $("result-count"), empty = $("empty-state");
+      const grid = $("deal-grid"), sortGroup = $("sort-group"), activeFilters = $("active-filters");
       const cards = Array.from(document.querySelectorAll("[data-card]"));
 
       function qatarTodayUTC() {
@@ -188,6 +206,7 @@ const ctrl = "rounded-full border border-line bg-bone px-4 py-2 text-sm text-ink
         const vt = dateToUTC(card.dataset.validTo);
         if (vt === null) return;
         const days = Math.round((vt - todayQ) / 86400000);
+        card.dataset.days = String(days);
         if (days < 0) card.dataset.expired = "1";
         const badge = card.querySelector(".exp-badge");
         if (!badge) return;
@@ -232,7 +251,79 @@ const ctrl = "rounded-full border border-line bg-bone px-4 py-2 text-sm text-ink
         });
         if (count) count.textContent = String(visible);
         if (empty) empty.classList.toggle("is-hidden", visible !== 0);
+        renderChips();
       }
+
+      // ---- Active-filter chips (removable) ----
+      function renderChips() {
+        if (!activeFilters) return;
+        activeFilters.innerHTML = "";
+        const items = [];
+        if (search && search.value.trim()) items.push(['"' + search.value.trim() + '"', () => { search.value = ""; }]);
+        [cuisine, area, price, type, channel].forEach((sel) => {
+          if (sel && sel.value) {
+            const opt = sel.options[sel.selectedIndex];
+            items.push([opt ? opt.textContent.trim() : sel.value, () => { sel.value = ""; }]);
+          }
+        });
+        items.forEach(([label, clearFn]) => {
+          const chip = document.createElement("span");
+          chip.className = "chip";
+          const txt = document.createElement("span");
+          txt.textContent = label;
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.setAttribute("aria-label", "Remove filter");
+          btn.textContent = "✕";
+          btn.addEventListener("click", () => { clearFn(); apply(); });
+          chip.append(txt, btn);
+          activeFilters.appendChild(chip);
+        });
+        activeFilters.classList.toggle("is-hidden", items.length === 0);
+      }
+
+      // ---- Sorting (reorders the grid; server already renders "ending soon") ----
+      function keyOf(card, mode) {
+        if (mode === "discount") { const v = card.dataset.discount ? +card.dataset.discount : null; return v == null ? Infinity : -v; }
+        if (mode === "price") { const v = card.dataset.price ? +card.dataset.price : null; return v == null ? Infinity : v; }
+        const d = (card.dataset.days === undefined || card.dataset.days === "") ? null : +card.dataset.days;
+        return d == null ? Infinity : d; // ending soon: fewest days first, ongoing last
+      }
+      function sortCards(mode) {
+        if (!grid) return;
+        const arr = cards.slice();
+        if (mode === "surprise") {
+          for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = arr[i]; arr[i] = arr[j]; arr[j] = t; }
+        } else {
+          arr.sort((a, b) => keyOf(a, mode) - keyOf(b, mode));
+        }
+        const frag = document.createDocumentFragment();
+        arr.forEach((c) => frag.appendChild(c));
+        grid.appendChild(frag);
+      }
+      function spotlightFirst() {
+        const first = cards.find((c) => !c.classList.contains("is-hidden"));
+        if (!first) return;
+        first.classList.remove("spotlight"); void first.offsetWidth; first.classList.add("spotlight");
+        first.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+      let sortMode = "ending";
+      try { sortMode = localStorage.getItem("sort") || "ending"; } catch (e) {}
+      function markSort(mode) {
+        if (!sortGroup) return;
+        Array.from(sortGroup.querySelectorAll(".sort-btn")).forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.sort === mode)));
+      }
+      function setSort(mode, persist) {
+        sortMode = mode;
+        markSort(mode);
+        if (persist) { try { localStorage.setItem("sort", mode); } catch (e) {} }
+        sortCards(mode);
+        if (mode === "surprise") spotlightFirst();
+      }
+      if (sortGroup) sortGroup.addEventListener("click", (e) => {
+        const btn = e.target.closest(".sort-btn");
+        if (btn) setSort(btn.dataset.sort, true);
+      });
 
       [search, cuisine, area, price, type, channel].forEach((el) => {
         if (!el) return;
@@ -243,7 +334,11 @@ const ctrl = "rounded-full border border-line bg-bone px-4 py-2 text-sm text-ink
         [search, cuisine, area, price, type, channel].forEach((el) => { if (el) el.value = ""; });
         apply();
       });
+
+      markSort(sortMode);
+      if (sortMode !== "ending") sortCards(sortMode); // default order already matches the server
       apply();
+      document.addEventListener("langchange", renderChips); // chips follow the active language
     })();
   </script>
 </Layout>
