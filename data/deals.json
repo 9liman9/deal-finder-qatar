@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-26T22:14:46+00:00",
-  "count": 2099,
+  "generated_at": "2026-06-27T22:03:53+00:00",
+  "count": 2246,
   "filters": {
     "cuisines": [
       "Burgers",
@@ -71311,6 +71311,5004 @@
       "code": null,
       "valid_from": null,
       "valid_to": "2026-07-17",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/dairy-queen-offer-doha-10-qar-1781028938188/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "dairy-queen",
+        "name": {
+          "en": "dairy Queen",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2133,
+      "title": {
+        "en": "Spritz and Cicchetti",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 95 · 4pm - 7pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "adrift-anda",
+        "name": {
+          "en": "ADRIFT Anda",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Italian",
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2134,
+      "title": {
+        "en": "Pausa Pranzo - Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 95 · 12pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "adrift-anda",
+        "name": {
+          "en": "ADRIFT Anda",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Italian",
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2135,
+      "title": {
+        "en": "Limitless Pizza and Pasta",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 140 · 6.30pm - 9pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 140.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "adrift-anda",
+        "name": {
+          "en": "ADRIFT Anda",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Italian",
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2158,
+      "title": {
+        "en": "Sips Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 30 · 4pm - 7pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 30.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ayjya",
+        "name": {
+          "en": "AYjYA",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://static.wixstatic.com/media/bc8b1b_8647e9a18ce14243b80ca27083c0b5b7%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/bc8b1b_8647e9a18ce14243b80ca27083c0b5b7%7Emv2.png"
+      }
+    },
+    {
+      "id": 2217,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/absolute-barbecues-doha-offer/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "absolute-barbecues",
+        "name": {
+          "en": "Absolute Barbecues",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://www.absolutebarbecues.com:443/favicon.ico"
+      }
+    },
+    {
+      "id": 2237,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/ahmad-alabdalla-chicken-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ahmad-alabdalla-chicken",
+        "name": {
+          "en": "Ahmad AlAbdalla Chicken",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2251,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/ahwet-zeitouna-restaurant-shisha/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ahwet-zeitouna-restaurant",
+        "name": {
+          "en": "Ahwet Zeitouna Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2247,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/al-arzeh-premium-restaurant-3/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "al-arzeh-premium-restaurant-shisha",
+        "name": {
+          "en": "Al ARZEH PREMIUM RESTAURANT (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2124,
+      "title": {
+        "en": "Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 12pm - 3pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "al-jalsa-garden-lounge",
+        "name": {
+          "en": "Al Jalsa Garden Lounge",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2244,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/al-jalsa-garden-lounge-3/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "al-jalsa-garden-lounge-shisha",
+        "name": {
+          "en": "Al Jalsa Garden Lounge Shisha",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2105,
+      "title": {
+        "en": "Afternoon Tea",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 195 · 3pm - 6pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 195.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "al-amma",
+        "name": {
+          "en": "Al' Amma",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2122,
+      "title": {
+        "en": "Cakes at Antoinette's",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 180",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "antoinette-s",
+        "name": {
+          "en": "Antoinette's",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Healthy",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2123,
+      "title": {
+        "en": "3D and Bespoke Cake",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 250",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 250.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "antoinette-s",
+        "name": {
+          "en": "Antoinette's",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Healthy",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2142,
+      "title": {
+        "en": "Sundowner Evenings",
+        "ar": null
+      },
+      "description": {
+        "en": "4pm - 7pm",
+        "ar": null
+      },
+      "deal_type": "discount_pct",
+      "discount_value": 30.0,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "aqua",
+        "name": {
+          "en": "Aqua",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Italian",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2143,
+      "title": {
+        "en": "Crafted Beverages and Pizza",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 180 · 7pm - 12am",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "aqua",
+        "name": {
+          "en": "Aqua",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Italian",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2156,
+      "title": {
+        "en": "Sundowner Hours",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 36 · 5pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 36.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "aqua-lounge",
+        "name": {
+          "en": "Aqua Lounge",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2157,
+      "title": {
+        "en": "Savour The Flavour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 5pm - 7pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "aqua-lounge",
+        "name": {
+          "en": "Aqua Lounge",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2223,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/asiana-restaurant-banquet-hall-buffet/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "asiana-restaurant-banquet-hall",
+        "name": {
+          "en": "Asiana Restaurant & Banquet Hall",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2116,
+      "title": {
+        "en": "Chic Mornings",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 45 · 8am - 11am",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 45.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "atteatude",
+        "name": {
+          "en": "AtTeatude",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2117,
+      "title": {
+        "en": "Express Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 60 · 12pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 60.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "atteatude",
+        "name": {
+          "en": "AtTeatude",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2118,
+      "title": {
+        "en": "Afternoon Tea",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 150 · 3pm - 6pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "atteatude",
+        "name": {
+          "en": "AtTeatude",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2243,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/ayam-al-taybeen/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ayam-al-taybeen",
+        "name": {
+          "en": "Ayam Al Taybeen",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2239,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/azima-restaurant/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "azima-restaurant",
+        "name": {
+          "en": "Azima Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2191,
+      "title": {
+        "en": "B-Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 165 · 12pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 165.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "b-lounge",
+        "name": {
+          "en": "B-Lounge",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2144,
+      "title": {
+        "en": "Winter Afternoon Tea",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 260 · 12pm - 9pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 260.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "baraha-lounge",
+        "name": {
+          "en": "Baraha Lounge",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2176,
+      "title": {
+        "en": "The Tomahawk Experience",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 560 · 6pm - 11pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 560.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "bentley-s-grill",
+        "name": {
+          "en": "Bentley's Grill",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://bentleysgrill.com/wp-content/uploads/2023/03/B-Logo-Favicon.svg"
+      }
+    },
+    {
+      "id": 2121,
+      "title": {
+        "en": "Dine under the Stars",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 199 · 5pm - 11pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 199.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "blu-terrace",
+        "name": {
+          "en": "Blu Terrace",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Al Sadd",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2229,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/brooks-cafe-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "brooks-cafe",
+        "name": {
+          "en": "Brooks Cafe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2238,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/brorito-restaurant/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "brorito-restaurant",
+        "name": {
+          "en": "Brorito Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2211,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/cup-go-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "cup-go",
+        "name": {
+          "en": "CUP & GO",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2146,
+      "title": {
+        "en": "Vibrant Sips Mocktail Class",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 79 · 3pm - 5pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 79.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "campagnia-caffe",
+        "name": {
+          "en": "Campagnia Caffe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2147,
+      "title": {
+        "en": "Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 70 · 12pm - 3pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 70.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "campagnia-caffe",
+        "name": {
+          "en": "Campagnia Caffe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2148,
+      "title": {
+        "en": "Express Dinner",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 85 · 6pm - 9pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 85.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "campagnia-caffe",
+        "name": {
+          "en": "Campagnia Caffe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2149,
+      "title": {
+        "en": "Weekend Wakeup",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 7am to 2pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "campagnia-caffe",
+        "name": {
+          "en": "Campagnia Caffe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2150,
+      "title": {
+        "en": "BYOM for a Latte Love",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 29 · 7am - 9pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 29.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "campagnia-caffe",
+        "name": {
+          "en": "Campagnia Caffe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2151,
+      "title": {
+        "en": "Sips of Winter",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 25 · 7am - 9pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 25.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "campagnia-caffe",
+        "name": {
+          "en": "Campagnia Caffe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2159,
+      "title": {
+        "en": "Power Hour at Champions",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 33 · 5pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 33.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "champions-sports-bar",
+        "name": {
+          "en": "Champions Sports Bar",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2224,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/coya-doha-buffet/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "coya",
+        "name": {
+          "en": "Coya",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2160,
+      "title": {
+        "en": "Power Hour at Crossroads Kitchen",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 36 · 6pm to 9pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 36.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "crossroads-kitchen",
+        "name": {
+          "en": "Crossroads Kitchen",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "International",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://static.wixstatic.com/ficons/b5bb87_da75008e47364c19bd7d3843b6b53190%7Emv2.ico"
+      }
+    },
+    {
+      "id": 2161,
+      "title": {
+        "en": "Express Business Lunch Buffet",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 105 · 12.30pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 105.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "crossroads-kitchen",
+        "name": {
+          "en": "Crossroads Kitchen",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "International",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://static.wixstatic.com/ficons/b5bb87_da75008e47364c19bd7d3843b6b53190%7Emv2.ico"
+      }
+    },
+    {
+      "id": 2162,
+      "title": {
+        "en": "Pranzo Expresso Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 79 · 12pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 79.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "cucina",
+        "name": {
+          "en": "Cucina",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2163,
+      "title": {
+        "en": "Aroma d'Italia",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 39 · 4pm - 7pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 39.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "cucina",
+        "name": {
+          "en": "Cucina",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2106,
+      "title": {
+        "en": "Outstanding Breakfast",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 120 · 6.30am - 11am",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 120.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "deli-kitchen",
+        "name": {
+          "en": "Deli Kitchen",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Healthy",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2107,
+      "title": {
+        "en": "Go Healthy",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 12.30pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "deli-kitchen",
+        "name": {
+          "en": "Deli Kitchen",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Healthy",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2136,
+      "title": {
+        "en": "Breakfast",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 150 · 6.30am - 11am",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "elissar-mediterranean-grill",
+        "name": {
+          "en": "Elissar Mediterranean Grill",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2111,
+      "title": {
+        "en": "Midday Escape",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 12.30pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "elixir",
+        "name": {
+          "en": "Elixir",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2112,
+      "title": {
+        "en": "After Hours",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 4pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "elixir",
+        "name": {
+          "en": "Elixir",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2169,
+      "title": {
+        "en": "Wonderland Afternoon Tea",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 250 · 2pm - 7pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 250.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ellamia",
+        "name": {
+          "en": "Ellamia",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2234,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/erodu-amman-mess/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "erodu-amman-mess",
+        "name": {
+          "en": "Erodu Amman Mess",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2152,
+      "title": {
+        "en": "Flavour Lab Mixed Beverage Class",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 275 · 3pm - 5pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 275.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "farmore-thn-burger",
+        "name": {
+          "en": "Farmore Thn Burger",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Burgers",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2153,
+      "title": {
+        "en": "Power Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 34 · 12pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 34.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "farmore-thn-burger",
+        "name": {
+          "en": "Farmore Thn Burger",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Burgers",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2154,
+      "title": {
+        "en": "Farmore Birthday Feast",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "discount_pct",
+      "discount_value": 40.0,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "farmore-thn-burger",
+        "name": {
+          "en": "Farmore Thn Burger",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Burgers",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2155,
+      "title": {
+        "en": "Hookah and Sip",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 95 · 3pm - 11pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "farmore-thn-burger",
+        "name": {
+          "en": "Farmore Thn Burger",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Burgers",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2219,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/fudo-restaurant-4/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "f-do-restaurant",
+        "name": {
+          "en": "Fūdo Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2193,
+      "title": {
+        "en": "The Sunset Social",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 5pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "habanos-cigar-bar",
+        "name": {
+          "en": "Habanos Cigar Bar",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2231,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/happy-truffles-cafe/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "happy-truffles-cafe",
+        "name": {
+          "en": "Happy Truffles Cafe",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2241,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/hemaliya-restaurant-barwa/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "hemaliya-restaurant-barwa",
+        "name": {
+          "en": "Hemaliya Restaurant Barwa",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2240,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/hot-chicken-al-wakrah/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "hot-chicken",
+        "name": {
+          "en": "Hot Chicken",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://hotchicken.qa/assets/ico.png"
+      }
+    },
+    {
+      "id": 2170,
+      "title": {
+        "en": "Burger Lovers",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "discount_pct",
+      "discount_value": 50.0,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "hudson-tavern",
+        "name": {
+          "en": "Hudson Tavern",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Burgers",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2177,
+      "title": {
+        "en": "Buffet Breakfast",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 100 · 6am - 10.30am",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 100.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "hyde-park-restaurant",
+        "name": {
+          "en": "Hyde Park Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "International",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2178,
+      "title": {
+        "en": "Buffet Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 100 · 12pm - 2pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 100.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "hyde-park-restaurant",
+        "name": {
+          "en": "Hyde Park Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "International",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2179,
+      "title": {
+        "en": "Buffet Dinner",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 120 · 6pm - 10.30pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 120.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "hyde-park-restaurant",
+        "name": {
+          "en": "Hyde Park Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "International",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2119,
+      "title": {
+        "en": "Coastal Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 95 · 12pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ibn-albahr",
+        "name": {
+          "en": "Ibn AlBahr",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2120,
+      "title": {
+        "en": "The High Note",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 180, · 4pm - 7pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "infinity-rooftop-lounge",
+        "name": {
+          "en": "Infinity Rooftop Lounge",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2180,
+      "title": {
+        "en": "Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 12pm - 3.30pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "inginuity",
+        "name": {
+          "en": "Inginuity",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Steakhouse",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2181,
+      "title": {
+        "en": "Steak Diane",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 130 · 3pm - 11pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 130.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "inginuity",
+        "name": {
+          "en": "Inginuity",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Steakhouse",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2182,
+      "title": {
+        "en": "Happy Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 32 · 3pm - 10pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 32.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "inginuity",
+        "name": {
+          "en": "Inginuity",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Steakhouse",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2164,
+      "title": {
+        "en": "Churrascaria Dinner",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 295 · 6pm - 11.15pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 295.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ipanema",
+        "name": {
+          "en": "Ipanema",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2250,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/khan-farouk-tarab-cafe-shisha/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "khan-farouk-tarab-cafe-shisha",
+        "name": {
+          "en": "Khan Farouk Tarab Cafe (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2228,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/leaf-and-roll-1780535295578/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "leaf-and-roll",
+        "name": {
+          "en": "LEAF AND ROLL",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2130,
+      "title": {
+        "en": "Ladies Brekke",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 75 · 6.30am - 11am",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 75.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "la-gourmandise",
+        "name": {
+          "en": "La Gourmandise",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2131,
+      "title": {
+        "en": "Express Menu",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 74 · 12pm- 4pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 74.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "la-gourmandise",
+        "name": {
+          "en": "La Gourmandise",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2132,
+      "title": {
+        "en": "Afternoon Par-Tea",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 128 · 2pm - 6pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 128.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "la-gourmandise",
+        "name": {
+          "en": "La Gourmandise",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2125,
+      "title": {
+        "en": "French Breakfast",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 59 · 7am - 11am",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 59.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "la-parisienne",
+        "name": {
+          "en": "La Parisienne",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2126,
+      "title": {
+        "en": "Late Breakfast",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 79 · 8am - 1pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 79.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "la-parisienne",
+        "name": {
+          "en": "La Parisienne",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2127,
+      "title": {
+        "en": "Express Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 79 · 11am - 2pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 79.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "la-parisienne",
+        "name": {
+          "en": "La Parisienne",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2128,
+      "title": {
+        "en": "Award-Winning Afternoon Tea - Voted Doha's Favourite",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 135 · 2pm - 6pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 135.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "la-parisienne",
+        "name": {
+          "en": "La Parisienne",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2249,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/layali-babal-hara-%d9%84%d9%8a%d8%a7%d9%84%d9%8a-%d8%a8%d8%a7%d8%a8-%d8%a7%d9%84%d8%ad%d8%a7%d8%b1%d8%a9-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "layali-babal-hara",
+        "name": {
+          "en": "Layali Babal Hara - ليالي باب الحارة",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2199,
+      "title": {
+        "en": "Timings:",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 475",
+        "ar": null
+      },
+      "deal_type": "free_item",
+      "discount_value": null,
+      "price": 475.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "le-petit-chef",
+        "name": {
+          "en": "Le Petit Chef",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://lepetitchef.com/favicon.ico"
+      }
+    },
+    {
+      "id": 2200,
+      "title": {
+        "en": "Afternoon Tea - Les Délices de Ledoux",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 280 · 3pm - 9pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 280.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ledoux",
+        "name": {
+          "en": "Ledoux",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2137,
+      "title": {
+        "en": "Afternoon Tea",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 145 · 2pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 145.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "loleya-caf",
+        "name": {
+          "en": "Loleya Café",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2138,
+      "title": {
+        "en": "Sweet Combo",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 45",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 45.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "loleya-caf",
+        "name": {
+          "en": "Loleya Café",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2139,
+      "title": {
+        "en": "Gourmet Combo",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 95",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "loleya-caf",
+        "name": {
+          "en": "Loleya Café",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2140,
+      "title": {
+        "en": "Weekend Breakfast",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 85 · 8am - 12pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 85.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "loleya-caf",
+        "name": {
+          "en": "Loleya Café",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2201,
+      "title": {
+        "en": "Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 1pm - 3pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "muru",
+        "name": {
+          "en": "MURU",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2202,
+      "title": {
+        "en": "Happy Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "5pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "discount_pct",
+      "discount_value": 40.0,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "muru",
+        "name": {
+          "en": "MURU",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2183,
+      "title": {
+        "en": "Happy Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 32 · 5.30pm - 1am",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 32.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "manhattan",
+        "name": {
+          "en": "Manhattan",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2235,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/matka-junction/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "matka-junction",
+        "name": {
+          "en": "Matka Junction",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2214,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/maxs-restaurant-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "max-s-restaurant",
+        "name": {
+          "en": "Max's Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2171,
+      "title": {
+        "en": "Express Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 95 · 12.30pm - 3.30pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "mondrian-bistro",
+        "name": {
+          "en": "Mondrian Bistro",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2172,
+      "title": {
+        "en": "Longest Breakfast in Town",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 7am - 12.30pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "mondrian-bistro",
+        "name": {
+          "en": "Mondrian Bistro",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2173,
+      "title": {
+        "en": "After Work",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 50 · 6pm - 9pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 50.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "morimoto",
+        "name": {
+          "en": "Morimoto",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2174,
+      "title": {
+        "en": "An Oceanic Four-Hand Omakase Journey",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 690 · 6pm - 11pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 690.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "morimoto",
+        "name": {
+          "en": "Morimoto",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2175,
+      "title": {
+        "en": "Art of Nigiri",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 350",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 350.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "morimoto",
+        "name": {
+          "en": "Morimoto",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2113,
+      "title": {
+        "en": "Yum Seng Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 108 · 12.30pm to 12am",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 108.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "mr-mrs-hawker",
+        "name": {
+          "en": "Mr. & Mrs. Hawker",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2192,
+      "title": {
+        "en": "Timings:",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 595 · 7pm - 9pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 595.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "omakase",
+        "name": {
+          "en": "Omakase",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2184,
+      "title": {
+        "en": "Happy Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 32 · 7pm - 10pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 32.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "orion",
+        "name": {
+          "en": "Orion",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2185,
+      "title": {
+        "en": "Hookah",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 89 · 6pm - 1am",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 89.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "orion",
+        "name": {
+          "en": "Orion",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2210,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/oryx-zaatar-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "oryx-zaatar",
+        "name": {
+          "en": "Oryx Zaatar",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://oryxzaatar.com/wp-content/uploads/2025/01/cropped-512x512_11zon-180x180.jpg"
+      }
+    },
+    {
+      "id": 2222,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/osha-asian-bistro-buffet/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "osha-asian-bistro-buffet",
+        "name": {
+          "en": "Osha Asian Bistro (Buffet)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "International",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2212,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/papa-johns-pizza-39/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "papa-john-s-pizza",
+        "name": {
+          "en": "Papa John's Pizza",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Italian",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2108,
+      "title": {
+        "en": "Lunch Set Menu",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 150 · 12.30pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "parisa",
+        "name": {
+          "en": "Parisa",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Persian",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2109,
+      "title": {
+        "en": "Persian Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 180 · 12.30pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "parisa",
+        "name": {
+          "en": "Parisa",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Persian",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2110,
+      "title": {
+        "en": "Unlimited Family Style Set Menu",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 195 · 12.30pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 195.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "parisa",
+        "name": {
+          "en": "Parisa",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Persian",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2246,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/patio-walima-shisha/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "patio-walima-shisha",
+        "name": {
+          "en": "Patio Walima (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2203,
+      "title": {
+        "en": "Afternoon Tea",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 280 · 3pm - 9pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 280.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "peacock-alley",
+        "name": {
+          "en": "Peacock Alley",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2209,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/pizza-box-offer/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "pizza-box",
+        "name": {
+          "en": "Pizza Box",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Italian",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://static.wixstatic.com/media/be1e65_11e7fad5e15e4472b9c65e3d541b4b2d%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/be1e65_11e7fad5e15e4472b9c65e3d541b4b2d%7Emv2.png"
+      }
+    },
+    {
+      "id": 2114,
+      "title": {
+        "en": "Hop O' Clock",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 175 · 3pm - 6pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 175.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "pool-bar",
+        "name": {
+          "en": "Pool Bar",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2165,
+      "title": {
+        "en": "Quickbites Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "6pm - 9pm",
+        "ar": null
+      },
+      "deal_type": "discount_pct",
+      "discount_value": 50.0,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "quick-bites",
+        "name": {
+          "en": "Quick Bites",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2225,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/d-grill-restaurant-1781028071189/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "restaurant",
+        "name": {
+          "en": "Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2230,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/riyadh-al-oasis-wakra/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "riyadh-al-oasis",
+        "name": {
+          "en": "Riyadh Al Oasis",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2186,
+      "title": {
+        "en": "Hong Shi Banya (Catch of the Day)",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 85 · 6pm - 11pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 85.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ruby-wu-s",
+        "name": {
+          "en": "Ruby Wu's",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2187,
+      "title": {
+        "en": "Grape & Dine 88",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 88 · 6pm - 11pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 88.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "ruby-wu-s",
+        "name": {
+          "en": "Ruby Wu's",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2242,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/stanley-cafe-%d9%85%d9%82%d9%87%d9%89-%d8%b3%d8%aa%d8%a7%d9%86%d9%84%d9%89/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "stanley-cafe",
+        "name": {
+          "en": "STANLEY CAFE مقهى ستانلى",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2196,
+      "title": {
+        "en": "Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 95 · 12pm - 3.30pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "stk-doha",
+        "name": {
+          "en": "STK Doha",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2197,
+      "title": {
+        "en": "Saturday Roast",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 175 · 12.30pm - 5pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 175.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "stk-doha",
+        "name": {
+          "en": "STK Doha",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2198,
+      "title": {
+        "en": "Happy Times",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 35 · 4pm - 7pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 35.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "stk-doha",
+        "name": {
+          "en": "STK Doha",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2221,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/sahra-restaurant-and-lounge-buffet/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "sahra-restaurant-and-lounge",
+        "name": {
+          "en": "Sahra Restaurant and Lounge",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2245,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/sahra-restaurant-and-lounge-shisha/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "sahra-restaurant-and-lounge-shisha",
+        "name": {
+          "en": "Sahra Restaurant and Lounge (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2194,
+      "title": {
+        "en": "Parisian Breakfast",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 150 · 10am - 2pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 150.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "sel-miel",
+        "name": {
+          "en": "Sel & Miel",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2195,
+      "title": {
+        "en": "Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 95 · 12pm - 4pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 95.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "sel-miel",
+        "name": {
+          "en": "Sel & Miel",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2188,
+      "title": {
+        "en": "Happy Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 37 · 5pm - 1am",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 37.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "shehrazad-lounge-bar-terrace",
+        "name": {
+          "en": "Shehrazad Lounge Bar & Terrace",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2189,
+      "title": {
+        "en": "Taste of Africa",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 50 · 5pm - 1am",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 50.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "shehrazad-lounge-bar-terrace",
+        "name": {
+          "en": "Shehrazad Lounge Bar & Terrace",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2190,
+      "title": {
+        "en": "S & S Roast",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "shehrazad-lounge-bar-terrace",
+        "name": {
+          "en": "Shehrazad Lounge Bar & Terrace",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2220,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/sherao-restaurant/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "sherao-restaurant",
+        "name": {
+          "en": "Sherao Restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2215,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/shisha-garden-la-cigale-hotel/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "shisha-garden-la-cigale-hotel",
+        "name": {
+          "en": "Shisha Garden -La Cigale Hotel",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2213,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/swiss-bellinn-doha-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "swiss-bellinn",
+        "name": {
+          "en": "Swiss-Bellinn",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2233,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/tannour-al-thumama/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "tannour-al-thumama",
+        "name": {
+          "en": "Tannour Al Thumama",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2248,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/terrace-by-21-high-st-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "terrace-by-21-high-st-shisha",
+        "name": {
+          "en": "Terrace by 21 High St. (Shisha)",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2129,
+      "title": {
+        "en": "Express Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 69 · 12pm - 3pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 69.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "the-asian-kitchen",
+        "name": {
+          "en": "The Asian Kitchen",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2204,
+      "title": {
+        "en": "Happy Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "5pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "discount_pct",
+      "discount_value": 40.0,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "the-cortland-bar",
+        "name": {
+          "en": "The Cortland Bar",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2141,
+      "title": {
+        "en": "Social Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 33 · 4pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 33.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "the-g-o-a-t-sports-lounge",
+        "name": {
+          "en": "The G.O.A.T Sports Lounge",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2226,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/the-lebanese-bakery-1780540279156/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "the-lebanese-bakery",
+        "name": {
+          "en": "The Lebanese Bakery",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Lebanese",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://thelebanesebakery.com/wp-content/uploads/2018/05/cropped-tlb-180x180.jpg"
+      }
+    },
+    {
+      "id": 2145,
+      "title": {
+        "en": "Timings:",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 350 · 8am - 1am",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 350.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "the-mandarin-cake-shop",
+        "name": {
+          "en": "The Mandarin Cake Shop",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2227,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/the-raclette-1780537879265/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "the-raclette",
+        "name": {
+          "en": "The Raclette",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2115,
+      "title": {
+        "en": "Lunch Decisions",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 98 · 12.30pm - 3.30pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 98.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "the-salt-road-doha",
+        "name": {
+          "en": "The Salt Road Doha",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2236,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/treffen-house/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "treffen-house",
+        "name": {
+          "en": "Treffen House",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://treffenhouse.com/wp-content/uploads/2025/03/cropped-1024-180x180.png"
+      }
+    },
+    {
+      "id": 2205,
+      "title": {
+        "en": "Breakfast Market",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 180 · 6.30am - 11am",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 180.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "tribeca-market",
+        "name": {
+          "en": "Tribeca Market",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2166,
+      "title": {
+        "en": "Tulum Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 33 · 4pm - 7pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 33.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "tulum",
+        "name": {
+          "en": "Tulum",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2167,
+      "title": {
+        "en": "Hookah Bliss",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 130 · 12pm - 12am",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 130.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "tulum",
+        "name": {
+          "en": "Tulum",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2232,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/utika/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "utika",
+        "name": {
+          "en": "Utika",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "Lusail",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2168,
+      "title": {
+        "en": "Alice in Wonderland Afternoon Tea",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 145, · 2pm - 6pm",
+        "ar": null
+      },
+      "deal_type": "set_menu",
+      "discount_value": null,
+      "price": 145.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "west-end-caf-and-patisserie",
+        "name": {
+          "en": "West End Café and Patisserie",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Cafe",
+        "area": "Doha",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2206,
+      "title": {
+        "en": "Business Lunch",
+        "ar": null
+      },
+      "description": {
+        "en": "QR 99 · 12pm - 3pm",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 99.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "yun",
+        "name": {
+          "en": "YUN",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2207,
+      "title": {
+        "en": "Happy Hour",
+        "ar": null
+      },
+      "description": {
+        "en": "5pm - 8pm",
+        "ar": null
+      },
+      "deal_type": "discount_pct",
+      "discount_value": 40.0,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "factqatar",
+      "source_url": "https://factqatar.com/the-best-dining-deals-in-qatar/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "yun",
+        "name": {
+          "en": "YUN",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": "West Bay",
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2218,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/yellow-cab-pizza/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "yellow-cab-pizza",
+        "name": {
+          "en": "Yellow Cab Pizza",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": "Italian",
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": "https://yellowcabpizza.qa/favicon.ico"
+      }
+    },
+    {
+      "id": 2216,
+      "title": {
+        "en": "Special offer",
+        "ar": null
+      },
+      "description": {
+        "en": null,
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": null,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
+      "source": "offernmenu",
+      "source_url": "https://offernmenu.com/offer/yummy-taste-restaurant-2/",
+      "image_url": null,
+      "restaurant": {
+        "slug": "yummy-taste-restaurant",
+        "name": {
+          "en": "Yummy taste restaurant",
+          "ar": null
+        },
+        "ig_handle": null,
+        "cuisine": null,
+        "area": null,
+        "lat": null,
+        "lng": null,
+        "logo_url": null
+      }
+    },
+    {
+      "id": 2208,
+      "title": {
+        "en": "Offer from QR 10",
+        "ar": null
+      },
+      "description": {
+        "en": "From QR 10",
+        "ar": null
+      },
+      "deal_type": "other",
+      "discount_value": null,
+      "price": 10.0,
+      "channel": "dine_in",
+      "code": null,
+      "valid_from": null,
+      "valid_to": "2026-07-18",
       "source": "offernmenu",
       "source_url": "https://offernmenu.com/offer/dairy-queen-offer-doha-10-qar-1781028938188/",
       "image_url": null,
