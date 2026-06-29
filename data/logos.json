@@ -64,5 +64,11 @@
     "name": "Yellow Cab Pizza",
     "logo_url": "https://yellowcabpizza.qa/favicon.ico",
     "domain": "yellowcabpizza.qa"
+  },
+  {
+    "slug": "dairy-queen",
+    "name": "dairy Queen",
+    "logo_url": "https://dairyqueen-prod.dotcdn.io/application/images/favicons/apple-touch-icon-152x152.png",
+    "domain": "dairyqueen.com"
   }
 ]
